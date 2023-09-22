@@ -1,0 +1,253 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Internet News Virtual Desktop</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script language="javascript" type="text/javascript">
+<!--
+function MM_findObj(n, d) { //v4.0
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && document.getElementById) x=document.getElementById(n); return x;
+}
+
+function MM_showHideLayers() { //v3.0
+  var i,p,v,obj,args=MM_showHideLayers.arguments;
+  for (i=0; i<(args.length-2); i+=3) if ((obj=MM_findObj(args[i]))!=null) { v=args[i+2];
+    if (obj.style) { obj=obj.style; v=(v=='show')?'visible':(v='hide')?'hidden':v; }
+    obj.visibility=v; }
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+//-->
+</script>
+</head>
+
+<body bgcolor="#008080" style="margin: 0px;" onload="show_clock();
+MM_showHideLayers('loading','','hide','loadmsg','','hide','taskbar','','show','clock','','show','inews','','show','inewsfile','','hide','inewsedit','','hide','inewsview','','hide','inewsviewpp','','hide','inewsnews','','hide','inewsoff','','hide','inewshelp','','hide','inewsabout','','hide','inewsoptsend','','hide','inewsoptread','','hide','inewsoptserv','','hide','inewsoptfont','','hide','inewsoptsig','','hide','inewsoptadv','','hide','inewsoptservpropgen','','hide','inewsoptservpropconn','','hide','inewsoptservpropadv','','hide','inewsng','','hide');
+MM_preloadImages('inewsload.png','tbar.png','inews.png','inewsfile.png','inewsedit.png','inewsview.png','inewsviewpp.png','inewsnews.png','inewsoff.png','inewshelp.png','inewsabout.png','inewsoptsend.png','inewsoptread.png','inewsoptserv.png','inewsoptfont.png','inewsoptsig.png','inewsoptadv.png','inewsoptservpropgen.png','inewsoptservpropconn.png','inewsoptservpropadv.png','inewsng.png');
+return document.MM_returnValue;">
+
+<div id="loading" style="z-index: 499; left: 0px; top: 0px; position: absolute;">
+<img src="inewsload.png" width="800" height="600" border="0" alt="">
+</div>
+
+<div id="loadmsg" style="z-index: 500; left: 20px; top: 20px; width: 225; height: 400; position: absolute;">
+<center><span style="font-family: Arial; font-size: 24px;">Please Wait...</span></center><br>
+<span style="font-family: Arial; font-size: 13px;">Images for the virtual desktop are now being preloaded into RAM. When this is complete, you will be presented with the desktop and be able to browse all available options without the need for further loading.</span>
+</div>
+
+<div id="taskbar" style="z-index: 99; left: 0px; top: 572px; position: absolute;">
+<img src="tbar.png" width="800" height="28" border="0" alt="">
+</div>
+
+<div id="clock" style="z-index: 100; left: 760px; top: 579px; position: absolute;">
+<script language="javascript" type="text/javascript" src="clock.js">
+/*
+Live Clock Script-
+By Mark Plachetta (astro@bigpond.net.au) based on code from DynamicDrive.com
+For full source code, 100's more DHTML scripts, and Terms Of Use,
+visit http://www.dynamicdrive.com
+*/
+</script>
+</div>
+
+<div id="inews" style="z-index: 20; left: 0px; top: 0px; position: absolute;">
+<img src="inews.png" usemap="#inews.png" width="800" height="576" border="0" alt="">
+<map name="inews.png">
+<area shape="rect" coords="782,2,797,15" href="#" alt="Close" onclick="window.close();">
+<area shape="rect" coords="0,18,27,37" href="#" alt="File" onmouseover="MM_showHideLayers('inewsfile','','show')"  onmouseout="MM_showHideLayers('inewsfile','','hide')">
+<area shape="rect" coords="28,18,57,37" href="#" alt="Edit" onmouseover="MM_showHideLayers('inewsedit','','show')"  onmouseout="MM_showHideLayers('inewsedit','','hide')">
+<area shape="rect" coords="58,18,92,37" href="#" alt="View" onmouseover="MM_showHideLayers('inewsview','','show')"  onmouseout="MM_showHideLayers('inewsview','','hide')">
+<area shape="rect" coords="93,18,131,37" href="#" alt="News" onmouseover="MM_showHideLayers('inewsnews','','show')"  onmouseout="MM_showHideLayers('inewsnews','','hide')">
+<area shape="rect" coords="132,18,173,37" href="#" alt="Offline" onmouseover="MM_showHideLayers('inewsoff','','show')"  onmouseout="MM_showHideLayers('inewsoff','','hide')">
+<area shape="rect" coords="174,18,207,37" href="#" alt="Help" onmouseover="MM_showHideLayers('inewshelp','','show')"  onmouseout="MM_showHideLayers('inewshelp','','hide')">
+<area shape="rect" coords="295,40,364,92" href="#" alt="Newsgroups" onclick="MM_showHideLayers('inewsng','','show')">
+</map>
+</div>
+
+<div id="inewsfile" style="z-index: 30; left: 0px; top: 37px; position: absolute;" onmouseover="MM_showHideLayers('inewsfile','','show')"  onmouseout="MM_showHideLayers('inewsfile','','hide')">
+<img src="inewsfile.png" usemap="#inewsfile.png" width="161" height="332" border="0" alt="">
+<map name="inewsfile.png">
+<area shape="rect" coords="2,308,158,329" href="#" alt="Close" onclick="window.close();">
+</map>
+</div>
+
+<div id="inewsedit" style="z-index: 30; left: 28px; top: 37px; position: absolute;" onmouseover="MM_showHideLayers('inewsedit','','show')"  onmouseout="MM_showHideLayers('inewsedit','','hide')">
+<img src="inewsedit.png" width="231" height="152" border="0" alt="">
+</div>
+
+<div id="inewsview" style="z-index: 30; left: 58px; top: 37px; position: absolute;" onmouseover="MM_showHideLayers('inewsview','','show')"  onmouseout="MM_showHideLayers('inewsview','','hide')">
+<img src="inewsview.png" usemap="#inewsview.png" width="191" height="324" border="0" alt="">
+<map name="inewsview.png">
+<area shape="rect" coords="3,37,186,55" href="#" alt="Preview Pane" onmouseover="MM_showHideLayers('inewsviewpp','','show')"  onmouseout="MM_showHideLayers('inewsviewpp','','hide')">
+</map>
+</div>
+
+<div id="inewsviewpp" style="z-index: 40; left: 243px; top: 71px; position: absolute;" onmouseover="MM_showHideLayers('inewsview','','show','inewsviewpp','','show')"  onmouseout="MM_showHideLayers('inewsview','','hide','inewsviewpp','','hide')">
+<img src="inewsviewpp.png" width="138" height="83" border="0" alt="">
+</div>
+
+<div id="inewsnews" style="z-index: 30; left: 93px; top: 37px; position: absolute;" onmouseover="MM_showHideLayers('inewsnews','','show')"  onmouseout="MM_showHideLayers('inewsnews','','hide')">
+<img src="inewsnews.png" usemap="#inewsnews.png" width="237" height="238" border="0" alt="">
+<map name="inewsnews.png">
+<area shape="rect" coords="3,3,233,19" href="#" alt="Newsgroups" onclick="MM_showHideLayers('inewsng','','show','inewsnews','','hide')">
+<area shape="rect" coords="3,215,233,234" href="#" alt="Options" onclick="MM_showHideLayers('inewsoptsend','','show','inewsnews','','hide')">
+</map>
+</div>
+
+<div id="inewsoff" style="z-index: 30; left: 132px; top: 37px; position: absolute;" onmouseover="MM_showHideLayers('inewsoff','','show')"  onmouseout="MM_showHideLayers('inewsoff','','hide')">
+<img src="inewsoff.png" width="184" height="126" border="0" alt="">
+</div>
+
+<div id="inewshelp" style="z-index: 30; left: 174px; top: 37px; position: absolute;" onmouseover="MM_showHideLayers('inewshelp','','show')"  onmouseout="MM_showHideLayers('inewshelp','','hide')">
+<img src="inewshelp.png" usemap="#inewshelp.png" width="252" height="109" border="0" alt="">
+<map name="inewshelp.png">
+<area shape="rect" coords="3,69,248,88" href="#" alt="About Microsoft Internet Mail and News" onclick="MM_showHideLayers('inewsabout','','show','inewshelp','','hide')">
+</map>
+</div>
+
+<div id="inewsabout" style="z-index: 30; left: 200px; top: 125px; position: absolute;">
+<img src="inewsabout.png" usemap="#inewsabout.png" width="285" height="254" border="0" alt="">
+<map name="inewsabout.png">
+<area shape="rect" coords="264,5,279,18" href="#" alt="Close" onclick="MM_showHideLayers('inewsabout','','hide')">
+<area shape="rect" coords="105,214,179,236" href="#" alt="OK" onclick="MM_showHideLayers('inewsabout','','hide')">
+</map>
+</div>
+
+<div id="inewsoptsend" style="z-index: 30; left: 200px; top: 75px; position: absolute;">
+<img src="inewsoptsend.png" usemap="#inewsoptsend.png" width="367" height="443" border="0" alt="">
+<map name="inewsoptsend.png">
+<area shape="rect" coords="346,5,360,17" href="#" alt="Close" onclick="MM_showHideLayers('inewsoptsend','','hide')">
+<area shape="rect" coords="54,31,94,49" href="#" alt="Read" onclick="MM_showHideLayers('inewsoptread','','show','inewsoptsend','','hide')">
+<area shape="rect" coords="95,31,137,49" href="#" alt="Server" onclick="MM_showHideLayers('inewsoptserv','','show','inewsoptsend','','hide')">
+<area shape="rect" coords="138,31,179,49" href="#" alt="Fonts" onclick="MM_showHideLayers('inewsoptfont','','show','inewsoptsend','','hide')">
+<area shape="rect" coords="180,31,236,49" href="#" alt="Signature" onclick="MM_showHideLayers('inewsoptsig','','show','inewsoptsend','','hide')">
+<area shape="rect" coords="237,31,297,49" href="#" alt="Advanced" onclick="MM_showHideLayers('inewsoptadv','','show','inewsoptsend','','hide')">
+<area shape="rect" coords="121,410,195,432" href="#" alt="OK" onclick="MM_showHideLayers('inewsoptsend','','hide')">
+<area shape="rect" coords="202,410,276,432" href="#" alt="Cancel" onclick="MM_showHideLayers('inewsoptsend','','hide')">
+</map>
+</div>
+
+<div id="inewsoptread" style="z-index: 30; left: 200px; top: 75px; position: absolute;">
+<img src="inewsoptread.png" usemap="#inewsoptread.png" width="367" height="443" border="0" alt="">
+<map name="inewsoptread.png">
+<area shape="rect" coords="346,5,360,17" href="#" alt="Close" onclick="MM_showHideLayers('inewsoptread','','hide')">
+<area shape="rect" coords="11,31,51,49" href="#" alt="Send" onclick="MM_showHideLayers('inewsoptsend','','show','inewsoptread','','hide')">
+<area shape="rect" coords="96,31,137,49" href="#" alt="Server" onclick="MM_showHideLayers('inewsoptserv','','show','inewsoptread','','hide')">
+<area shape="rect" coords="138,31,179,49" href="#" alt="Fonts" onclick="MM_showHideLayers('inewsoptfont','','show','inewsoptread','','hide')">
+<area shape="rect" coords="180,31,236,49" href="#" alt="Signature" onclick="MM_showHideLayers('inewsoptsig','','show','inewsoptread','','hide')">
+<area shape="rect" coords="237,31,297,49" href="#" alt="Advanced" onclick="MM_showHideLayers('inewsoptadv','','show','inewsoptread','','hide')">
+<area shape="rect" coords="121,410,195,432" href="#" alt="OK" onclick="MM_showHideLayers('inewsoptread','','hide')">
+<area shape="rect" coords="202,410,276,432" href="#" alt="Cancel" onclick="MM_showHideLayers('inewsoptread','','hide')">
+</map>
+</div>
+
+<div id="inewsoptserv" style="z-index: 30; left: 200px; top: 75px; position: absolute;">
+<img src="inewsoptserv.png" usemap="#inewsoptserv.png" width="367" height="443" border="0" alt="">
+<map name="inewsoptserv.png">
+<area shape="rect" coords="346,5,360,17" href="#" alt="Close" onclick="MM_showHideLayers('inewsoptserv','','hide')">
+<area shape="rect" coords="11,31,52,49" href="#" alt="Send" onclick="MM_showHideLayers('inewsoptsend','','show','inewsoptserv','','hide')">
+<area shape="rect" coords="53,31,93,49" href="#" alt="Read" onclick="MM_showHideLayers('inewsoptread','','show','inewsoptserv','','hide')">
+<area shape="rect" coords="139,31,179,49" href="#" alt="Fonts" onclick="MM_showHideLayers('inewsoptfont','','show','inewsoptserv','','hide')">
+<area shape="rect" coords="180,31,236,49" href="#" alt="Signature" onclick="MM_showHideLayers('inewsoptsig','','show','inewsoptserv','','hide')">
+<area shape="rect" coords="237,31,297,49" href="#" alt="Advanced" onclick="MM_showHideLayers('inewsoptadv','','show','inewsoptserv','','hide')">
+<area shape="rect" coords="94,357,168,379" href="#" alt="Add" onclick="MM_showHideLayers('inewsoptservpropgen','','show')">
+<area shape="rect" coords="256,357,330,379" href="#" alt="Properties" onclick="MM_showHideLayers('inewsoptservpropgen','','show')">
+<area shape="rect" coords="121,410,195,432" href="#" alt="OK" onclick="MM_showHideLayers('inewsoptserv','','hide')">
+<area shape="rect" coords="202,410,276,432" href="#" alt="Cancel" onclick="MM_showHideLayers('inewsoptserv','','hide')">
+</map>
+</div>
+
+<div id="inewsoptfont" style="z-index: 30; left: 200px; top: 75px; position: absolute;">
+<img src="inewsoptfont.png" usemap="#inewsoptfont.png" width="367" height="443" border="0" alt="">
+<map name="inewsoptfont.png">
+<area shape="rect" coords="346,5,360,17" href="#" alt="Close" onclick="MM_showHideLayers('inewsoptfont','','hide')">
+<area shape="rect" coords="11,31,52,49" href="#" alt="Send" onclick="MM_showHideLayers('inewsoptsend','','show','inewsoptfont','','hide')">
+<area shape="rect" coords="53,31,94,49" href="#" alt="Read" onclick="MM_showHideLayers('inewsoptread','','show','inewsoptfont','','hide')">
+<area shape="rect" coords="95,31,136,49" href="#" alt="Server" onclick="MM_showHideLayers('inewsoptserv','','show','inewsoptfont','','hide')">
+<area shape="rect" coords="181,31,236,49" href="#" alt="Signature" onclick="MM_showHideLayers('inewsoptsig','','show','inewsoptfont','','hide')">
+<area shape="rect" coords="237,31,297,49" href="#" alt="Advanced" onclick="MM_showHideLayers('inewsoptadv','','show','inewsoptfont','','hide')">
+<area shape="rect" coords="121,410,195,432" href="#" alt="OK" onclick="MM_showHideLayers('inewsoptfont','','hide')">
+<area shape="rect" coords="202,410,276,432" href="#" alt="Cancel" onclick="MM_showHideLayers('inewsoptfont','','hide')">
+</map>
+</div>
+
+<div id="inewsoptsig" style="z-index: 30; left: 200px; top: 75px; position: absolute;">
+<img src="inewsoptsig.png" usemap="#inewsoptsig.png" width="367" height="443" border="0" alt="">
+<map name="inewsoptsig.png">
+<area shape="rect" coords="346,5,360,17" href="#" alt="Close" onclick="MM_showHideLayers('inewsoptsig','','hide')">
+<area shape="rect" coords="11,31,52,49" href="#" alt="Send" onclick="MM_showHideLayers('inewsoptsend','','show','inewsoptsig','','hide')">
+<area shape="rect" coords="53,31,94,49" href="#" alt="Read" onclick="MM_showHideLayers('inewsoptread','','show','inewsoptsig','','hide')">
+<area shape="rect" coords="95,31,137,49" href="#" alt="Server" onclick="MM_showHideLayers('inewsoptserv','','show','inewsoptsig','','hide')">
+<area shape="rect" coords="138,31,178,49" href="#" alt="Fonts" onclick="MM_showHideLayers('inewsoptfont','','show','inewsoptsig','','hide')">
+<area shape="rect" coords="238,31,297,49" href="#" alt="Advanced" onclick="MM_showHideLayers('inewsoptadv','','show','inewsoptsig','','hide')">
+<area shape="rect" coords="121,410,195,432" href="#" alt="OK" onclick="MM_showHideLayers('inewsoptsig','','hide')">
+<area shape="rect" coords="202,410,276,432" href="#" alt="Cancel" onclick="MM_showHideLayers('inewsoptsig','','hide')">
+</map>
+</div>
+
+<div id="inewsoptadv" style="z-index: 30; left: 200px; top: 75px; position: absolute;">
+<img src="inewsoptadv.png" usemap="#inewsoptadv.png" width="367" height="443" border="0" alt="">
+<map name="inewsoptadv.png">
+<area shape="rect" coords="346,5,360,17" href="#" alt="Close" onclick="MM_showHideLayers('inewsoptadv','','hide')">
+<area shape="rect" coords="11,31,52,49" href="#" alt="Send" onclick="MM_showHideLayers('inewsoptsend','','show','inewsoptadv','','hide')">
+<area shape="rect" coords="53,31,94,49" href="#" alt="Read" onclick="MM_showHideLayers('inewsoptread','','show','inewsoptadv','','hide')">
+<area shape="rect" coords="95,31,137,49" href="#" alt="Server" onclick="MM_showHideLayers('inewsoptserv','','show','inewsoptadv','','hide')">
+<area shape="rect" coords="138,31,179,49" href="#" alt="Fonts" onclick="MM_showHideLayers('inewsoptfont','','show','inewsoptadv','','hide')">
+<area shape="rect" coords="180,31,235,49" href="#" alt="Signature" onclick="MM_showHideLayers('inewsoptsig','','show','inewsoptadv','','hide')">
+<area shape="rect" coords="121,410,195,432" href="#" alt="OK" onclick="MM_showHideLayers('inewsoptadv','','hide')">
+<area shape="rect" coords="202,410,276,432" href="#" alt="Cancel" onclick="MM_showHideLayers('inewsoptadv','','hide')">
+</map>
+</div>
+
+<div id="inewsoptservpropgen" style="z-index: 40; left: 200px; top: 75px; position: absolute;">
+<img src="inewsoptservpropgen.png" usemap="#inewsoptservpropgen.png" width="367" height="443" border="0" alt="">
+<map name="inewsoptservpropgen.png">
+<area shape="rect" coords="346,5,360,17" href="#" alt="Close" onclick="MM_showHideLayers('inewsoptservpropgen','','hide')">
+<area shape="rect" coords="61,31,125,49" href="#" alt="Connection" onclick="MM_showHideLayers('inewsoptservpropconn','','show','inewsoptservpropgen','','hide')">
+<area shape="rect" coords="126,31,186,49" href="#" alt="Advanced" onclick="MM_showHideLayers('inewsoptservpropadv','','show','inewsoptservpropgen','','hide')">
+<area shape="rect" coords="121,410,195,432" href="#" alt="OK" onclick="MM_showHideLayers('inewsoptservpropgen','','hide')">
+<area shape="rect" coords="202,410,276,432" href="#" alt="Cancel" onclick="MM_showHideLayers('inewsoptservpropgen','','hide')">
+</map>
+</div>
+
+<div id="inewsoptservpropconn" style="z-index: 40; left: 200px; top: 75px; position: absolute;">
+<img src="inewsoptservpropconn.png" usemap="#inewsoptservpropconn.png" width="367" height="443" border="0" alt="">
+<map name="inewsoptservpropconn.png">
+<area shape="rect" coords="346,5,360,17" href="#" alt="Close" onclick="MM_showHideLayers('inewsoptservpropconn','','hide')">
+<area shape="rect" coords="11,31,58,49" href="#" alt="General" onclick="MM_showHideLayers('inewsoptservpropgen','','show','inewsoptservpropconn','','hide')">
+<area shape="rect" coords="127,31,186,49" href="#" alt="Advanced" onclick="MM_showHideLayers('inewsoptservpropadv','','show','inewsoptservpropconn','','hide')">
+<area shape="rect" coords="121,410,195,432" href="#" alt="OK" onclick="MM_showHideLayers('inewsoptservpropconn','','hide')">
+<area shape="rect" coords="202,410,276,432" href="#" alt="Cancel" onclick="MM_showHideLayers('inewsoptservpropconn','','hide')">
+</map>
+</div>
+
+<div id="inewsoptservpropadv" style="z-index: 40; left: 200px; top: 75px; position: absolute;">
+<img src="inewsoptservpropadv.png" usemap="#inewsoptservpropadv.png" width="367" height="443" border="0" alt="">
+<map name="inewsoptservpropadv.png">
+<area shape="rect" coords="346,5,360,17" href="#" alt="Close" onclick="MM_showHideLayers('inewsoptservpropadv','','hide')">
+<area shape="rect" coords="11,31,59,49" href="#" alt="General" onclick="MM_showHideLayers('inewsoptservpropgen','','show','inewsoptservpropadv','','hide')">
+<area shape="rect" coords="60,31,124,49" href="#" alt="Connection" onclick="MM_showHideLayers('inewsoptservpropconn','','show','inewsoptservpropadv','','hide')">
+<area shape="rect" coords="121,410,195,432" href="#" alt="OK" onclick="MM_showHideLayers('inewsoptservpropadv','','hide')">
+<area shape="rect" coords="202,410,276,432" href="#" alt="Cancel" onclick="MM_showHideLayers('inewsoptservpropadv','','hide')">
+</map>
+</div>
+
+<div id="inewsng" style="z-index: 30; left: 100px; top: 100px; position: absolute;">
+<img src="inewsng.png" usemap="#inewsng.png" width="524" height="386" border="0" alt="">
+<map name="inewsng.png">
+<area shape="rect" coords="502,6,516,18" href="#" alt="Close" onclick="MM_showHideLayers('inewsng','','hide')">
+<area shape="rect" coords="350,349,424,371" href="#" alt="OK" onclick="MM_showHideLayers('inewsng','','hide')">
+<area shape="rect" coords="435,349,509,371" href="#" alt="Cancel" onclick="MM_showHideLayers('inewsng','','hide')">
+</map>
+</div>
+
+</body>
+</html>

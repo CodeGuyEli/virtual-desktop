@@ -1,0 +1,1236 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Outlook 98 Virtual Desktop</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script language="javascript" type="text/javascript">
+<!--
+function MM_findObj(n, d) { //v4.0
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && document.getElementById) x=document.getElementById(n); return x;
+}
+
+function MM_showHideLayers() { //v3.0
+  var i,p,v,obj,args=MM_showHideLayers.arguments;
+  for (i=0; i<(args.length-2); i+=3) if ((obj=MM_findObj(args[i]))!=null) { v=args[i+2];
+    if (obj.style) { obj=obj.style; v=(v=='show')?'visible':(v='hide')?'hidden':v; }
+    obj.visibility=v; }
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+//-->
+</script>
+</head>
+
+<body bgcolor="#008080" style="margin: 0px;" onload="show_clock();
+MM_showHideLayers('loading','','hide','loadmsg','','hide','taskbar','','show','clock','','show','ol98','','show','ol98myshort','','hide','ol98file','','hide','ol98edit','','hide','ol98view','','hide','ol98go','','hide','ol98tool','','hide','ol98act','','hide','ol98help','','hide','ol98filenew','','hide','ol98filefold','','hide','ol98viewcv','','hide','ol98actjem','','hide','ol98ibpropgen','','hide','ol98ibpropaa','','hide','ol98ccview','','hide','ol98ccviewfield','','hide','ol98ccviewgb','','hide','ol98ccviewsort','','hide','ol98ccviewfilt','','hide','ol98ccviewos','','hide','ol98ccviewaf','','hide','ol98newmsg','','hide','ol98newmsgfile','','hide','ol98newmsgedit','','hide','ol98newmsgview','','hide','ol98newmsgins','','hide','ol98newmsgform','','hide','ol98newmsgtool','','hide','ol98newmsgact','','hide','ol98newmsghelp','','hide','ol98newmsgopt','','hide','ol98orgbut','','hide','ol98orgmsglist','','hide','ol98orguf','','hide','ol98orguc','','hide','ol98orguv','','hide','ol98orgjem','','hide','ol98orgjemch','','hide','ol98edjs','','hide','ol98edjsadd','','hide','ol98edacs','','hide','ol98edacsadd','','hide','ol98rw','','hide','ol98rwnewtype','','hide','ol98rwnewtype2','','hide','ol98rwnewcond','','hide','ol98rwnewcond2','','hide','ol98rwnewcond3','','hide','ol98rwnewcond4','','hide','ol98rwnewcond5','','hide','ol98rwnewdo','','hide','ol98rwnewdo2','','hide','ol98rwnewdo3','','hide','ol98rwnewex','','hide','ol98rwnewex2','','hide','ol98rwnewex3','','hide','ol98rwnewex4','','hide','ol98rwnewex5','','hide','ol98rwnewdone','','hide','ol98rwopt','','hide','ol98accall','','hide','ol98accmail','','hide','ol98accds','','hide','ol98accadd','','hide','ol98accaddmailname','','hide','ol98accaddmailemail','','hide','ol98accaddmailserv','','hide','ol98accaddmaillogon','','hide','ol98accaddmailconntype1','','hide','ol98accaddmailconntype2','','hide','ol98accaddmailconntype3','','hide','ol98accaddmailduc','','hide','ol98accaddmailfin','','hide','ol98accaddmailfin2','','hide','ol98accaddmailfin3','','hide','ol98accadddsserv','','hide','ol98accadddsserv2','','hide','ol98accadddslogon','','hide','ol98accadddschk','','hide','ol98accadddsfin','','hide','ol98accaddexit','','hide','ol98accmailgen','','hide','ol98accmailserv','','hide','ol98accmailserv2','','hide','ol98accmailservset','','hide','ol98accmailconn','','hide','ol98accmailadv','','hide','ol98accdsgen','','hide','ol98accdsadv','','hide','ol98optpref','','hide','ol98optmd','','hide','ol98optmf','','hide','ol98optspell','','hide','ol98optsec','','hide','ol98optother','','hide','ol98optprefemo','','hide','ol98optprefemoadv','','hide','ol98optprefco','','hide','ol98optprefcotz','','hide','ol98optprefcoah','','hide','ol98optprefcors','','hide','ol98optprefcofbo','','hide','ol98optprefto','','hide','ol98optprefjo','','hide','ol98optprefno','','hide','ol98optmfset','','hide','ol98optmfio','','hide','ol98optmffont','','hide','ol98optmfsp','','hide','ol98optmfsped','','hide','ol98optmfspnewname','','hide','ol98optmfspnewtext','','hide','ol98optseccs','','hide','ol98optseccsch','','hide','ol98optseciedid','','hide','ol98optotherao','','hide','ol98optotheraoro','','hide','ol98optotheraoaim','','hide','ol98optotheraoat','','hide','ol98optotheraa','','hide','ol98optotherpp','','hide','ol98about','','hide');
+MM_preloadImages('loading.png','tbar.png','ol98.png','ol98myshort.png','ol98file.png','ol98edit.png','ol98view.png','ol98go.png','ol98tool.png','ol98act.png','ol98help.png','ol98filenew.png','ol98filefold.png','ol98viewcv.png','ol98actjem.png','ol98ibpropgen.png','ol98ibpropaa.png','ol98ccview.png','ol98ccviewfield.png','ol98ccviewgb.png','ol98ccviewsort.png','ol98ccviewfilt.png','ol98ccviewos.png','ol98ccviewaf.png','ol98newmsg.png','ol98newmsgfile.png','ol98newmsgedit.png','ol98newmsgview.png','ol98newmsgins.png','ol98newmsgform.png','ol98newmsgtool.png','ol98newmsgact.png','ol98newmsghelp.png','ol98newmsgopt.png','ol98orgbut.png','ol98orgmsglist.png','ol98orguf.png','ol98orguc.png','ol98orguv.png','ol98orgjem.png','ol98orgjemch.png','ol98edjs.png','ol98edjsadd.png','ol98edacs.png','ol98edacsadd.png','ol98rw.png','ol98rwnewtype.png','ol98rwnewtype2.png','ol98rwnewcond.png','ol98rwnewcond2.png','ol98rwnewcond3.png','ol98rwnewcond4.png','ol98rwnewcond5.png','ol98rwnewdo.png','ol98rwnewdo2.png','ol98rwnewdo3.png','ol98rwnewex.png','ol98rwnewex2.png','ol98rwnewex3.png','ol98rwnewex4.png','ol98rwnewex5.png','ol98rwnewdone.png','ol98rwopt.png','ol98accall.png','ol98accmail.png','ol98accds.png','ol98accadd.png','ol98accaddmailname.png','ol98accaddmailemail.png','ol98accaddmailserv.png','ol98accaddmaillogon.png','ol98accaddmailconntype1.png','ol98accaddmailconntype2.png','ol98accaddmailconntype3.png','ol98accaddmailduc.png','ol98accaddmailfin.png','ol98accadddsserv.png','ol98accadddsserv2.png','ol98accadddslogon.png','ol98accadddschk.png','ol98accadddsfin.png','ol98accaddexit.png','ol98accmailgen.png','ol98accmailserv.png','ol98accmailserv2.png','ol98accmailservset.png','ol98accmailconn.png','ol98accmailadv.png','ol98accdsgen.png','ol98accdsadv.png','ol98optpref.png','ol98optmd.png','ol98optmf.png','ol98optspell.png','ol98optsec.png','ol98optother.png','ol98optprefemo.png','ol98optprefemoadv.png','ol98optprefco.png','ol98optprefcotz.png','ol98optprefcoah.png','ol98optprefcors.png','ol98optprefcofbo.png','ol98optprefto.png','ol98optprefjo.png','ol98optprefno.png','ol98optmfset.png','ol98optmfio.png','ol98optmffont.png','ol98optmfsp.png','ol98optmfsped.png','ol98optmfspnewname.png','ol98optmfspnewtext.png','ol98optseccs.png','ol98optseccsch.png','ol98optseciedid.png','ol98optotherao.png','ol98optotheraoro.png','ol98optotheraoaim.png','ol98optotheraoat.png','ol98optotheraa.png','ol98optotherpp.png','ol98about.png');
+return document.MM_returnValue;">
+
+<div id="loading" style="z-index: 499; left: 0px; top: 0px; position: absolute;">
+<img src="loading.png" width="800" height="600" border="0" alt="">
+</div>
+
+<div id="loadmsg" style="z-index: 500; left: 20px; top: 20px; width: 300; height: 300; position: absolute;">
+<center><span style="font-family: Arial; font-size: 24px;">Please Wait...</span></center><br>
+<span style="font-family: Arial; font-size: 13px;">Images for the virtual desktop are now being preloaded into RAM. When this is complete, you will be presented with the desktop and be able to browse all available options without the need for further loading.</span>
+</div>
+
+<div id="taskbar" style="z-index: 99; left: 0px; top: 572px; position: absolute;">
+<img src="tbar.png" width="800" height="28" border="0" alt="">
+</div>
+
+<div id="clock" style="z-index: 100; left: 760px; top: 579px; position: absolute;">
+<script language="javascript" type="text/javascript" src="clock.js">
+/*
+Live Clock Script-
+By Mark Plachetta (astro@bigpond.net.au) based on code from DynamicDrive.com
+For full source code, 100's more DHTML scripts, and Terms Of Use,
+visit http://www.dynamicdrive.com
+*/
+</script>
+</div>
+
+<div id="ol98" style="z-index: 10; left: 0px; top: 0px; position: absolute;">
+<img src="ol98.png" usemap="#ol98.png" width="800" height="576" border="0" alt="">
+<map name="ol98.png">
+<area shape="rect" coords="782,2,797,15" href="#" alt="Close" onclick="window.close();">
+<area shape="rect" coords="11,21,37,40" href="#" alt="File" onmouseover="MM_showHideLayers('ol98file','','show')" onmouseout="MM_showHideLayers('ol98file','','hide')">
+<area shape="rect" coords="37,21,65,40" href="#" alt="Edit" onmouseover="MM_showHideLayers('ol98edit','','show')" onmouseout="MM_showHideLayers('ol98edit','','hide')">
+<area shape="rect" coords="65,21,97,40" href="#" alt="View" onmouseover="MM_showHideLayers('ol98view','','show')" onmouseout="MM_showHideLayers('ol98view','','hide')">
+<area shape="rect" coords="97,21,120,40" href="#" alt="Go" onmouseover="MM_showHideLayers('ol98go','','show')" onmouseout="MM_showHideLayers('ol98go','','hide')">
+<area shape="rect" coords="120,21,155,40" href="#" alt="Tools" onmouseover="MM_showHideLayers('ol98tool','','show')" onmouseout="MM_showHideLayers('ol98tool','','hide')">
+<area shape="rect" coords="155,21,200,40" href="#" alt="Actions" onmouseover="MM_showHideLayers('ol98act','','show')" onmouseout="MM_showHideLayers('ol98act','','hide')">
+<area shape="rect" coords="200,21,231,40" href="#" alt="Help" onmouseover="MM_showHideLayers('ol98help','','show')" onmouseout="MM_showHideLayers('ol98help','','hide')">
+<area shape="rect" coords="10,43,46,66" href="#" alt="New Mail Message" onclick="MM_showHideLayers('ol98newmsg','','show')">
+<area shape="rect" coords="530,44,599,66" href="#" alt="Organize" onclick="MM_showHideLayers('ol98orgbut','','show','ol98orgmsglist','','show','ol98orguf','','show')">
+<area shape="rect" coords="4,524,97,545" href="#" alt="My Shortcuts" onclick="MM_showHideLayers('ol98myshort','','show')">
+</map>
+</div>
+
+<div id="ol98myshort" style="z-index: 20; left: 3px; top: 74px; position: absolute;">
+<img src="ol98myshort.png" usemap="#ol98myshort.png" width="96" height="473" border="0" alt="">
+<map name="ol98myshort.png">
+<area shape="rect" coords="1,1,94,22" href="#" alt="Outlook Shortcuts" onclick="MM_showHideLayers('ol98myshort','','hide')">
+</map>
+</div>
+
+<div id="ol98file" style="z-index: 30; left: 11px; top: 40px; position: absolute;" onmouseover="MM_showHideLayers('ol98file','','show')" onmouseout="MM_showHideLayers('ol98file','','hide')">
+<img src="ol98file.png" usemap="#ol98file.png" width="150" height="313" border="0" alt="">
+<map name="ol98file.png">
+<area shape="rect" coords="2,2,147,23" href="#" alt="New" onmouseover="MM_showHideLayers('ol98filenew','','show')" onmouseout="MM_showHideLayers('ol98filenew','','hide')">
+<area shape="rect" coords="2,114,147,140" href="#" alt="Folder" onmouseover="MM_showHideLayers('ol98filefold','','show')" onmouseout="MM_showHideLayers('ol98filefold','','hide')">
+<area shape="rect" coords="2,287,147,310" href="#" alt="Exit" onclick="window.close();">
+</map>
+</div>
+
+<div id="ol98edit" style="z-index: 30; left: 37px; top: 40px; position: absolute;" onmouseover="MM_showHideLayers('ol98edit','','show')" onmouseout="MM_showHideLayers('ol98edit','','hide')">
+<img src="ol98edit.png" width="208" height="303" border="0" alt="">
+</div>
+
+<div id="ol98view" style="z-index: 30; left: 65px; top: 40px; position: absolute;" onmouseover="MM_showHideLayers('ol98view','','show')" onmouseout="MM_showHideLayers('ol98view','','hide')">
+<img src="ol98view.png" usemap="#ol98view.png" width="163" height="188" border="0" alt="">
+<map name="ol98view.png">
+<area shape="rect" coords="2,2,160,25" href="#" alt="Current View" onmouseover="MM_showHideLayers('ol98viewcv','','show')" onmouseout="MM_showHideLayers('ol98viewcv','','hide')">
+</map>
+</div>
+
+<div id="ol98go" style="z-index: 30; left: 97px; top: 40px; position: absolute;" onmouseover="MM_showHideLayers('ol98go','','show')" onmouseout="MM_showHideLayers('ol98go','','hide')">
+<img src="ol98go.png" width="165" height="273" border="0" alt="">
+</div>
+
+<div id="ol98tool" style="z-index: 30; left: 120px; top: 40px; position: absolute;" onmouseover="MM_showHideLayers('ol98tool','','show')" onmouseout="MM_showHideLayers('ol98tool','','hide')">
+<img src="ol98tool.png" usemap="#ol98tool.png" width="207" height="265" border="0" alt="">
+<map name="ol98tool.png">
+<area shape="rect" coords="2,118,204,140" href="#" alt="Organize" onclick="MM_showHideLayers('ol98orgbut','','show','ol98orgmsglist','','show','ol98orguf','','show','ol98tool','','hide')">
+<area shape="rect" coords="2,143,204,166" href="#" alt="Rules Wizard" onclick="MM_showHideLayers('ol98rw','','show','ol98tool','','hide')">
+<area shape="rect" coords="2,220,204,242" href="#" alt="Accounts" onclick="MM_showHideLayers('ol98accall','','show','ol98tool','','hide')">
+<area shape="rect" coords="2,243,204,262" href="#" alt="Options" onclick="MM_showHideLayers('ol98optpref','','show','ol98tool','','hide')">
+</map>
+</div>
+
+<div id="ol98act" style="z-index: 30; left: 155px; top: 40px; position: absolute;" onmouseover="MM_showHideLayers('ol98act','','show')" onmouseout="MM_showHideLayers('ol98act','','hide')">
+<img src="ol98act.png" usemap="#ol98act.png" width="223" height="188" border="0" alt="">
+<map name="ol98act.png">
+<area shape="rect" coords="2,2,220,23" href="#" alt="New Mail Message" onclick="MM_showHideLayers('ol98newmsg','','show','ol98act','','hide')">
+<area shape="rect" coords="2,71,220,92" href="#" alt="Junk E-mail" onmouseover="MM_showHideLayers('ol98actjem','','show')" onmouseout="MM_showHideLayers('ol98actjem','','hide')">
+</map>
+</div>
+
+<div id="ol98help" style="z-index: 30; left: 200px; top: 40px; position: absolute;" onmouseover="MM_showHideLayers('ol98help','','show')" onmouseout="MM_showHideLayers('ol98help','','hide')">
+<img src="ol98help.png" usemap="#ol98help.png" width="183" height="121" border="0" alt="">
+<map name="ol98help.png">
+<area shape="rect" coords="2,95,180,118" href="#" alt="About Microsoft Outlook" onclick="MM_showHideLayers('ol98about','','show','ol98help','','hide')">
+</map>
+</div>
+
+<div id="ol98filenew" style="z-index: 40; left: 158px; top: 40px; position: absolute;" onmouseover="MM_showHideLayers('ol98file','','show','ol98filenew','','show')" onmouseout="MM_showHideLayers('ol98file','','hide','ol98filenew','','hide')">
+<img src="ol98filenew.png" usemap="#ol98filenew.png" width="211" height="312" border="0" alt="">
+<map name="ol98filenew.png">
+<area shape="rect" coords="2,2,208,22" href="#" alt="Mail Message" onclick="MM_showHideLayers('ol98newmsg','','show','ol98file','','hide','ol98filenew','','hide')">
+</map>
+</div>
+
+<div id="ol98filefold" style="z-index: 40; left: 158px; top: 155px; position: absolute;" onmouseover="MM_showHideLayers('ol98file','','show','ol98filefold','','show')" onmouseout="MM_showHideLayers('ol98file','','hide','ol98filefold','','hide')">
+<img src="ol98filefold.png" usemap="#ol98filefold.png" width="190" height="150" border="0" alt="">
+<map name="ol98filefold.png">
+<area shape="rect" coords="2,124,187,147" href="#" alt='Properties for "Inbox"' onclick="MM_showHideLayers('ol98ibpropgen','','show','ol98file','','hide','ol98filefold','','hide')">
+</map>
+</div>
+
+<div id="ol98viewcv" style="z-index: 40; left: 225px; top: 40px; position: absolute;" onmouseover="MM_showHideLayers('ol98view','','show','ol98viewcv','','show')" onmouseout="MM_showHideLayers('ol98view','','hide','ol98viewcv','','hide')">
+<img src="ol98viewcv.png" usemap="#ol98viewcv.png" width="191" height="244" border="0" alt="">
+<map name="ol98viewcv.png">
+<area shape="rect" coords="2,199,188,222" href="#" alt="Customize Current View" onclick="MM_showHideLayers('ol98ccview','','show','ol98view','','hide','ol98viewcv','','hide')">
+</map>
+</div>
+
+<div id="ol98actjem" style="z-index: 40; left: 375px; top: 107px; position: absolute;" onmouseover="MM_showHideLayers('ol98act','','show','ol98actjem','','show')" onmouseout="MM_showHideLayers('ol98act','','hide','ol98actjem','','hide')">
+<img src="ol98actjem.png" width="210" height="44" border="0" alt="">
+</div>
+
+<div id="ol98ibpropgen" style="z-index: 30; left: 215px; top: 45px; position: absolute;">
+<img src="ol98ibpropgen.png" usemap="#ol98ibpropgen.png" width="367" height="484" border="0" alt="">
+<map name="ol98ibpropgen.png">
+<area shape="rect" coords="346,5,361,18" href="#" alt="Close" onclick="MM_showHideLayers('ol98ibpropgen','','hide')">
+<area shape="rect" coords="61,31,130,49" href="#" alt="AutoArchive" onclick="MM_showHideLayers('ol98ibpropaa','','show','ol98ibpropgen','','hide')">
+<area shape="rect" coords="121,451,195,473" href="#" alt="OK" onclick="MM_showHideLayers('ol98ibpropgen','','hide')">
+<area shape="rect" coords="202,451,276,473" href="#" alt="Cancel" onclick="MM_showHideLayers('ol98ibpropgen','','hide')">
+</map>
+</div>
+
+<div id="ol98ibpropaa" style="z-index: 30; left: 215px; top: 45px; position: absolute;">
+<img src="ol98ibpropaa.png" usemap="#ol98ibpropaa.png" width="367" height="484" border="0" alt="">
+<map name="ol98ibpropaa.png">
+<area shape="rect" coords="346,5,361,18" href="#" alt="Close" onclick="MM_showHideLayers('ol98ibpropaa','','hide')">
+<area shape="rect" coords="11,31,58,49" href="#" alt="General" onclick="MM_showHideLayers('ol98ibpropgen','','show','ol98ibpropaa','','hide')">
+<area shape="rect" coords="121,451,195,473" href="#" alt="OK" onclick="MM_showHideLayers('ol98ibpropaa','','hide')">
+<area shape="rect" coords="202,451,276,473" href="#" alt="Cancel" onclick="MM_showHideLayers('ol98ibpropaa','','hide')">
+</map>
+</div>
+
+<div id="ol98ccview" style="z-index: 30; left: 180px; top: 145px; position: absolute;">
+<img src="ol98ccview.png" usemap="#ol98ccview.png" width="441" height="285" border="0" alt="">
+<map name="ol98ccview.png">
+<area shape="rect" coords="420,5,435,18" href="#" alt="Close" onclick="MM_showHideLayers('ol98ccview','','hide')">
+<area shape="rect" coords="24,48,146,70" href="#" alt="Fields" onclick="MM_showHideLayers('ol98ccviewfield','','show')">
+<area shape="rect" coords="24,81,146,103" href="#" alt="Group By" onclick="MM_showHideLayers('ol98ccviewgb','','show')">
+<area shape="rect" coords="24,113,146,135" href="#" alt="Sort" onclick="MM_showHideLayers('ol98ccviewsort','','show')">
+<area shape="rect" coords="24,146,146,168" href="#" alt="Filter" onclick="MM_showHideLayers('ol98ccviewfilt','','show')">
+<area shape="rect" coords="24,178,146,200" href="#" alt="Other Settings" onclick="MM_showHideLayers('ol98ccviewos','','show')">
+<area shape="rect" coords="24,211,146,233" href="#" alt="Automatic Formatting" onclick="MM_showHideLayers('ol98ccviewaf','','show')">
+<area shape="rect" coords="129,250,203,272" href="#" alt="OK" onclick="MM_showHideLayers('ol98ccview','','hide')">
+<area shape="rect" coords="213,250,287,272" href="#" alt="Cancel" onclick="MM_showHideLayers('ol98ccview','','hide')">
+</map>
+</div>
+
+<div id="ol98ccviewfield" style="z-index: 40; left: 140px; top: 125px; position: absolute;">
+<img src="ol98ccviewfield.png" usemap="#ol98ccviewfield.png" width="522" height="322" border="0" alt="">
+<map name="ol98ccviewfield.png">
+<area shape="rect" coords="501,5,516,18" href="#" alt="Close" onclick="MM_showHideLayers('ol98ccviewfield','','hide')">
+<area shape="rect" coords="434,50,508,72" href="#" alt="OK" onclick="MM_showHideLayers('ol98ccviewfield','','hide')">
+<area shape="rect" coords="434,79,508,101" href="#" alt="Cancel" onclick="MM_showHideLayers('ol98ccviewfield','','hide')">
+</map>
+</div>
+
+<div id="ol98ccviewgb" style="z-index: 40; left: 195px; top: 105px; position: absolute;">
+<img src="ol98ccviewgb.png" usemap="#ol98ccviewgb.png" width="407" height="361" border="0" alt="">
+<map name="ol98ccviewgb.png">
+<area shape="rect" coords="386,5,401,18" href="#" alt="Close" onclick="MM_showHideLayers('ol98ccviewgb','','hide')">
+<area shape="rect" coords="318,35,392,57" href="#" alt="OK" onclick="MM_showHideLayers('ol98ccviewgb','','hide')">
+<area shape="rect" coords="318,63,392,85" href="#" alt="Cancel" onclick="MM_showHideLayers('ol98ccviewgb','','hide')">
+</map>
+</div>
+
+<div id="ol98ccviewsort" style="z-index: 40; left: 200px; top: 115px; position: absolute;">
+<img src="ol98ccviewsort.png" usemap="#ol98ccviewsort.png" width="396" height="344" border="0" alt="">
+<map name="ol98ccviewsort.png">
+<area shape="rect" coords="375,5,390,18" href="#" alt="Close" onclick="MM_showHideLayers('ol98ccviewsort','','hide')">
+<area shape="rect" coords="308,35,382,57" href="#" alt="OK" onclick="MM_showHideLayers('ol98ccviewsort','','hide')">
+<area shape="rect" coords="308,63,382,85" href="#" alt="Cancel" onclick="MM_showHideLayers('ol98ccviewsort','','hide')">
+</map>
+</div>
+
+<div id="ol98ccviewfilt" style="z-index: 40; left: 190px; top: 130px; position: absolute;">
+<img src="ol98ccviewfilt.png" usemap="#ol98ccviewfilt.png" width="419" height="313" border="0" alt="">
+<map name="ol98ccviewfilt.png">
+<area shape="rect" coords="398,5,413,18" href="#" alt="Close" onclick="MM_showHideLayers('ol98ccviewfilt','','hide')">
+<area shape="rect" coords="173,280,247,302" href="#" alt="OK" onclick="MM_showHideLayers('ol98ccviewfilt','','hide')">
+<area shape="rect" coords="254,280,328,302" href="#" alt="Cancel" onclick="MM_showHideLayers('ol98ccviewfilt','','hide')">
+</map>
+</div>
+
+<div id="ol98ccviewos" style="z-index: 40; left: 155px; top: 80px; position: absolute;">
+<img src="ol98ccviewos.png" usemap="#ol98ccviewos.png" width="491" height="417" border="0" alt="">
+<map name="ol98ccviewos.png">
+<area shape="rect" coords="470,5,485,18" href="#" alt="Close" onclick="MM_showHideLayers('ol98ccviewos','','hide')">
+<area shape="rect" coords="402,35,476,57" href="#" alt="OK" onclick="MM_showHideLayers('ol98ccviewos','','hide')">
+<area shape="rect" coords="402,64,476,86" href="#" alt="Cancel" onclick="MM_showHideLayers('ol98ccviewos','','hide')">
+</map>
+</div>
+
+<div id="ol98ccviewaf" style="z-index: 40; left: 200px; top: 115px; position: absolute;">
+<img src="ol98ccviewaf.png" usemap="#ol98ccviewaf.png" width="347" height="334" border="0" alt="">
+<map name="ol98ccviewaf.png">
+<area shape="rect" coords="326,5,341,18" href="#" alt="Close" onclick="MM_showHideLayers('ol98ccviewaf','','hide')">
+<area shape="rect" coords="95,295,169,317" href="#" alt="OK" onclick="MM_showHideLayers('ol98ccviewaf','','hide')">
+<area shape="rect" coords="176,295,250,317" href="#" alt="Cancel" onclick="MM_showHideLayers('ol98ccviewaf','','hide')">
+</map>
+</div>
+
+<div id="ol98newmsg" style="z-index: 30; left: 105px; top: 95px; position: absolute;">
+<img src="ol98newmsg.png" usemap="#ol98newmsg.png" width="589" height="386" border="0" alt="">
+<map name="ol98newmsg.png">
+<area shape="rect" coords="567,6,582,19" href="#" alt="Close" onclick="MM_showHideLayers('ol98newmsg','','hide')">
+<area shape="rect" coords="15,25,41,44" href="#" alt="File" onmouseover="MM_showHideLayers('ol98newmsgfile','','show')" onmouseout="MM_showHideLayers('ol98newmsgfile','','hide')">
+<area shape="rect" coords="41,25,69,44" href="#" alt="Edit" onmouseover="MM_showHideLayers('ol98newmsgedit','','show')" onmouseout="MM_showHideLayers('ol98newmsgedit','','hide')">
+<area shape="rect" coords="69,25,101,44" href="#" alt="View" onmouseover="MM_showHideLayers('ol98newmsgview','','show')" onmouseout="MM_showHideLayers('ol98newmsgview','','hide')">
+<area shape="rect" coords="101,25,140,44" href="#" alt="Insert" onmouseover="MM_showHideLayers('ol98newmsgins','','show')" onmouseout="MM_showHideLayers('ol98newmsgins','','hide')">
+<area shape="rect" coords="140,25,184,44" href="#" alt="Format" onmouseover="MM_showHideLayers('ol98newmsgform','','show')" onmouseout="MM_showHideLayers('ol98newmsgform','','hide')">
+<area shape="rect" coords="184,25,219,44" href="#" alt="Tools" onmouseover="MM_showHideLayers('ol98newmsgtool','','show')" onmouseout="MM_showHideLayers('ol98newmsgtool','','hide')">
+<area shape="rect" coords="219,25,264,44" href="#" alt="Actions" onmouseover="MM_showHideLayers('ol98newmsgact','','show')" onmouseout="MM_showHideLayers('ol98newmsgact','','hide')">
+<area shape="rect" coords="264,25,295,44" href="#" alt="Help" onmouseover="MM_showHideLayers('ol98newmsghelp','','show')" onmouseout="MM_showHideLayers('ol98newmsghelp','','hide')">
+<area shape="rect" coords="14,47,66,70" href="#" alt="Send" onclick="MM_showHideLayers('ol98newmsg','','hide')">
+<area shape="rect" coords="358,47,433,70" href="#" alt="Options" onclick="MM_showHideLayers('ol98newmsgopt','','show')">
+</map>
+</div>
+
+<div id="ol98newmsgfile" style="z-index: 40; left: 120px; top: 139px; position: absolute;" onmouseover="MM_showHideLayers('ol98newmsgfile','','show')" onmouseout="MM_showHideLayers('ol98newmsgfile','','hide')">
+<img src="ol98newmsgfile.png" usemap="#ol98newmsgfile.png" width="208" height="332" border="0" alt="">
+<map name="ol98newmsgfile.png">
+<area shape="rect" coords="2,28,205,54" href="#" alt="Send" onclick="MM_showHideLayers('ol98newmsg','','hide','ol98newmsgfile','','hide')">
+<area shape="rect" coords="2,306,205,329" href="#" alt="Close" onclick="MM_showHideLayers('ol98newmsg','','hide','ol98newmsgfile','','hide')">
+</map>
+</div>
+
+<div id="ol98newmsgedit" style="z-index: 40; left: 146px; top: 139px; position: absolute;" onmouseover="MM_showHideLayers('ol98newmsgedit','','show')" onmouseout="MM_showHideLayers('ol98newmsgedit','','hide')">
+<img src="ol98newmsgedit.png" width="151" height="293" border="0" alt="">
+</div>
+
+<div id="ol98newmsgview" style="z-index: 40; left: 174px; top: 139px; position: absolute;" onmouseover="MM_showHideLayers('ol98newmsgview','','show')" onmouseout="MM_showHideLayers('ol98newmsgview','','hide')">
+<img src="ol98newmsgview.png" usemap="#ol98newmsgview.png" width="130" height="198" border="0" alt="">
+<map name="ol98newmsgview.png">
+<area shape="rect" coords="2,143,127,169" href="#" alt="Options" onclick="MM_showHideLayers('ol98newmsgopt','','show','ol98newmsgview','','hide')">
+</map>
+</div>
+
+<div id="ol98newmsgins" style="z-index: 40; left: 206px; top: 139px; position: absolute;" onmouseover="MM_showHideLayers('ol98newmsgins','','show')" onmouseout="MM_showHideLayers('ol98newmsgins','','hide')">
+<img src="ol98newmsgins.png" width="136" height="159" border="0" alt="">
+</div>
+
+<div id="ol98newmsgform" style="z-index: 40; left: 245px; top: 139px; position: absolute;" onmouseover="MM_showHideLayers('ol98newmsgform','','show')" onmouseout="MM_showHideLayers('ol98newmsgform','','hide')">
+<img src="ol98newmsgform.png" width="202" height="198" border="0" alt="">
+</div>
+
+<div id="ol98newmsgtool" style="z-index: 40; left: 289px; top: 139px; position: absolute;" onmouseover="MM_showHideLayers('ol98newmsgtool','','show')" onmouseout="MM_showHideLayers('ol98newmsgtool','','hide')">
+<img src="ol98newmsgtool.png" width="201" height="102" border="0" alt="">
+</div>
+
+<div id="ol98newmsgact" style="z-index: 40; left: 324px; top: 139px; position: absolute;" onmouseover="MM_showHideLayers('ol98newmsgact','','show')" onmouseout="MM_showHideLayers('ol98newmsgact','','hide')">
+<img src="ol98newmsgact.png" width="223" height="188" border="0" alt="">
+</div>
+
+<div id="ol98newmsghelp" style="z-index: 40; left: 369px; top: 139px; position: absolute;" onmouseover="MM_showHideLayers('ol98newmsghelp','','show')" onmouseout="MM_showHideLayers('ol98newmsghelp','','hide')">
+<img src="ol98newmsghelp.png" width="183" height="121" border="0" alt="">
+</div>
+
+<div id="ol98newmsgopt" style="z-index: 40; left: 125px; top: 120px; position: absolute;">
+<img src="ol98newmsgopt.png" usemap="#ol98newmsgopt.png" width="552" height="331" border="0" alt="">
+<map name="ol98newmsgopt.png">
+<area shape="rect" coords="531,5,546,18" href="#" alt="Close" onclick="MM_showHideLayers('ol98newmsgopt','','hide')">
+<area shape="rect" coords="447,295,536,315" href="#" alt="Close" onclick="MM_showHideLayers('ol98newmsgopt','','hide')">
+</map>
+</div>
+
+<div id="ol98orgbut" style="z-index: 20; left: 530px; top: 44px; position: absolute;">
+<img src="ol98orgbut.png" usemap="#ol98orgbut.png" width="69" height="22" border="0" alt="">
+<map name="ol98orgbut.png">
+<area shape="rect" coords="0,0,68,21" href="#" alt="Close Organize" onclick="MM_showHideLayers('ol98orgbut','','hide','ol98orgmsglist','','hide','ol98orguf','','hide','ol98orguc','','hide','ol98orguv','','hide','ol98orgjem','','hide','ol98orgjemch','','hide')">
+</map>
+</div>
+
+<div id="ol98orgmsglist" style="z-index: 20; left: 103px; top: 281px; position: absolute;">
+<img src="ol98orgmsglist.png" width="694" height="266" border="0" alt="">
+</div>
+
+<div id="ol98orguf" style="z-index: 20; left: 103px; top: 101px; position: absolute;">
+<img src="ol98orguf.png" usemap="#ol98orguf.png" width="694" height="180" border="0" alt="">
+<map name="ol98orguf.png">
+<area shape="rect" coords="542,4,650,24" href="#" alt="Rules Wizard" onclick="MM_showHideLayers('ol98rw','','show')">
+<area shape="rect" coords="653,4,675,24" href="#" alt="Close" onclick="MM_showHideLayers('ol98orgbut','','hide','ol98orgmsglist','','hide','ol98orguf','','hide')">
+<area shape="rect" coords="6,85,133,110" href="#" alt="Using Colors" onclick="MM_showHideLayers('ol98orguc','','show','ol98orguf','','hide')">
+<area shape="rect" coords="6,112,133,137" href="#" alt="Using Views" onclick="MM_showHideLayers('ol98orguv','','show','ol98orguf','','hide')">
+<area shape="rect" coords="6,139,133,164" href="#" alt="Junk E-Mail" onclick="MM_showHideLayers('ol98orgjem','','show','ol98orguf','','hide')">
+</map>
+</div>
+
+<div id="ol98orguc" style="z-index: 20; left: 103px; top: 101px; position: absolute;">
+<img src="ol98orguc.png" usemap="#ol98orguc.png" width="694" height="180" border="0" alt="">
+<map name="ol98orguc.png">
+<area shape="rect" coords="492,4,650,24" href="#" alt="Automatic Formatting" onclick="MM_showHideLayers('ol98ccviewaf','','show')">
+<area shape="rect" coords="653,4,675,24" href="#" alt="Close" onclick="MM_showHideLayers('ol98orgbut','','hide','ol98orgmsglist','','hide','ol98orguc','','hide')">
+<area shape="rect" coords="6,59,133,84" href="#" alt="Using Folders" onclick="MM_showHideLayers('ol98orguf','','show','ol98orguc','','hide')">
+<area shape="rect" coords="6,112,133,137" href="#" alt="Using Views" onclick="MM_showHideLayers('ol98orguv','','show','ol98orguc','','hide')">
+<area shape="rect" coords="6,139,133,164" href="#" alt="Junk E-Mail" onclick="MM_showHideLayers('ol98orgjem','','show','ol98orguc','','hide')">
+</map>
+</div>
+
+<div id="ol98orguv" style="z-index: 20; left: 103px; top: 101px; position: absolute;">
+<img src="ol98orguv.png" usemap="#ol98orguv.png" width="694" height="180" border="0" alt="">
+<map name="ol98orguv.png">
+<area shape="rect" coords="475,4,650,24" href="#" alt="Customize Current View" onclick="MM_showHideLayers('ol98ccview','','show')">
+<area shape="rect" coords="653,4,675,24" href="#" alt="Close" onclick="MM_showHideLayers('ol98orgbut','','hide','ol98orgmsglist','','hide','ol98orguv','','hide')">
+<area shape="rect" coords="6,59,133,84" href="#" alt="Using Folders" onclick="MM_showHideLayers('ol98orguf','','show','ol98orguv','','hide')">
+<area shape="rect" coords="6,85,133,110" href="#" alt="Using Colors" onclick="MM_showHideLayers('ol98orguc','','show','ol98orguv','','hide')">
+<area shape="rect" coords="6,139,133,164" href="#" alt="Junk E-Mail" onclick="MM_showHideLayers('ol98orgjem','','show','ol98orguv','','hide')">
+</map>
+</div>
+
+<div id="ol98orgjem" style="z-index: 20; left: 103px; top: 101px; position: absolute;">
+<img src="ol98orgjem.png" usemap="#ol98orgjem.png" width="694" height="180" border="0" alt="">
+<map name="ol98orgjem.png">
+<area shape="rect" coords="653,4,675,24" href="#" alt="Close" onclick="MM_showHideLayers('ol98orgbut','','hide','ol98orgmsglist','','hide','ol98orgjem','','hide')">
+<area shape="rect" coords="6,59,133,84" href="#" alt="Using Folders" onclick="MM_showHideLayers('ol98orguf','','show','ol98orgjem','','hide')">
+<area shape="rect" coords="6,85,133,110" href="#" alt="Using Colors" onclick="MM_showHideLayers('ol98orguc','','show','ol98orgjem','','hide')">
+<area shape="rect" coords="6,112,133,137" href="#" alt="Using Views" onclick="MM_showHideLayers('ol98orguv','','show','ol98orgjem','','hide')">
+<area shape="rect" coords="413,155,474,172" href="#" alt="Click Here" onclick="MM_showHideLayers('ol98orgjemch','','show','ol98orgjem','','hide')">
+</map>
+</div>
+
+<div id="ol98orgjemch" style="z-index: 20; left: 103px; top: 101px; position: absolute;">
+<img src="ol98orgjemch.png" usemap="#ol98orgjemch.png" width="694" height="180" border="0" alt="">
+<map name="ol98orgjemch.png">
+<area shape="rect" coords="653,4,675,24" href="#" alt="Close" onclick="MM_showHideLayers('ol98orgbut','','hide','ol98orgmsglist','','hide','ol98orgjemch','','hide')">
+<area shape="rect" coords="6,59,133,84" href="#" alt="Using Folders" onclick="MM_showHideLayers('ol98orguf','','show','ol98orgjemch','','hide')">
+<area shape="rect" coords="6,85,133,110" href="#" alt="Using Colors" onclick="MM_showHideLayers('ol98orguc','','show','ol98orgjemch','','hide')">
+<area shape="rect" coords="6,112,133,137" href="#" alt="Using Views" onclick="MM_showHideLayers('ol98orguv','','show','ol98orgjemch','','hide')">
+<area shape="rect" coords="470,91,586,108" href="#" alt="Edit Junk Senders" onclick="MM_showHideLayers('ol98edjs','','show')">
+<area shape="rect" coords="600,91,664,108" href="#" alt="Edit Adult Content Senders" onclick="MM_showHideLayers('ol98edacs','','show')">
+<area shape="rect" coords="171,110,275,127" href="#" alt="Edit Adult Content Senders" onclick="MM_showHideLayers('ol98edacs','','show')">
+<area shape="rect" coords="171,158,300,175" href="#" alt="Back to Junk E-Mail" onclick="MM_showHideLayers('ol98orgjem','','show','ol98orgjemch','','hide')">
+</map>
+</div>
+
+<div id="ol98edjs" style="z-index: 30; left: 260px; top: 170px; position: absolute;">
+<img src="ol98edjs.png" usemap="#ol98edjs.png" width="285" height="228" border="0" alt="">
+<map name="ol98edjs.png">
+<area shape="rect" coords="264,5,279,18" href="#" alt="Close" onclick="MM_showHideLayers('ol98edjs','','hide')">
+<area shape="rect" coords="197,33,271,55" href="#" alt="OK" onclick="MM_showHideLayers('ol98edjs','','hide')">
+<area shape="rect" coords="197,59,271,81" href="#" alt="Cancel" onclick="MM_showHideLayers('ol98edjs','','hide')">
+<area shape="rect" coords="197,85,271,107" href="#" alt="Add" onclick="MM_showHideLayers('ol98edjsadd','','show')">
+<area shape="rect" coords="197,111,271,133" href="#" alt="Edit" onclick="MM_showHideLayers('ol98edjsadd','','show')">
+</map>
+</div>
+
+<div id="ol98edjsadd" style="z-index: 40; left: 255px; top: 205px; position: absolute;">
+<img src="ol98edjsadd.png" usemap="#ol98edjsadd.png" width="287" height="160" border="0" alt="">
+<map name="ol98edjsadd.png">
+<area shape="rect" coords="266,5,281,18" href="#" alt="Close" onclick="MM_showHideLayers('ol98edjsadd','','hide')">
+<area shape="rect" coords="59,105,133,127" href="#" alt="OK" onclick="MM_showHideLayers('ol98edjsadd','','hide')">
+<area shape="rect" coords="143,105,217,127" href="#" alt="Cancel" onclick="MM_showHideLayers('ol98edjsadd','','hide')">
+</map>
+</div>
+
+<div id="ol98edacs" style="z-index: 30; left: 260px; top: 170px; position: absolute;">
+<img src="ol98edacs.png" usemap="#ol98edacs.png" width="285" height="228" border="0" alt="">
+<map name="ol98edacs.png">
+<area shape="rect" coords="264,5,279,18" href="#" alt="Close" onclick="MM_showHideLayers('ol98edacs','','hide')">
+<area shape="rect" coords="197,33,271,55" href="#" alt="OK" onclick="MM_showHideLayers('ol98edacs','','hide')">
+<area shape="rect" coords="197,59,271,81" href="#" alt="Cancel" onclick="MM_showHideLayers('ol98edacs','','hide')">
+<area shape="rect" coords="197,85,271,107" href="#" alt="Add" onclick="MM_showHideLayers('ol98edacsadd','','show')">
+<area shape="rect" coords="197,111,271,133" href="#" alt="Edit" onclick="MM_showHideLayers('ol98edacsadd','','show')">
+</map>
+</div>
+
+<div id="ol98edacsadd" style="z-index: 40; left: 255px; top: 205px; position: absolute;">
+<img src="ol98edacsadd.png" usemap="#ol98edacsadd.png" width="287" height="160" border="0" alt="">
+<map name="ol98edacsadd.png">
+<area shape="rect" coords="266,5,281,18" href="#" alt="Close" onclick="MM_showHideLayers('ol98edacsadd','','hide')">
+<area shape="rect" coords="59,105,133,127" href="#" alt="OK" onclick="MM_showHideLayers('ol98edacsadd','','hide')">
+<area shape="rect" coords="143,105,217,127" href="#" alt="Cancel" onclick="MM_showHideLayers('ol98edacsadd','','hide')">
+</map>
+</div>
+
+<div id="ol98rw" style="z-index: 30; left: 195px; top: 85px; position: absolute;">
+<img src="ol98rw.png" usemap="#ol98rw.png" width="410" height="400" border="0" alt="">
+<map name="ol98rw.png">
+<area shape="rect" coords="389,5,404,18" href="#" alt="Close" onclick="MM_showHideLayers('ol98rw','','hide')">
+<area shape="rect" coords="311,53,397,75" href="#" alt="New" onclick="MM_showHideLayers('ol98rwnewtype','','show')">
+<area shape="rect" coords="311,105,397,127" href="#" alt="Modify" onclick="MM_showHideLayers('ol98rwnewtype','','show')">
+<area shape="rect" coords="87,368,161,390" href="#" alt="OK" onclick="MM_showHideLayers('ol98rw','','hide')">
+<area shape="rect" coords="168,368,242,390" href="#" alt="Cancel" onclick="MM_showHideLayers('ol98rw','','hide')">
+<area shape="rect" coords="249,368,323,390" href="#" alt="Options" onclick="MM_showHideLayers('ol98rwopt','','show')">
+</map>
+</div>
+
+<div id="ol98rwnewtype" style="z-index: 40; left: 180px; top: 105px; position: absolute;">
+<img src="ol98rwnewtype.png" usemap="#ol98rwnewtype.png" width="443" height="363" border="0" alt="">
+<map name="ol98rwnewtype.png">
+<area shape="rect" coords="422,5,437,18" href="#" alt="Close" onclick="MM_showHideLayers('ol98rwnewtype','','hide','ol98rwnewtype2','','hide')">
+<area shape="rect" coords="411,137,426,152" href="#" alt="Down" onclick="MM_showHideLayers('ol98rwnewtype2','','show')">
+<area shape="rect" coords="110,327,184,349" href="#" alt="Cancel" onclick="MM_showHideLayers('ol98rwnewtype','','hide','ol98rwnewtype2','','hide')">
+<area shape="rect" coords="270,327,344,349" href="#" alt="Next" onclick="MM_showHideLayers('ol98rwnewcond','','show','ol98rwnewtype','','hide','ol98rwnewtype2','','hide')">
+</map>
+</div>
+
+<div id="ol98rwnewtype2" style="z-index: 50; left: 325px; top: 154px; position: absolute;">
+<img src="ol98rwnewtype2.png" usemap="#ol98rwnewtype2.png" width="284" height="106" border="0" alt="">
+<map name="ol98rwnewtype2.png">
+<area shape="rect" coords="266,2,281,17" href="#" alt="Up" onclick="MM_showHideLayers('ol98rwnewtype2','','hide')">
+</map>
+</div>
+
+<div id="ol98rwnewcond" style="z-index: 40; left: 180px; top: 105px; position: absolute;">
+<img src="ol98rwnewcond.png" usemap="#ol98rwnewcond.png" width="443" height="363" border="0" alt="">
+<map name="ol98rwnewcond.png">
+<area shape="rect" coords="422,5,437,18" href="#" alt="Close" onclick="MM_showHideLayers('ol98rwnewcond','','hide','ol98rwnewcond2','','hide','ol98rwnewcond3','','hide','ol98rwnewcond4','','hide','ol98rwnewcond5','','hide')">
+<area shape="rect" coords="411,119,426,134" href="#" alt="Down" onclick="MM_showHideLayers('ol98rwnewcond2','','show')">
+<area shape="rect" coords="110,327,184,349" href="#" alt="Cancel" onclick="MM_showHideLayers('ol98rwnewcond','','hide','ol98rwnewcond2','','hide','ol98rwnewcond3','','hide','ol98rwnewcond4','','hide','ol98rwnewcond5','','hide')">
+<area shape="rect" coords="195,327,269,349" href="#" alt="Back" onclick="MM_showHideLayers('ol98rwnewtype','','show','ol98rwnewcond','','hide','ol98rwnewcond2','','hide','ol98rwnewcond3','','hide','ol98rwnewcond4','','hide','ol98rwnewcond5','','hide')">
+<area shape="rect" coords="270,327,344,349" href="#" alt="Next" onclick="MM_showHideLayers('ol98rwnewdo','','show','ol98rwnewcond','','hide','ol98rwnewcond2','','hide','ol98rwnewcond3','','hide','ol98rwnewcond4','','hide','ol98rwnewcond5','','hide')">
+</map>
+</div>
+
+<div id="ol98rwnewcond2" style="z-index: 50; left: 325px; top: 154px; position: absolute;">
+<img src="ol98rwnewcond2.png" usemap="#ol98rwnewcond2.png" width="284" height="88" border="0" alt="">
+<map name="ol98rwnewcond2.png">
+<area shape="rect" coords="266,2,281,17" href="#" alt="Up" onclick="MM_showHideLayers('ol98rwnewcond2','','hide')">
+<area shape="rect" coords="266,70,281,85" href="#" alt="Down" onclick="MM_showHideLayers('ol98rwnewcond3','','show','ol98rwnewcond2','','hide')">
+</map>
+</div>
+
+<div id="ol98rwnewcond3" style="z-index: 50; left: 325px; top: 154px; position: absolute;">
+<img src="ol98rwnewcond3.png" usemap="#ol98rwnewcond3.png" width="284" height="88" border="0" alt="">
+<map name="ol98rwnewcond3.png">
+<area shape="rect" coords="266,2,281,17" href="#" alt="Up" onclick="MM_showHideLayers('ol98rwnewcond2','','show','ol98rwnewcond3','','hide')">
+<area shape="rect" coords="266,70,281,85" href="#" alt="Down" onclick="MM_showHideLayers('ol98rwnewcond4','','show','ol98rwnewcond3','','hide')">
+</map>
+</div>
+
+<div id="ol98rwnewcond4" style="z-index: 50; left: 325px; top: 154px; position: absolute;">
+<img src="ol98rwnewcond4.png" usemap="#ol98rwnewcond4.png" width="284" height="88" border="0" alt="">
+<map name="ol98rwnewcond4.png">
+<area shape="rect" coords="266,2,281,17" href="#" alt="Up" onclick="MM_showHideLayers('ol98rwnewcond3','','show','ol98rwnewcond4','','hide')">
+<area shape="rect" coords="266,70,281,85" href="#" alt="Down" onclick="MM_showHideLayers('ol98rwnewcond5','','show','ol98rwnewcond4','','hide')">
+</map>
+</div>
+
+<div id="ol98rwnewcond5" style="z-index: 50; left: 325px; top: 154px; position: absolute;">
+<img src="ol98rwnewcond5.png" usemap="#ol98rwnewcond5.png" width="284" height="88" border="0" alt="">
+<map name="ol98rwnewcond5.png">
+<area shape="rect" coords="266,2,281,17" href="#" alt="Up" onclick="MM_showHideLayers('ol98rwnewcond4','','show','ol98rwnewcond5','','hide')">
+</map>
+</div>
+
+<div id="ol98rwnewdo" style="z-index: 40; left: 180px; top: 105px; position: absolute;">
+<img src="ol98rwnewdo.png" usemap="#ol98rwnewdo.png" width="443" height="363" border="0" alt="">
+<map name="ol98rwnewdo.png">
+<area shape="rect" coords="422,5,437,18" href="#" alt="Close" onclick="MM_showHideLayers('ol98rwnewdo','','hide','ol98rwnewdo2','','hide','ol98rwnewdo3','','hide')">
+<area shape="rect" coords="411,119,426,134" href="#" alt="Down" onclick="MM_showHideLayers('ol98rwnewdo2','','show')">
+<area shape="rect" coords="110,327,184,349" href="#" alt="Cancel" onclick="MM_showHideLayers('ol98rwnewdo','','hide','ol98rwnewdo2','','hide','ol98rwnewdo3','','hide')">
+<area shape="rect" coords="195,327,269,349" href="#" alt="Back" onclick="MM_showHideLayers('ol98rwnewcond','','show','ol98rwnewdo','','hide','ol98rwnewdo2','','hide','ol98rwnewdo3','','hide')">
+<area shape="rect" coords="270,327,344,349" href="#" alt="Next" onclick="MM_showHideLayers('ol98rwnewex','','show','ol98rwnewdo','','hide','ol98rwnewdo2','','hide','ol98rwnewdo3','','hide')">
+</map>
+</div>
+
+<div id="ol98rwnewdo2" style="z-index: 50; left: 325px; top: 154px; position: absolute;">
+<img src="ol98rwnewdo2.png" usemap="#ol98rwnewdo2.png" width="284" height="88" border="0" alt="">
+<map name="ol98rwnewdo2.png">
+<area shape="rect" coords="266,2,281,17" href="#" alt="Up" onclick="MM_showHideLayers('ol98rwnewdo2','','hide')">
+<area shape="rect" coords="266,70,281,85" href="#" alt="Down" onclick="MM_showHideLayers('ol98rwnewdo3','','show','ol98rwnewdo2','','hide')">
+</map>
+</div>
+
+<div id="ol98rwnewdo3" style="z-index: 50; left: 325px; top: 154px; position: absolute;">
+<img src="ol98rwnewdo3.png" usemap="#ol98rwnewdo3.png" width="284" height="88" border="0" alt="">
+<map name="ol98rwnewdo3.png">
+<area shape="rect" coords="266,2,281,17" href="#" alt="Up" onclick="MM_showHideLayers('ol98rwnewdo2','','show','ol98rwnewdo3','','hide')">
+</map>
+</div>
+
+<div id="ol98rwnewex" style="z-index: 40; left: 180px; top: 105px; position: absolute;">
+<img src="ol98rwnewex.png" usemap="#ol98rwnewex.png" width="443" height="363" border="0" alt="">
+<map name="ol98rwnewex.png">
+<area shape="rect" coords="422,5,437,18" href="#" alt="Close" onclick="MM_showHideLayers('ol98rwnewex','','hide','ol98rwnewex2','','hide','ol98rwnewex3','','hide','ol98rwnewex4','','hide','ol98rwnewex5','','hide')">
+<area shape="rect" coords="411,119,426,134" href="#" alt="Down" onclick="MM_showHideLayers('ol98rwnewex2','','show')">
+<area shape="rect" coords="110,327,184,349" href="#" alt="Cancel" onclick="MM_showHideLayers('ol98rwnewex','','hide','ol98rwnewex2','','hide','ol98rwnewex3','','hide','ol98rwnewex4','','hide','ol98rwnewex5','','hide')">
+<area shape="rect" coords="195,327,269,349" href="#" alt="Back" onclick="MM_showHideLayers('ol98rwnewdo','','show','ol98rwnewex','','hide','ol98rwnewex2','','hide','ol98rwnewex3','','hide','ol98rwnewex4','','hide','ol98rwnewex5','','hide')">
+<area shape="rect" coords="270,327,344,349" href="#" alt="Next" onclick="MM_showHideLayers('ol98rwnewdone','','show','ol98rwnewex','','hide','ol98rwnewex2','','hide','ol98rwnewex3','','hide','ol98rwnewex4','','hide','ol98rwnewex5','','hide')">
+</map>
+</div>
+
+<div id="ol98rwnewex2" style="z-index: 50; left: 325px; top: 154px; position: absolute;">
+<img src="ol98rwnewex2.png" usemap="#ol98rwnewex2.png" width="284" height="88" border="0" alt="">
+<map name="ol98rwnewex2.png">
+<area shape="rect" coords="266,2,281,17" href="#" alt="Up" onclick="MM_showHideLayers('ol98rwnewex2','','hide')">
+<area shape="rect" coords="266,70,281,85" href="#" alt="Down" onclick="MM_showHideLayers('ol98rwnewex3','','show','ol98rwnewex2','','hide')">
+</map>
+</div>
+
+<div id="ol98rwnewex3" style="z-index: 50; left: 325px; top: 154px; position: absolute;">
+<img src="ol98rwnewex3.png" usemap="#ol98rwnewex3.png" width="284" height="88" border="0" alt="">
+<map name="ol98rwnewex3.png">
+<area shape="rect" coords="266,2,281,17" href="#" alt="Up" onclick="MM_showHideLayers('ol98rwnewex2','','show','ol98rwnewex3','','hide')">
+<area shape="rect" coords="266,70,281,85" href="#" alt="Down" onclick="MM_showHideLayers('ol98rwnewex4','','show','ol98rwnewex3','','hide')">
+</map>
+</div>
+
+<div id="ol98rwnewex4" style="z-index: 50; left: 325px; top: 154px; position: absolute;">
+<img src="ol98rwnewex4.png" usemap="#ol98rwnewex4.png" width="284" height="88" border="0" alt="">
+<map name="ol98rwnewex4.png">
+<area shape="rect" coords="266,2,281,17" href="#" alt="Up" onclick="MM_showHideLayers('ol98rwnewex3','','show','ol98rwnewex4','','hide')">
+<area shape="rect" coords="266,70,281,85" href="#" alt="Down" onclick="MM_showHideLayers('ol98rwnewex5','','show','ol98rwnewex4','','hide')">
+</map>
+</div>
+
+<div id="ol98rwnewex5" style="z-index: 50; left: 325px; top: 154px; position: absolute;">
+<img src="ol98rwnewex5.png" usemap="#ol98rwnewex5.png" width="284" height="88" border="0" alt="">
+<map name="ol98rwnewex5.png">
+<area shape="rect" coords="266,2,281,17" href="#" alt="Up" onclick="MM_showHideLayers('ol98rwnewex4','','show','ol98rwnewex5','','hide')">
+</map>
+</div>
+
+<div id="ol98rwnewdone" style="z-index: 40; left: 180px; top: 105px; position: absolute;">
+<img src="ol98rwnewdone.png" usemap="#ol98rwnewdone.png" width="443" height="363" border="0" alt="">
+<map name="ol98rwnewdone.png">
+<area shape="rect" coords="422,5,437,18" href="#" alt="Close" onclick="MM_showHideLayers('ol98rwnewdone','','hide')">
+<area shape="rect" coords="110,327,184,349" href="#" alt="Cancel" onclick="MM_showHideLayers('ol98rwnewdone','','hide')">
+<area shape="rect" coords="195,327,269,349" href="#" alt="Back" onclick="MM_showHideLayers('ol98rwnewex','','show','ol98rwnewdone','','hide')">
+<area shape="rect" coords="355,327,429,349" href="#" alt="Finish" onclick="MM_showHideLayers('ol98rwnewdone','','hide')">
+</map>
+</div>
+
+<div id="ol98rwopt" style="z-index: 40; left: 245px; top: 225px; position: absolute;">
+<img src="ol98rwopt.png" usemap="#ol98rwopt.png" width="314" height="127" border="0" alt="">
+<map name="ol98rwopt.png">
+<area shape="rect" coords="293,5,308,18" href="#" alt="Close" onclick="MM_showHideLayers('ol98rwopt','','hide')">
+<area shape="rect" coords="224,38,298,60" href="#" alt="OK" onclick="MM_showHideLayers('ol98rwopt','','hide')">
+<area shape="rect" coords="224,64,298,86" href="#" alt="Cancel" onclick="MM_showHideLayers('ol98rwopt','','hide')">
+</map>
+</div>
+
+<div id="ol98accall" style="z-index: 40; left: 150px; top: 130px; position: absolute;">
+<img src="ol98accall.png" usemap="#ol98accall.png" width="503" height="308" border="0" alt="">
+<map name="ol98accall.png">
+<area shape="rect" coords="482,5,497,18" href="#" alt="Close" onclick="MM_showHideLayers('ol98accall','','hide')">
+<area shape="rect" coords="59,35,99,53" href="#" alt="Mail" onclick="MM_showHideLayers('ol98accmail','','show','ol98accall','','hide')">
+<area shape="rect" coords="100,35,192,53" href="#" alt="Directory Service" onclick="MM_showHideLayers('ol98accds','','show','ol98accall','','hide')">
+<area shape="rect" coords="395,33,489,55" href="#" alt="Add" onclick="MM_showHideLayers('ol98accadd','','show')">
+<area shape="rect" coords="395,271,489,293" href="#" alt="Close" onclick="MM_showHideLayers('ol98accall','','hide')">
+</map>
+</div>
+
+<div id="ol98accmail" style="z-index: 40; left: 150px; top: 130px; position: absolute;">
+<img src="ol98accmail.png" usemap="#ol98accmail.png" width="503" height="308" border="0" alt="">
+<map name="ol98accmail.png">
+<area shape="rect" coords="482,5,497,18" href="#" alt="Close" onclick="MM_showHideLayers('ol98accmail','','hide')">
+<area shape="rect" coords="16,35,56,53" href="#" alt="All" onclick="MM_showHideLayers('ol98accall','','show','ol98accmail','','hide')">
+<area shape="rect" coords="101,35,192,53" href="#" alt="Directory Service" onclick="MM_showHideLayers('ol98accds','','show','ol98accmail','','hide')">
+<area shape="rect" coords="395,33,489,55" href="#" alt="Add" onclick="MM_showHideLayers('ol98accadd','','show')">
+<area shape="rect" coords="395,92,489,114" href="#" alt="Properties" onclick="MM_showHideLayers('ol98accmailgen','','show')">
+<area shape="rect" coords="395,271,489,293" href="#" alt="Close" onclick="MM_showHideLayers('ol98accmail','','hide')">
+</map>
+</div>
+
+<div id="ol98accds" style="z-index: 40; left: 150px; top: 130px; position: absolute;">
+<img src="ol98accds.png" usemap="#ol98accds.png" width="503" height="308" border="0" alt="">
+<map name="ol98accds.png">
+<area shape="rect" coords="482,5,497,18" href="#" alt="Close" onclick="MM_showHideLayers('ol98accds','','hide')">
+<area shape="rect" coords="16,35,57,53" href="#" alt="All" onclick="MM_showHideLayers('ol98accall','','show','ol98accds','','hide')">
+<area shape="rect" coords="58,35,98,53" href="#" alt="Mail" onclick="MM_showHideLayers('ol98accmail','','show','ol98accds','','hide')">
+<area shape="rect" coords="395,33,489,55" href="#" alt="Add" onclick="MM_showHideLayers('ol98accadd','','show')">
+<area shape="rect" coords="395,92,489,114" href="#" alt="Properties" onclick="MM_showHideLayers('ol98accdsgen','','show')">
+<area shape="rect" coords="395,271,489,293" href="#" alt="Close" onclick="MM_showHideLayers('ol98accds','','hide')">
+</map>
+</div>
+
+<div id="ol98accadd" style="z-index: 50; left: 640px; top: 163px; position: absolute;">
+<img src="ol98accadd.png" usemap="#ol98accadd.png" width="138" height="40" border="0" alt="">
+<map name="ol98accadd.png">
+<area shape="rect" coords="2,2,135,19" href="#" alt="Mail" onclick="MM_showHideLayers('ol98accaddmailname','','show','ol98accadd','','hide')">
+<area shape="rect" coords="2,20,135,37" href="#" alt="Directory Service" onclick="MM_showHideLayers('ol98accadddsserv','','show','ol98accadd','','hide')">
+</map>
+</div>
+
+<div id="ol98accaddmailname" style="z-index: 50; left: 130px; top: 65px; position: absolute;">
+<img src="ol98accaddmailname.png" usemap="#ol98accaddmailname.png" width="542" height="441" border="0" alt="">
+<map name="ol98accaddmailname.png">
+<area shape="rect" coords="521,5,536,18" href="#" alt="Close" onclick="MM_showHideLayers('ol98accaddexit','','show')">
+<area shape="rect" coords="283,405,357,427" href="#" alt="Next" onclick="MM_showHideLayers('ol98accaddmailemail','','show','ol98accaddmailname','','hide')">
+<area shape="rect" coords="368,405,442,427" href="#" alt="Cancel" onclick="MM_showHideLayers('ol98accaddexit','','show')">
+</map>
+</div>
+
+<div id="ol98accaddmailemail" style="z-index: 50; left: 130px; top: 65px; position: absolute;">
+<img src="ol98accaddmailemail.png" usemap="#ol98accaddmailemail.png" width="542" height="441" border="0" alt="">
+<map name="ol98accaddmailemail.png">
+<area shape="rect" coords="521,5,536,18" href="#" alt="Close" onclick="MM_showHideLayers('ol98accaddexit','','show')">
+<area shape="rect" coords="208,405,282,427" href="#" alt="Back" onclick="MM_showHideLayers('ol98accaddmailname','','show','ol98accaddmailemail','','hide')">
+<area shape="rect" coords="283,405,357,427" href="#" alt="Next" onclick="MM_showHideLayers('ol98accaddmailserv','','show','ol98accaddmailemail','','hide')">
+<area shape="rect" coords="368,405,442,427" href="#" alt="Cancel" onclick="MM_showHideLayers('ol98accaddexit','','show')">
+</map>
+</div>
+
+<div id="ol98accaddmailserv" style="z-index: 50; left: 130px; top: 65px; position: absolute;">
+<img src="ol98accaddmailserv.png" usemap="#ol98accaddmailserv.png" width="542" height="441" border="0" alt="">
+<map name="ol98accaddmailserv.png">
+<area shape="rect" coords="521,5,536,18" href="#" alt="Close" onclick="MM_showHideLayers('ol98accaddexit','','show')">
+<area shape="rect" coords="208,405,282,427" href="#" alt="Back" onclick="MM_showHideLayers('ol98accaddmailemail','','show','ol98accaddmailserv','','hide')">
+<area shape="rect" coords="283,405,357,427" href="#" alt="Next" onclick="MM_showHideLayers('ol98accaddmaillogon','','show','ol98accaddmailserv','','hide')">
+<area shape="rect" coords="368,405,442,427" href="#" alt="Cancel" onclick="MM_showHideLayers('ol98accaddexit','','show')">
+</map>
+</div>
+
+<div id="ol98accaddmaillogon" style="z-index: 50; left: 130px; top: 65px; position: absolute;">
+<img src="ol98accaddmaillogon.png" usemap="#ol98accaddmaillogon.png" width="542" height="441" border="0" alt="">
+<map name="ol98accaddmaillogon.png">
+<area shape="rect" coords="521,5,536,18" href="#" alt="Close" onclick="MM_showHideLayers('ol98accaddexit','','show')">
+<area shape="rect" coords="208,405,282,427" href="#" alt="Back" onclick="MM_showHideLayers('ol98accaddmailserv','','show','ol98accaddmaillogon','','hide')">
+<area shape="rect" coords="283,405,357,427" href="#" alt="Next" onclick="MM_showHideLayers('ol98accaddmailconntype1','','show','ol98accaddmaillogon','','hide')">
+<area shape="rect" coords="368,405,442,427" href="#" alt="Cancel" onclick="MM_showHideLayers('ol98accaddexit','','show')">
+</map>
+</div>
+
+<div id="ol98accaddmailconntype1" style="z-index: 50; left: 130px; top: 65px; position: absolute;">
+<img src="ol98accaddmailconntype1.png" usemap="#ol98accaddmailconntype1.png" width="542" height="441" border="0" alt="">
+<map name="ol98accaddmailconntype1.png">
+<area shape="rect" coords="521,5,536,18" href="#" alt="Close" onclick="MM_showHideLayers('ol98accaddexit','','show')">
+<area shape="circle" coords="52,245,5" href="#" alt="Connect Using LAN" onclick="MM_showHideLayers('ol98accaddmailconntype2','','show','ol98accaddmailconntype1','','hide')">
+<area shape="circle" coords="52,268,5" href="#" alt="Connect Manually" onclick="MM_showHideLayers('ol98accaddmailconntype3','','show','ol98accaddmailconntype1','','hide')">
+<area shape="rect" coords="208,405,282,427" href="#" alt="Back" onclick="MM_showHideLayers('ol98accaddmaillogon','','show','ol98accaddmailconntype1','','hide')">
+<area shape="rect" coords="283,405,357,427" href="#" alt="Next" onclick="MM_showHideLayers('ol98accaddmailduc','','show','ol98accaddmailconntype1','','hide')">
+<area shape="rect" coords="368,405,442,427" href="#" alt="Cancel" onclick="MM_showHideLayers('ol98accaddexit','','show')">
+</map>
+</div>
+
+<div id="ol98accaddmailconntype2" style="z-index: 50; left: 130px; top: 65px; position: absolute;">
+<img src="ol98accaddmailconntype2.png" usemap="#ol98accaddmailconntype2.png" width="542" height="441" border="0" alt="">
+<map name="ol98accaddmailconntype2.png">
+<area shape="rect" coords="521,5,536,18" href="#" alt="Close" onclick="MM_showHideLayers('ol98accaddexit','','show')">
+<area shape="circle" coords="52,222,5" href="#" alt="Connect Using Phone Line" onclick="MM_showHideLayers('ol98accaddmailconntype1','','show','ol98accaddmailconntype2','','hide')">
+<area shape="circle" coords="52,268,5" href="#" alt="Connect Manually" onclick="MM_showHideLayers('ol98accaddmailconntype3','','show','ol98accaddmailconntype2','','hide')">
+<area shape="rect" coords="208,405,282,427" href="#" alt="Back" onclick="MM_showHideLayers('ol98accaddmaillogon','','show','ol98accaddmailconntype2','','hide')">
+<area shape="rect" coords="283,405,357,427" href="#" alt="Next" onclick="MM_showHideLayers('ol98accaddmailfin2','','show','ol98accaddmailconntype2','','hide')">
+<area shape="rect" coords="368,405,442,427" href="#" alt="Cancel" onclick="MM_showHideLayers('ol98accaddexit','','show')">
+</map>
+</div>
+
+<div id="ol98accaddmailconntype3" style="z-index: 50; left: 130px; top: 65px; position: absolute;">
+<img src="ol98accaddmailconntype3.png" usemap="#ol98accaddmailconntype3.png" width="542" height="441" border="0" alt="">
+<map name="ol98accaddmailconntype3.png">
+<area shape="rect" coords="521,5,536,18" href="#" alt="Close" onclick="MM_showHideLayers('ol98accaddexit','','show')">
+<area shape="circle" coords="52,222,5" href="#" alt="Connect Using Phone Line" onclick="MM_showHideLayers('ol98accaddmailconntype1','','show','ol98accaddmailconntype3','','hide')">
+<area shape="circle" coords="52,245,5" href="#" alt="Connect Using LAN" onclick="MM_showHideLayers('ol98accaddmailconntype2','','show','ol98accaddmailconntype3','','hide')">
+<area shape="rect" coords="208,405,282,427" href="#" alt="Back" onclick="MM_showHideLayers('ol98accaddmaillogon','','show','ol98accaddmailconntype3','','hide')">
+<area shape="rect" coords="283,405,357,427" href="#" alt="Next" onclick="MM_showHideLayers('ol98accaddmailfin3','','show','ol98accaddmailconntype3','','hide')">
+<area shape="rect" coords="368,405,442,427" href="#" alt="Cancel" onclick="MM_showHideLayers('ol98accaddexit','','show')">
+</map>
+</div>
+
+<div id="ol98accaddmailduc" style="z-index: 50; left: 130px; top: 65px; position: absolute;">
+<img src="ol98accaddmailduc.png" usemap="#ol98accaddmailduc.png" width="542" height="441" border="0" alt="">
+<map name="ol98accaddmailduc.png">
+<area shape="rect" coords="208,405,282,427" href="#" alt="Back" onclick="MM_showHideLayers('ol98accaddmailconntype1','','show','ol98accaddmailduc','','hide')">
+<area shape="rect" coords="283,405,357,427" href="#" alt="Next" onclick="MM_showHideLayers('ol98accaddmailfin','','show','ol98accaddmailduc','','hide')">
+<area shape="rect" coords="368,405,442,427" href="#" alt="Cancel" onclick="MM_showHideLayers('ol98accaddexit','','show')">
+</map>
+</div>
+
+<div id="ol98accaddmailfin" style="z-index: 50; left: 130px; top: 65px; position: absolute;">
+<img src="ol98accaddmailfin.png" usemap="#ol98accaddmailfin.png" width="542" height="441" border="0" alt="">
+<map name="ol98accaddmailfin.png">
+<area shape="rect" coords="208,405,282,427" href="#" alt="Back" onclick="MM_showHideLayers('ol98accaddmailduc','','show','ol98accaddmailfin','','hide')">
+<area shape="rect" coords="283,405,357,427" href="#" alt="Finish" onclick="MM_showHideLayers('ol98accaddmailfin','','hide')">
+<area shape="rect" coords="368,405,442,427" href="#" alt="Cancel" onclick="MM_showHideLayers('ol98accaddexit','','show')">
+</map>
+</div>
+
+<div id="ol98accaddmailfin2" style="z-index: 50; left: 130px; top: 65px; position: absolute;">
+<img src="ol98accaddmailfin.png" usemap="#ol98accaddmailfin2.png" width="542" height="441" border="0" alt="">
+<map name="ol98accaddmailfin2.png">
+<area shape="rect" coords="208,405,282,427" href="#" alt="Back" onclick="MM_showHideLayers('ol98accaddmailconntype2','','show','ol98accaddmailfin2','','hide')">
+<area shape="rect" coords="283,405,357,427" href="#" alt="Finish" onclick="MM_showHideLayers('ol98accaddmailfin2','','hide')">
+<area shape="rect" coords="368,405,442,427" href="#" alt="Cancel" onclick="MM_showHideLayers('ol98accaddexit','','show')">
+</map>
+</div>
+
+<div id="ol98accaddmailfin3" style="z-index: 50; left: 130px; top: 65px; position: absolute;">
+<img src="ol98accaddmailfin.png" usemap="#ol98accaddmailfin3.png" width="542" height="441" border="0" alt="">
+<map name="ol98accaddmailfin3.png">
+<area shape="rect" coords="208,405,282,427" href="#" alt="Back" onclick="MM_showHideLayers('ol98accaddmailconntype3','','show','ol98accaddmailfin3','','hide')">
+<area shape="rect" coords="283,405,357,427" href="#" alt="Finish" onclick="MM_showHideLayers('ol98accaddmailfin3','','hide')">
+<area shape="rect" coords="368,405,442,427" href="#" alt="Cancel" onclick="MM_showHideLayers('ol98accaddexit','','show')">
+</map>
+</div>
+
+<div id="ol98accadddsserv" style="z-index: 50; left: 150px; top: 95px; position: absolute;">
+<img src="ol98accadddsserv.png" usemap="#ol98accadddsserv.png" width="503" height="385" border="0" alt="">
+<map name="ol98accadddsserv.png">
+<area shape="rect" coords="482,5,497,18" href="#" alt="Close" onclick="MM_showHideLayers('ol98accaddexit','','show')">
+<area shape="rect" coords="46,218,58,230" href="#" alt="Server Requires Logon" onclick="MM_showHideLayers('ol98accadddsserv2','','show','ol98accadddsserv','','hide')">
+<area shape="rect" coords="330,349,404,371" href="#" alt="Next" onclick="MM_showHideLayers('ol98accadddschk','','show','ol98accadddsserv','','hide')">
+<area shape="rect" coords="415,349,489,371" href="#" alt="Cancel" onclick="MM_showHideLayers('ol98accaddexit','','show')">
+</map>
+</div>
+
+<div id="ol98accadddsserv2" style="z-index: 50; left: 150px; top: 95px; position: absolute;">
+<img src="ol98accadddsserv2.png" usemap="#ol98accadddsserv2.png" width="503" height="385" border="0" alt="">
+<map name="ol98accadddsserv2.png">
+<area shape="rect" coords="482,5,497,18" href="#" alt="Close" onclick="MM_showHideLayers('ol98accaddexit','','show')">
+<area shape="rect" coords="46,218,58,230" href="#" alt="Server Doesn't Require Logon" onclick="MM_showHideLayers('ol98accadddsserv','','show','ol98accadddsserv2','','hide')">
+<area shape="rect" coords="330,349,404,371" href="#" alt="Next" onclick="MM_showHideLayers('ol98accadddslogon','','show','ol98accadddsserv2','','hide')">
+<area shape="rect" coords="415,349,489,371" href="#" alt="Cancel" onclick="MM_showHideLayers('ol98accaddexit','','show')">
+</map>
+</div>
+
+<div id="ol98accadddslogon" style="z-index: 50; left: 150px; top: 95px; position: absolute;">
+<img src="ol98accadddslogon.png" usemap="#ol98accadddslogon.png" width="503" height="385" border="0" alt="">
+<map name="ol98accadddslogon.png">
+<area shape="rect" coords="482,5,497,18" href="#" alt="Close" onclick="MM_showHideLayers('ol98accaddexit','','show')">
+<area shape="rect" coords="255,349,329,371" href="#" alt="Back" onclick="MM_showHideLayers('ol98accadddsserv2','','show','ol98accadddslogon','','hide')">
+<area shape="rect" coords="330,349,404,371" href="#" alt="Next" onclick="MM_showHideLayers('ol98accadddschk','','show','ol98accadddslogon','','hide')">
+<area shape="rect" coords="415,349,489,371" href="#" alt="Cancel" onclick="MM_showHideLayers('ol98accaddexit','','show')">
+</map>
+</div>
+
+<div id="ol98accadddschk" style="z-index: 50; left: 150px; top: 95px; position: absolute;">
+<img src="ol98accadddschk.png" usemap="#ol98accadddschk.png" width="503" height="385" border="0" alt="">
+<map name="ol98accadddschk.png">
+<area shape="rect" coords="482,5,497,18" href="#" alt="Close" onclick="MM_showHideLayers('ol98accaddexit','','show')">
+<area shape="rect" coords="255,349,329,371" href="#" alt="Back" onclick="MM_showHideLayers('ol98accadddsserv','','show','ol98accadddschk','','hide')">
+<area shape="rect" coords="330,349,404,371" href="#" alt="Next" onclick="MM_showHideLayers('ol98accadddsfin','','show','ol98accadddschk','','hide')">
+<area shape="rect" coords="415,349,489,371" href="#" alt="Cancel" onclick="MM_showHideLayers('ol98accaddexit','','show')">
+</map>
+</div>
+
+<div id="ol98accadddsfin" style="z-index: 50; left: 150px; top: 95px; position: absolute;">
+<img src="ol98accadddsfin.png" usemap="#ol98accadddsfin.png" width="503" height="385" border="0" alt="">
+<map name="ol98accadddsfin.png">
+<area shape="rect" coords="482,5,497,18" href="#" alt="Close" onclick="MM_showHideLayers('ol98accaddexit','','show')">
+<area shape="rect" coords="255,349,329,371" href="#" alt="Back" onclick="MM_showHideLayers('ol98accadddschk','','show','ol98accadddsfin','','hide')">
+<area shape="rect" coords="330,349,404,371" href="#" alt="Finish" onclick="MM_showHideLayers('ol98accadddsfin','','hide')">
+<area shape="rect" coords="415,349,489,371" href="#" alt="Cancel" onclick="MM_showHideLayers('ol98accaddexit','','show')">
+</map>
+</div>
+
+<div id="ol98accaddexit" style="z-index: 60; left: 240px; top: 225px; position: absolute;">
+<img src="ol98accaddexit.png" usemap="#ol98accaddexit.png" width="323" height="126" border="0" alt="">
+<map name="ol98accaddexit.png">
+<area shape="rect" coords="83,89,157,111" href="#" alt="Yes" onclick="MM_showHideLayers('ol98accaddmailname','','hide','ol98accaddmailemail','','hide','ol98accaddmailserv','','hide','ol98accaddmaillogon','','hide','ol98accaddmailconntype1','','hide','ol98accaddmailconntype2','','hide','ol98accaddmailconntype3','','hide','ol98accaddmailduc','','hide','ol98accaddmailfin','','hide','ol98accaddmailfin2','','hide','ol98accaddmailfin3','','hide','ol98accadddsserv','','hide','ol98accadddsserv2','','hide','ol98accadddslogon','','hide','ol98accadddschk','','hide','ol98accadddsfin','','hide','ol98accaddexit','','hide')">
+<area shape="rect" coords="164,89,238,111" href="#" alt="No" onclick="MM_showHideLayers('ol98accaddexit','','hide')">
+</map>
+</div>
+
+<div id="ol98accmailgen" style="z-index: 50; left: 215px; top: 65px; position: absolute;">
+<img src="ol98accmailgen.png" usemap="#ol98accmailgen.png" width="367" height="443" border="0" alt="">
+<map name="ol98accmailgen.png">
+<area shape="rect" coords="346,5,361,18" href="#" alt="Close" onclick="MM_showHideLayers('ol98accmailgen','','hide')">
+<area shape="rect" coords="61,31,107,49" href="#" alt="Servers" onclick="MM_showHideLayers('ol98accmailserv','','show','ol98accmailgen','','hide')">
+<area shape="rect" coords="108,31,173,49" href="#" alt="Connection" onclick="MM_showHideLayers('ol98accmailconn','','show','ol98accmailgen','','hide')">
+<area shape="rect" coords="174,31,234,49" href="#" alt="Advanced" onclick="MM_showHideLayers('ol98accmailadv','','show','ol98accmailgen','','hide')">
+<area shape="rect" coords="121,410,195,432" href="#" alt="OK" onclick="MM_showHideLayers('ol98accmailgen','','hide')">
+<area shape="rect" coords="202,410,276,432" href="#" alt="Cancel" onclick="MM_showHideLayers('ol98accmailgen','','hide')">
+</map>
+</div>
+
+<div id="ol98accmailserv" style="z-index: 50; left: 215px; top: 65px; position: absolute;">
+<img src="ol98accmailserv.png" usemap="#ol98accmailserv.png" width="367" height="443" border="0" alt="">
+<map name="ol98accmailserv.png">
+<area shape="rect" coords="346,5,361,18" href="#" alt="Close" onclick="MM_showHideLayers('ol98accmailserv','','hide')">
+<area shape="rect" coords="11,31,58,49" href="#" alt="General" onclick="MM_showHideLayers('ol98accmailgen','','show','ol98accmailserv','','hide')">
+<area shape="rect" coords="109,31,173,49" href="#" alt="Connection" onclick="MM_showHideLayers('ol98accmailconn','','show','ol98accmailserv','','hide')">
+<area shape="rect" coords="174,31,234,49" href="#" alt="Advanced" onclick="MM_showHideLayers('ol98accmailadv','','show','ol98accmailserv','','hide')">
+<area shape="rect" coords="36,312,48,324" href="#" alt="Server Requires Authentication" onclick="MM_showHideLayers('ol98accmailserv2','','show','ol98accmailserv','','hide')">
+<area shape="rect" coords="121,410,195,432" href="#" alt="OK" onclick="MM_showHideLayers('ol98accmailserv','','hide')">
+<area shape="rect" coords="202,410,276,432" href="#" alt="Cancel" onclick="MM_showHideLayers('ol98accmailserv','','hide')">
+</map>
+</div>
+
+<div id="ol98accmailserv2" style="z-index: 50; left: 215px; top: 65px; position: absolute;">
+<img src="ol98accmailserv2.png" usemap="#ol98accmailserv2.png" width="367" height="443" border="0" alt="">
+<map name="ol98accmailserv2.png">
+<area shape="rect" coords="346,5,361,18" href="#" alt="Close" onclick="MM_showHideLayers('ol98accmailserv2','','hide')">
+<area shape="rect" coords="11,31,58,49" href="#" alt="General" onclick="MM_showHideLayers('ol98accmailgen','','show','ol98accmailserv2','','hide')">
+<area shape="rect" coords="109,31,173,49" href="#" alt="Connection" onclick="MM_showHideLayers('ol98accmailconn','','show','ol98accmailserv2','','hide')">
+<area shape="rect" coords="174,31,234,49" href="#" alt="Advanced" onclick="MM_showHideLayers('ol98accmailadv','','show','ol98accmailserv2','','hide')">
+<area shape="rect" coords="36,312,48,324" href="#" alt="Server Doesn't Require Authentication" onclick="MM_showHideLayers('ol98accmailserv','','show','ol98accmailserv2','','hide')">
+<area shape="rect" coords="262,308,342,330" href="#" alt="Settings" onclick="MM_showHideLayers('ol98accmailservset','','show')">
+<area shape="rect" coords="121,410,195,432" href="#" alt="OK" onclick="MM_showHideLayers('ol98accmailserv2','','hide')">
+<area shape="rect" coords="202,410,276,432" href="#" alt="Cancel" onclick="MM_showHideLayers('ol98accmailserv2','','hide')">
+</map>
+</div>
+
+<div id="ol98accmailservset" style="z-index: 60; left: 225px; top: 170px; position: absolute;">
+<img src="ol98accmailservset.png" usemap="#ol98accmailservset.png" width="347" height="236" border="0" alt="">
+<map name="ol98accmailservset.png">
+<area shape="rect" coords="326,5,341,18" href="#" alt="Close" onclick="MM_showHideLayers('ol98accmailservset','','hide')">
+<area shape="rect" coords="177,201,251,223" href="#" alt="OK" onclick="MM_showHideLayers('ol98accmailservset','','hide')">
+<area shape="rect" coords="258,201,332,223" href="#" alt="Cancel" onclick="MM_showHideLayers('ol98accmailservset','','hide')">
+</map>
+</div>
+
+<div id="ol98accmailconn" style="z-index: 50; left: 215px; top: 65px; position: absolute;">
+<img src="ol98accmailconn.png" usemap="#ol98accmailconn.png" width="367" height="443" border="0" alt="">
+<map name="ol98accmailconn.png">
+<area shape="rect" coords="346,5,361,18" href="#" alt="Close" onclick="MM_showHideLayers('ol98accmailconn','','hide')">
+<area shape="rect" coords="11,31,59,49" href="#" alt="General" onclick="MM_showHideLayers('ol98accmailgen','','show','ol98accmailconn','','hide')">
+<area shape="rect" coords="60,31,106,49" href="#" alt="Servers" onclick="MM_showHideLayers('ol98accmailserv','','show','ol98accmailconn','','hide')">
+<area shape="rect" coords="175,31,234,49" href="#" alt="Advanced" onclick="MM_showHideLayers('ol98accmailadv','','show','ol98accmailconn','','hide')">
+<area shape="rect" coords="121,410,195,432" href="#" alt="OK" onclick="MM_showHideLayers('ol98accmailconn','','hide')">
+<area shape="rect" coords="202,410,276,432" href="#" alt="Cancel" onclick="MM_showHideLayers('ol98accmailconn','','hide')">
+</map>
+</div>
+
+<div id="ol98accmailadv" style="z-index: 50; left: 215px; top: 65px; position: absolute;">
+<img src="ol98accmailadv.png" usemap="#ol98accmailadv.png" width="367" height="443" border="0" alt="">
+<map name="ol98accmailadv.png">
+<area shape="rect" coords="346,5,361,18" href="#" alt="Close" onclick="MM_showHideLayers('ol98accmailadv','','hide')">
+<area shape="rect" coords="11,31,59,49" href="#" alt="General" onclick="MM_showHideLayers('ol98accmailgen','','show','ol98accmailadv','','hide')">
+<area shape="rect" coords="60,31,107,49" href="#" alt="Servers" onclick="MM_showHideLayers('ol98accmailserv','','show','ol98accmailadv','','hide')">
+<area shape="rect" coords="108,31,172,49" href="#" alt="Connection" onclick="MM_showHideLayers('ol98accmailconn','','show','ol98accmailadv','','hide')">
+<area shape="rect" coords="121,410,195,432" href="#" alt="OK" onclick="MM_showHideLayers('ol98accmailadv','','hide')">
+<area shape="rect" coords="202,410,276,432" href="#" alt="Cancel" onclick="MM_showHideLayers('ol98accmailadv','','hide')">
+</map>
+</div>
+
+<div id="ol98accdsgen" style="z-index: 50; left: 215px; top: 65px; position: absolute;">
+<img src="ol98accdsgen.png" usemap="#ol98accdsgen.png" width="367" height="443" border="0" alt="">
+<map name="ol98accdsgen.png">
+<area shape="rect" coords="346,5,361,18" href="#" alt="Close" onclick="MM_showHideLayers('ol98accdsgen','','hide')">
+<area shape="rect" coords="61,31,120,49" href="#" alt="Advanced" onclick="MM_showHideLayers('ol98accdsadv','','show','ol98accdsgen','','hide')">
+<area shape="rect" coords="121,410,195,432" href="#" alt="OK" onclick="MM_showHideLayers('ol98accdsgen','','hide')">
+<area shape="rect" coords="202,410,276,432" href="#" alt="Cancel" onclick="MM_showHideLayers('ol98accdsgen','','hide')">
+</map>
+</div>
+
+<div id="ol98accdsadv" style="z-index: 50; left: 215px; top: 65px; position: absolute;">
+<img src="ol98accdsadv.png" usemap="#ol98accdsadv.png" width="367" height="443" border="0" alt="">
+<map name="ol98accdsadv.png">
+<area shape="rect" coords="346,5,361,18" href="#" alt="Close" onclick="MM_showHideLayers('ol98accdsadv','','hide')">
+<area shape="rect" coords="11,31,58,49" href="#" alt="General" onclick="MM_showHideLayers('ol98accdsgen','','show','ol98accdsadv','','hide')">
+<area shape="rect" coords="121,410,195,432" href="#" alt="OK" onclick="MM_showHideLayers('ol98accdsadv','','hide')">
+<area shape="rect" coords="202,410,276,432" href="#" alt="Cancel" onclick="MM_showHideLayers('ol98accdsadv','','hide')">
+</map>
+</div>
+
+<div id="ol98optpref" style="z-index: 30; left: 180px; top: 55px; position: absolute;">
+<img src="ol98optpref.png" usemap="#ol98optpref.png" width="439" height="463" border="0" alt="">
+<map name="ol98optpref.png">
+<area shape="rect" coords="418,5,433,18" href="#" alt="Close" onclick="MM_showHideLayers('ol98optpref','','hide')">
+<area shape="rect" coords="82,31,152,49" href="#" alt="Mail Delivery" onclick="MM_showHideLayers('ol98optmd','','show','ol98optpref','','hide')">
+<area shape="rect" coords="153,31,219,49" href="#" alt="Mail Format" onclick="MM_showHideLayers('ol98optmf','','show','ol98optpref','','hide')">
+<area shape="rect" coords="220,31,267,49" href="#" alt="Spelling" onclick="MM_showHideLayers('ol98optspell','','show','ol98optpref','','hide')">
+<area shape="rect" coords="268,31,318,49" href="#" alt="Security" onclick="MM_showHideLayers('ol98optsec','','show','ol98optpref','','hide')">
+<area shape="rect" coords="319,31,360,49" href="#" alt="Other" onclick="MM_showHideLayers('ol98optother','','show','ol98optpref','','hide')">
+<area shape="rect" coords="310,101,414,123" href="#" alt="E-mail Options" onclick="MM_showHideLayers('ol98optprefemo','','show')">
+<area shape="rect" coords="310,170,414,192" href="#" alt="Calendar Options" onclick="MM_showHideLayers('ol98optprefco','','show')">
+<area shape="rect" coords="310,238,414,260" href="#" alt="Task Options" onclick="MM_showHideLayers('ol98optprefto','','show')">
+<area shape="rect" coords="310,306,414,328" href="#" alt="Journal Options" onclick="MM_showHideLayers('ol98optprefjo','','show')">
+<area shape="rect" coords="310,373,414,395" href="#" alt="Note Options" onclick="MM_showHideLayers('ol98optprefno','','show')">
+<area shape="rect" coords="193,430,267,452" href="#" alt="OK" onclick="MM_showHideLayers('ol98optpref','','hide')">
+<area shape="rect" coords="274,430,348,452" href="#" alt="Cancel" onclick="MM_showHideLayers('ol98optpref','','hide')">
+</map>
+</div>
+
+<div id="ol98optmd" style="z-index: 30; left: 180px; top: 55px; position: absolute;">
+<img src="ol98optmd.png" usemap="#ol98optmd.png" width="439" height="463" border="0" alt="">
+<map name="ol98optmd.png">
+<area shape="rect" coords="418,5,433,18" href="#" alt="Close" onclick="MM_showHideLayers('ol98optmd','','hide')">
+<area shape="rect" coords="11,31,79,49" href="#" alt="Preferences" onclick="MM_showHideLayers('ol98optpref','','show','ol98optmd','','hide')">
+<area shape="rect" coords="154,31,219,49" href="#" alt="Mail Format" onclick="MM_showHideLayers('ol98optmf','','show','ol98optmd','','hide')">
+<area shape="rect" coords="220,31,267,49" href="#" alt="Spelling" onclick="MM_showHideLayers('ol98optspell','','show','ol98optmd','','hide')">
+<area shape="rect" coords="268,31,318,49" href="#" alt="Security" onclick="MM_showHideLayers('ol98optsec','','show','ol98optmd','','hide')">
+<area shape="rect" coords="319,31,360,49" href="#" alt="Other" onclick="MM_showHideLayers('ol98optother','','show','ol98optmd','','hide')">
+<area shape="rect" coords="307,101,414,123" href="#" alt="Accounts" onclick="MM_showHideLayers('ol98accall','','show')">
+<area shape="rect" coords="193,430,267,452" href="#" alt="OK" onclick="MM_showHideLayers('ol98optmd','','hide')">
+<area shape="rect" coords="274,430,348,452" href="#" alt="Cancel" onclick="MM_showHideLayers('ol98optmd','','hide')">
+</map>
+</div>
+
+<div id="ol98optmf" style="z-index: 30; left: 180px; top: 55px; position: absolute;">
+<img src="ol98optmf.png" usemap="#ol98optmf.png" width="439" height="463" border="0" alt="">
+<map name="ol98optmf.png">
+<area shape="rect" coords="418,5,433,18" href="#" alt="Close" onclick="MM_showHideLayers('ol98optmf','','hide')">
+<area shape="rect" coords="11,31,80,49" href="#" alt="Preferences" onclick="MM_showHideLayers('ol98optpref','','show','ol98optmf','','hide')">
+<area shape="rect" coords="81,31,151,49" href="#" alt="Mail Delivery" onclick="MM_showHideLayers('ol98optmd','','show','ol98optmf','','hide')">
+<area shape="rect" coords="221,31,267,49" href="#" alt="Spelling" onclick="MM_showHideLayers('ol98optspell','','show','ol98optmf','','hide')">
+<area shape="rect" coords="268,31,318,49" href="#" alt="Security" onclick="MM_showHideLayers('ol98optsec','','show','ol98optmf','','hide')">
+<area shape="rect" coords="319,31,360,49" href="#" alt="Other" onclick="MM_showHideLayers('ol98optother','','show','ol98optmf','','hide')">
+<area shape="rect" coords="205,140,275,162" href="#" alt="Settings" onclick="MM_showHideLayers('ol98optmfset','','show')">
+<area shape="rect" coords="282,140,413,162" href="#" alt="International Options" onclick="MM_showHideLayers('ol98optmfio','','show')">
+<area shape="rect" coords="205,254,275,276" href="#" alt="Fonts" onclick="MM_showHideLayers('ol98optmffont','','show')">
+<area shape="rect" coords="282,368,413,390" href="#" alt="Signature Picker" onclick="MM_showHideLayers('ol98optmfsp','','show')">
+<area shape="rect" coords="193,430,267,452" href="#" alt="OK" onclick="MM_showHideLayers('ol98optmf','','hide')">
+<area shape="rect" coords="274,430,348,452" href="#" alt="Cancel" onclick="MM_showHideLayers('ol98optmf','','hide')">
+</map>
+</div>
+
+<div id="ol98optspell" style="z-index: 30; left: 180px; top: 55px; position: absolute;">
+<img src="ol98optspell.png" usemap="#ol98optspell.png" width="439" height="463" border="0" alt="">
+<map name="ol98optspell.png">
+<area shape="rect" coords="418,5,433,18" href="#" alt="Close" onclick="MM_showHideLayers('ol98optspell','','hide')">
+<area shape="rect" coords="11,31,80,49" href="#" alt="Preferences" onclick="MM_showHideLayers('ol98optpref','','show','ol98optspell','','hide')">
+<area shape="rect" coords="81,31,152,49" href="#" alt="Mail Delivery" onclick="MM_showHideLayers('ol98optmd','','show','ol98optspell','','hide')">
+<area shape="rect" coords="153,31,218,49" href="#" alt="Mail Format" onclick="MM_showHideLayers('ol98optmf','','show','ol98optspell','','hide')">
+<area shape="rect" coords="269,31,318,49" href="#" alt="Security" onclick="MM_showHideLayers('ol98optsec','','show','ol98optspell','','hide')">
+<area shape="rect" coords="319,31,360,49" href="#" alt="Other" onclick="MM_showHideLayers('ol98optother','','show','ol98optspell','','hide')">
+<area shape="rect" coords="193,430,267,452" href="#" alt="OK" onclick="MM_showHideLayers('ol98optspell','','hide')">
+<area shape="rect" coords="274,430,348,452" href="#" alt="Cancel" onclick="MM_showHideLayers('ol98optspell','','hide')">
+</map>
+</div>
+
+<div id="ol98optsec" style="z-index: 30; left: 180px; top: 55px; position: absolute;">
+<img src="ol98optsec.png" usemap="#ol98optsec.png" width="439" height="463" border="0" alt="">
+<map name="ol98optsec.png">
+<area shape="rect" coords="418,5,433,18" href="#" alt="Close" onclick="MM_showHideLayers('ol98optsec','','hide')">
+<area shape="rect" coords="11,31,80,49" href="#" alt="Preferences" onclick="MM_showHideLayers('ol98optpref','','show','ol98optsec','','hide')">
+<area shape="rect" coords="81,31,152,49" href="#" alt="Mail Delivery" onclick="MM_showHideLayers('ol98optmd','','show','ol98optsec','','hide')">
+<area shape="rect" coords="153,31,219,49" href="#" alt="Mail Format" onclick="MM_showHideLayers('ol98optmf','','show','ol98optsec','','hide')">
+<area shape="rect" coords="220,31,266,49" href="#" alt="Spelling" onclick="MM_showHideLayers('ol98optspell','','show','ol98optsec','','hide')">
+<area shape="rect" coords="320,31,360,49" href="#" alt="Other" onclick="MM_showHideLayers('ol98optother','','show','ol98optsec','','hide')">
+<area shape="rect" coords="291,165,415,187" href="#" alt="Change Settings" onclick="MM_showHideLayers('ol98optseccs','','show')">
+<area shape="rect" coords="121,374,284,396" href="#" alt="Import/Export Digital ID" onclick="MM_showHideLayers('ol98optseciedid','','show')">
+<area shape="rect" coords="193,430,267,452" href="#" alt="OK" onclick="MM_showHideLayers('ol98optsec','','hide')">
+<area shape="rect" coords="274,430,348,452" href="#" alt="Cancel" onclick="MM_showHideLayers('ol98optsec','','hide')">
+</map>
+</div>
+
+<div id="ol98optother" style="z-index: 30; left: 180px; top: 55px; position: absolute;">
+<img src="ol98optother.png" usemap="#ol98optother.png" width="439" height="463" border="0" alt="">
+<map name="ol98optother.png">
+<area shape="rect" coords="418,5,433,18" href="#" alt="Close" onclick="MM_showHideLayers('ol98optother','','hide')">
+<area shape="rect" coords="11,31,80,49" href="#" alt="Preferences" onclick="MM_showHideLayers('ol98optpref','','show','ol98optother','','hide')">
+<area shape="rect" coords="81,31,152,49" href="#" alt="Mail Delivery" onclick="MM_showHideLayers('ol98optmd','','show','ol98optother','','hide')">
+<area shape="rect" coords="153,31,219,49" href="#" alt="Mail Format" onclick="MM_showHideLayers('ol98optmf','','show','ol98optother','','hide')">
+<area shape="rect" coords="220,31,267,49" href="#" alt="Spelling" onclick="MM_showHideLayers('ol98optspell','','show','ol98optother','','hide')">
+<area shape="rect" coords="268,31,317,49" href="#" alt="Security" onclick="MM_showHideLayers('ol98optsec','','show','ol98optother','','hide')">
+<area shape="rect" coords="303,105,415,127" href="#" alt="Advanced Options" onclick="MM_showHideLayers('ol98optotherao','','show')">
+<area shape="rect" coords="303,194,415,216" href="#" alt="AutoArchive" onclick="MM_showHideLayers('ol98optotheraa','','show')">
+<area shape="rect" coords="303,282,415,304" href="#" alt="Preview Pane" onclick="MM_showHideLayers('ol98optotherpp','','show')">
+<area shape="rect" coords="193,430,267,452" href="#" alt="OK" onclick="MM_showHideLayers('ol98optother','','hide')">
+<area shape="rect" coords="274,430,348,452" href="#" alt="Cancel" onclick="MM_showHideLayers('ol98optother','','hide')">
+</map>
+</div>
+
+<div id="ol98optprefemo" style="z-index: 40; left: 190px; top: 60px; position: absolute;">
+<img src="ol98optprefemo.png" usemap="#ol98optprefemo.png" width="419" height="456" border="0" alt="">
+<map name="ol98optprefemo.png">
+<area shape="rect" coords="398,5,413,18" href="#" alt="Close" onclick="MM_showHideLayers('ol98optprefemo','','hide')">
+<area shape="rect" coords="63,167,205,189" href="#" alt="Advanced E-mail Options" onclick="MM_showHideLayers('ol98optprefemoadv','','show')">
+<area shape="rect" coords="249,419,323,441" href="#" alt="OK" onclick="MM_showHideLayers('ol98optprefemo','','hide')">
+<area shape="rect" coords="330,419,404,441" href="#" alt="Cancel" onclick="MM_showHideLayers('ol98optprefemo','','hide')">
+</map>
+</div>
+
+<div id="ol98optprefemoadv" style="z-index: 50; left: 205px; top: 60px; position: absolute;">
+<img src="ol98optprefemoadv.png" usemap="#ol98optprefemoadv.png" width="389" height="448" border="0" alt="">
+<map name="ol98optprefemoadv.png">
+<area shape="rect" coords="368,5,383,18" href="#" alt="Close" onclick="MM_showHideLayers('ol98optprefemoadv','','hide')">
+<area shape="rect" coords="221,410,295,432" href="#" alt="OK" onclick="MM_showHideLayers('ol98optprefemoadv','','hide')">
+<area shape="rect" coords="300,410,374,432" href="#" alt="Cancel" onclick="MM_showHideLayers('ol98optprefemoadv','','hide')">
+</map>
+</div>
+
+<div id="ol98optprefco" style="z-index: 40; left: 160px; top: 100px; position: absolute;">
+<img src="ol98optprefco.png" usemap="#ol98optprefco.png" width="477" height="374" border="0" alt="">
+<map name="ol98optprefco.png">
+<area shape="rect" coords="456,5,471,18" href="#" alt="Close" onclick="MM_showHideLayers('ol98optprefco','','hide')">
+<area shape="rect" coords="63,204,163,226" href="#" alt="Time Zone" onclick="MM_showHideLayers('ol98optprefcotz','','show')">
+<area shape="rect" coords="195,204,295,226" href="#" alt="Add Holidays" onclick="MM_showHideLayers('ol98optprefcoah','','show')">
+<area shape="rect" coords="327,204,452,226" href="#" alt="Resource Scheduling" onclick="MM_showHideLayers('ol98optprefcors','','show')">
+<area shape="rect" coords="327,298,452,320" href="#" alt="Free/Busy Options" onclick="MM_showHideLayers('ol98optprefcofbo','','show')">
+<area shape="rect" coords="308,337,382,359" href="#" alt="OK" onclick="MM_showHideLayers('ol98optprefco','','hide')">
+<area shape="rect" coords="389,337,463,359" href="#" alt="Cancel" onclick="MM_showHideLayers('ol98optprefco','','hide')">
+</map>
+</div>
+
+<div id="ol98optprefcotz" style="z-index: 50; left: 195px; top: 130px; position: absolute;">
+<img src="ol98optprefcotz.png" usemap="#ol98optprefcotz.png" width="407" height="311" border="0" alt="">
+<map name="ol98optprefcotz.png">
+<area shape="rect" coords="386,5,401,18" href="#" alt="Close" onclick="MM_showHideLayers('ol98optprefcotz','','hide')">
+<area shape="rect" coords="237,274,311,296" href="#" alt="OK" onclick="MM_showHideLayers('ol98optprefcotz','','hide')">
+<area shape="rect" coords="318,274,392,296" href="#" alt="Cancel" onclick="MM_showHideLayers('ol98optprefcotz','','hide')">
+</map>
+</div>
+
+<div id="ol98optprefcoah" style="z-index: 50; left: 270px; top: 175px; position: absolute;">
+<img src="ol98optprefcoah.png" usemap="#ol98optprefcoah.png" width="257" height="227" border="0" alt="">
+<map name="ol98optprefcoah.png">
+<area shape="rect" coords="236,5,251,18" href="#" alt="Close" onclick="MM_showHideLayers('ol98optprefcoah','','hide')">
+<area shape="rect" coords="50,189,124,211" href="#" alt="OK" onclick="MM_showHideLayers('ol98optprefcoah','','hide')">
+<area shape="rect" coords="134,189,208,211" href="#" alt="Cancel" onclick="MM_showHideLayers('ol98optprefcoah','','hide')">
+</map>
+</div>
+
+<div id="ol98optprefcors" style="z-index: 50; left: 190px; top: 190px; position: absolute;">
+<img src="ol98optprefcors.png" usemap="#ol98optprefcors.png" width="423" height="191" border="0" alt="">
+<map name="ol98optprefcors.png">
+<area shape="rect" coords="402,5,417,18" href="#" alt="Close" onclick="MM_showHideLayers('ol98optprefcors','','hide')">
+<area shape="rect" coords="254,154,328,176" href="#" alt="OK" onclick="MM_showHideLayers('ol98optprefcors','','hide')">
+<area shape="rect" coords="335,154,409,176" href="#" alt="Cancel" onclick="MM_showHideLayers('ol98optprefcors','','hide')">
+</map>
+</div>
+
+<div id="ol98optprefcofbo" style="z-index: 50; left: 145px; top: 165px; position: absolute;">
+<img src="ol98optprefcofbo.png" usemap="#ol98optprefcofbo.png" width="513" height="244" border="0" alt="">
+<map name="ol98optprefcofbo.png">
+<area shape="rect" coords="492,5,507,18" href="#" alt="Close" onclick="MM_showHideLayers('ol98optprefcofbo','','hide')">
+<area shape="rect" coords="342,209,416,231" href="#" alt="OK" onclick="MM_showHideLayers('ol98optprefcofbo','','hide')">
+<area shape="rect" coords="425,209,499,231" href="#" alt="Cancel" onclick="MM_showHideLayers('ol98optprefcofbo','','hide')">
+</map>
+</div>
+
+<div id="ol98optprefto" style="z-index: 40; left: 265px; top: 210px; position: absolute;">
+<img src="ol98optprefto.png" usemap="#ol98optprefto.png" width="267" height="153" border="0" alt="">
+<map name="ol98optprefto.png">
+<area shape="rect" coords="246,5,261,18" href="#" alt="Close" onclick="MM_showHideLayers('ol98optprefto','','hide')">
+<area shape="rect" coords="98,116,172,138" href="#" alt="OK" onclick="MM_showHideLayers('ol98optprefto','','hide')">
+<area shape="rect" coords="179,116,253,138" href="#" alt="Cancel" onclick="MM_showHideLayers('ol98optprefto','','hide')">
+</map>
+</div>
+
+<div id="ol98optprefjo" style="z-index: 40; left: 160px; top: 120px; position: absolute;">
+<img src="ol98optprefjo.png" usemap="#ol98optprefjo.png" width="480" height="335" border="0" alt="">
+<map name="ol98optprefjo.png">
+<area shape="rect" coords="459,5,474,18" href="#" alt="Close" onclick="MM_showHideLayers('ol98optprefjo','','hide')">
+<area shape="rect" coords="311,298,385,320" href="#" alt="OK" onclick="MM_showHideLayers('ol98optprefjo','','hide')">
+<area shape="rect" coords="392,298,466,320" href="#" alt="Cancel" onclick="MM_showHideLayers('ol98optprefjo','','hide')">
+</map>
+</div>
+
+<div id="ol98optprefno" style="z-index: 40; left: 265px; top: 210px; position: absolute;">
+<img src="ol98optprefno.png" usemap="#ol98optprefno.png" width="312" height="179" border="0" alt="">
+<map name="ol98optprefno.png">
+<area shape="rect" coords="291,5,306,18" href="#" alt="Close" onclick="MM_showHideLayers('ol98optprefno','','hide')">
+<area shape="rect" coords="143,144,217,166" href="#" alt="OK" onclick="MM_showHideLayers('ol98optprefno','','hide')">
+<area shape="rect" coords="224,144,298,166" href="#" alt="Cancel" onclick="MM_showHideLayers('ol98optprefno','','hide')">
+</map>
+</div>
+
+<div id="ol98optmfset" style="z-index: 40; left: 230px; top: 180px; position: absolute;">
+<img src="ol98optmfset.png" usemap="#ol98optmfset.png" width="345" height="217" border="0" alt="">
+<map name="ol98optmfset.png">
+<area shape="rect" coords="324,5,339,18" href="#" alt="Close" onclick="MM_showHideLayers('ol98optmfset','','hide')">
+<area shape="rect" coords="176,180,250,202" href="#" alt="OK" onclick="MM_showHideLayers('ol98optmfset','','hide')">
+<area shape="rect" coords="257,180,331,202" href="#" alt="Cancel" onclick="MM_showHideLayers('ol98optmfset','','hide')">
+</map>
+</div>
+
+<div id="ol98optmfio" style="z-index: 40; left: 200px; top: 230px; position: absolute;">
+<img src="ol98optmfio.png" usemap="#ol98optmfio.png" width="404" height="116" border="0" alt="">
+<map name="ol98optmfio.png">
+<area shape="rect" coords="383,5,398,18" href="#" alt="Close" onclick="MM_showHideLayers('ol98optmfio','','hide')">
+<area shape="rect" coords="233,79,307,101" href="#" alt="OK" onclick="MM_showHideLayers('ol98optmfio','','hide')">
+<area shape="rect" coords="314,79,390,101" href="#" alt="Cancel" onclick="MM_showHideLayers('ol98optmfio','','hide')">
+</map>
+</div>
+
+<div id="ol98optmffont" style="z-index: 40; left: 205px; top: 70px; position: absolute;">
+<img src="ol98optmffont.png" usemap="#ol98optmffont.png" width="390" height="431" border="0" alt="">
+<map name="ol98optmffont.png">
+<area shape="rect" coords="369,5,384,18" href="#" alt="Close" onclick="MM_showHideLayers('ol98optmffont','','hide')">
+<area shape="rect" coords="210,394,284,416" href="#" alt="OK" onclick="MM_showHideLayers('ol98optmffont','','hide')">
+<area shape="rect" coords="291,394,376,416" href="#" alt="Cancel" onclick="MM_showHideLayers('ol98optmffont','','hide')">
+</map>
+</div>
+
+<div id="ol98optmfsp" style="z-index: 40; left: 200px; top: 85px; position: absolute;">
+<img src="ol98optmfsp.png" usemap="#ol98optmfsp.png" width="404" height="399" border="0" alt="">
+<map name="ol98optmfsp.png">
+<area shape="rect" coords="383,5,398,18" href="#" alt="Close" onclick="MM_showHideLayers('ol98optmfsp','','hide')">
+<area shape="rect" coords="302,50,390,72" href="#" alt="Edit" onclick="MM_showHideLayers('ol98optmfsped','','show')">
+<area shape="rect" coords="302,108,390,130" href="#" alt="New" onclick="MM_showHideLayers('ol98optmfspnewname','','show')">
+<area shape="rect" coords="234,362,308,384" href="#" alt="OK" onclick="MM_showHideLayers('ol98optmfsp','','hide')">
+<area shape="rect" coords="315,362,389,384" href="#" alt="Cancel" onclick="MM_showHideLayers('ol98optmfsp','','hide')">
+</map>
+</div>
+
+<div id="ol98optmfsped" style="z-index: 50; left: 185px; top: 95px; position: absolute;">
+<img src="ol98optmfsped.png" usemap="#ol98optmfsped.png" width="426" height="383" border="0" alt="">
+<map name="ol98optmfsped.png">
+<area shape="rect" coords="405,5,420,18" href="#" alt="Close" onclick="MM_showHideLayers('ol98optmfsped','','hide')">
+<area shape="rect" coords="257,345,331,367" href="#" alt="OK" onclick="MM_showHideLayers('ol98optmfsped','','hide')">
+<area shape="rect" coords="338,345,412,367" href="#" alt="Cancel" onclick="MM_showHideLayers('ol98optmfsped','','hide')">
+</map>
+</div>
+
+<div id="ol98optmfspnewname" style="z-index: 50; left: 235px; top: 125px; position: absolute;">
+<img src="ol98optmfspnewname.png" usemap="#ol98optmfspnewname.png" width="333" height="319" border="0" alt="">
+<map name="ol98optmfspnewname.png">
+<area shape="rect" coords="312,5,327,18" href="#" alt="Close" onclick="MM_showHideLayers('ol98optmfspnewname','','hide')">
+<area shape="rect" coords="164,280,238,302" href="#" alt="Next" onclick="MM_showHideLayers('ol98optmfspnewtext','','show','ol98optmfspnewname','','hide')">
+<area shape="rect" coords="245,280,319,302" href="#" alt="Cancel" onclick="MM_showHideLayers('ol98optmfspnewname','','hide')">
+</map>
+</div>
+
+<div id="ol98optmfspnewtext" style="z-index: 50; left: 185px; top: 95px; position: absolute;">
+<img src="ol98optmfspnewtext.png" usemap="#ol98optmfspnewtext.png" width="426" height="383" border="0" alt="">
+<map name="ol98optmfspnewtext.png">
+<area shape="rect" coords="405,5,420,18" href="#" alt="Close" onclick="MM_showHideLayers('ol98optmfspnewtext','','hide')">
+<area shape="rect" coords="257,345,331,367" href="#" alt="Finish" onclick="MM_showHideLayers('ol98optmfspnewtext','','hide')">
+<area shape="rect" coords="338,345,412,367" href="#" alt="Cancel" onclick="MM_showHideLayers('ol98optmfspnewtext','','hide')">
+</map>
+</div>
+
+<div id="ol98optseccs" style="z-index: 40; left: 205px; top: 50px; position: absolute;">
+<img src="ol98optseccs.png" usemap="#ol98optseccs.png" width="389" height="470" border="0" alt="">
+<map name="ol98optseccs.png">
+<area shape="rect" coords="368,5,383,18" href="#" alt="Close" onclick="MM_showHideLayers('ol98optseccs','','hide')">
+<area shape="rect" coords="284,189,358,211" href="#" alt="Choose" onclick="MM_showHideLayers('ol98optseccsch','','show')">
+<area shape="rect" coords="284,264,358,286" href="#" alt="Choose" onclick="MM_showHideLayers('ol98optseccsch','','show')">
+<area shape="rect" coords="224,435,298,457" href="#" alt="OK" onclick="MM_showHideLayers('ol98optseccs','','hide')">
+<area shape="rect" coords="305,435,379,457" href="#" alt="Cancel" onclick="MM_showHideLayers('ol98optseccs','','hide')">
+</map>
+</div>
+
+<div id="ol98optseccsch" style="z-index: 50; left: 190px; top: 145px; position: absolute;">
+<img src="ol98optseccsch.png" usemap="#ol98optseccsch.png" width="423" height="280" border="0" alt="">
+<map name="ol98optseccsch.png">
+<area shape="rect" coords="402,5,417,18" href="#" alt="Close" onclick="MM_showHideLayers('ol98optseccsch','','hide')">
+<area shape="rect" coords="143,243,217,265" href="#" alt="OK" onclick="MM_showHideLayers('ol98optseccsch','','hide')">
+<area shape="rect" coords="222,243,296,265" href="#" alt="Cancel" onclick="MM_showHideLayers('ol98optseccsch','','hide')">
+</map>
+</div>
+
+<div id="ol98optseciedid" style="z-index: 40; left: 190px; top: 60px; position: absolute;">
+<img src="ol98optseciedid.png" usemap="#ol98optseciedid.png" width="419" height="457" border="0" alt="">
+<map name="ol98optseciedid.png">
+<area shape="rect" coords="398,5,413,18" href="#" alt="Close" onclick="MM_showHideLayers('ol98optseciedid','','hide')">
+<area shape="rect" coords="251,425,325,447" href="#" alt="OK" onclick="MM_showHideLayers('ol98optseciedid','','hide')">
+<area shape="rect" coords="332,425,406,447" href="#" alt="Cancel" onclick="MM_showHideLayers('ol98optseciedid','','hide')">
+</map>
+</div>
+
+<div id="ol98optotherao" style="z-index: 40; left: 210px; top: 105px; position: absolute;">
+<img src="ol98optotherao.png" usemap="#ol98optotherao.png" width="378" height="360" border="0" alt="">
+<map name="ol98optotherao.png">
+<area shape="rect" coords="357,5,372,18" href="#" alt="Close" onclick="MM_showHideLayers('ol98optotherao','','hide')">
+<area shape="rect" coords="14,263,126,285" href="#" alt="Reminder Options" onclick="MM_showHideLayers('ol98optotheraoro','','show')">
+<area shape="rect" coords="135,263,242,285" href="#" alt="Add-In Manager" onclick="MM_showHideLayers('ol98optotheraoaim','','show')">
+<area shape="rect" coords="252,263,364,285" href="#" alt="Advanced Tasks" onclick="MM_showHideLayers('ol98optotheraoat','','show')">
+<area shape="rect" coords="209,321,283,343" href="#" alt="OK" onclick="MM_showHideLayers('ol98optotherao','','hide')">
+<area shape="rect" coords="290,321,364,343" href="#" alt="Cancel" onclick="MM_showHideLayers('ol98optotherao','','hide')">
+</map>
+</div>
+
+<div id="ol98optotheraoro" style="z-index: 50; left: 215px; top: 200px; position: absolute;">
+<img src="ol98optotheraoro.png" usemap="#ol98optotheraoro.png" width="371" height="170" border="0" alt="">
+<map name="ol98optotheraoro.png">
+<area shape="rect" coords="350,5,365,18" href="#" alt="Close" onclick="MM_showHideLayers('ol98optotheraoro','','hide')">
+<area shape="rect" coords="201,131,275,153" href="#" alt="OK" onclick="MM_showHideLayers('ol98optotheraoro','','hide')">
+<area shape="rect" coords="282,131,356,153" href="#" alt="Cancel" onclick="MM_showHideLayers('ol98optotheraoro','','hide')">
+</map>
+</div>
+
+<div id="ol98optotheraoaim" style="z-index: 50; left: 195px; top: 190px; position: absolute;">
+<img src="ol98optotheraoaim.png" usemap="#ol98optotheraoaim.png" width="407" height="194" border="0" alt="">
+<map name="ol98optotheraoaim.png">
+<area shape="rect" coords="386,5,401,18" href="#" alt="Close" onclick="MM_showHideLayers('ol98optotheraoaim','','hide')">
+<area shape="rect" coords="165,157,239,179" href="#" alt="OK" onclick="MM_showHideLayers('ol98optotheraoaim','','hide')">
+</map>
+</div>
+
+<div id="ol98optotheraoat" style="z-index: 50; left: 235px; top: 215px; position: absolute;">
+<img src="ol98optotheraoat.png" usemap="#ol98optotheraoat.png" width="333" height="140" border="0" alt="">
+<map name="ol98optotheraoat.png">
+<area shape="rect" coords="312,5,327,18" href="#" alt="Close" onclick="MM_showHideLayers('ol98optotheraoat','','hide')">
+<area shape="rect" coords="164,102,238,124" href="#" alt="OK" onclick="MM_showHideLayers('ol98optotheraoat','','hide')">
+<area shape="rect" coords="245,102,319,124" href="#" alt="Cancel" onclick="MM_showHideLayers('ol98optotheraoat','','hide')">
+</map>
+</div>
+
+<div id="ol98optotheraa" style="z-index: 40; left: 200px; top: 170px; position: absolute;">
+<img src="ol98optotheraa.png" usemap="#ol98optotheraa.png" width="404" height="236" border="0" alt="">
+<map name="ol98optotheraa.png">
+<area shape="rect" coords="383,5,398,18" href="#" alt="Close" onclick="MM_showHideLayers('ol98optotheraa','','hide')">
+<area shape="rect" coords="234,199,308,219" href="#" alt="OK" onclick="MM_showHideLayers('ol98optotheraa','','hide')">
+<area shape="rect" coords="315,199,389,219" href="#" alt="Cancel" onclick="MM_showHideLayers('ol98optotheraa','','hide')">
+</map>
+</div>
+
+<div id="ol98optotherpp" style="z-index: 40; left: 220px; top: 165px; position: absolute;">
+<img src="ol98optotherpp.png" usemap="#ol98optotherpp.png" width="359" height="244" border="0" alt="">
+<map name="ol98optotherpp.png">
+<area shape="rect" coords="338,5,353,18" href="#" alt="Close" onclick="MM_showHideLayers('ol98optotherpp','','hide')">
+<area shape="rect" coords="189,209,263,231" href="#" alt="OK" onclick="MM_showHideLayers('ol98optotherpp','','hide')">
+<area shape="rect" coords="270,209,344,231" href="#" alt="Cancel" onclick="MM_showHideLayers('ol98optotherpp','','hide')">
+</map>
+</div>
+
+<div id="ol98about" style="z-index: 30; left: 200px; top: 125px; position: absolute;">
+<img src="ol98about.png" usemap="#ol98about.png" width="401" height="326" border="0" alt="">
+<map name="ol98about.png">
+<area shape="rect" coords="380,5,395,18" href="#" alt="Close" onclick="MM_showHideLayers('ol98about','','hide')">
+<area shape="rect" coords="303,230,386,252" href="#" alt="OK" onclick="MM_showHideLayers('ol98about','','hide')">
+</map>
+</div>
+
+</body>
+</html>

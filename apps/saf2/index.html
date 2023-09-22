@@ -1,0 +1,300 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Safari 2 (Mac OS X) Virtual Desktop</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script language="javascript" type="text/javascript">
+<!--
+function MM_findObj(n, d) { //v4.0
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && document.getElementById) x=document.getElementById(n); return x;
+}
+
+function MM_showHideLayers() { //v3.0
+  var i,p,v,obj,args=MM_showHideLayers.arguments;
+  for (i=0; i<(args.length-2); i+=3) if ((obj=MM_findObj(args[i]))!=null) { v=args[i+2];
+    if (obj.style) { obj=obj.style; v=(v=='show')?'visible':(v='hide')?'hidden':v; }
+    obj.visibility=v; }
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+//-->
+</script>
+</head>
+
+<body bgcolor="#266AA9" style="margin: 0px;" onload="show_clock();	
+MM_showHideLayers('loading','','hide','loadmsg','','hide','clock','','show','safari','','show','safarifinder','','show','safariappmenu','','hide','safarisafari','','hide','safarifile','','hide','safariedit','','hide','safariview','','hide','safarihist','','hide','safaribook','','hide','safariwin','','hide','safarihelp','','hide','safariabout','','hide','safariprefgen','','hide','safariprefapp','','hide','safariprefbook','','hide','safaripreftabs','','hide','safariprefrss','','hide','safariprefrssrem','','hide','safariprefaf','','hide','safariprefafuseredit','','hide','safariprefafformedit','','hide','safariprefsec','','hide','safariprefseccook','','hide','safariprefadv','','hide','safaripb','','hide','safarireset','','hide','safariec','','hide','safaripb','','hide','safarireset','','hide','safariec','','hide');
+MM_preloadImages('loading.png','safari.png','safarifinder.png','safariappmenu.png','safarisafari.png','safarifile.png','safariedit.png','safariview.png','safarihist.png','safaribook.png','safariwin.png','safarihelp.png','safariabout.png','safariprefgen.png','safariprefapp.png','safariprefbook.png','safaripreftabs.png','safariprefrss.png','safariprefrssrem.png','safariprefaf.png','safariprefafuseredit.png','safariprefafformedit.png','safariprefsec.png','safariprefseccook.png','safariprefadv.png','safaripb.png','safarireset.png','safariec.png','safaripb.png','safarireset.png','safariec.png');
+return document.MM_returnValue;">
+
+<div id="loading" style="z-index: 499; left: 0px; top: 0px; position: absolute;">
+<img src="loading.png" width="800" height="600" border="0" alt="">
+</div>
+
+<div id="loadmsg" style="z-index: 500; left: 20px; top: 20px; width: 225; height: 400; position: absolute;">
+<center><span style="font-family: Arial; font-size: 24px;">Please Wait...</span></center><br>
+<span style="font-family: Arial; font-size: 13px;">Images for the virtual desktop are now being preloaded into RAM. When this is complete, you will be presented with the desktop and be able to browse all available options without the need for further loading.</span>
+</div>
+
+<div id="clock" style="z-index: 200; left: 670px; top: 1px; position: absolute;">
+<b><script language="javascript" type="text/javascript" src="clock.js">
+/*
+Live Clock Script-
+By Mark Plachetta (astro@bigpond.net.au) based on code from DynamicDrive.com
+For full source code, 100's more DHTML scripts, and Terms Of Use,
+visit http://www.dynamicdrive.com
+*/
+</script></b>
+</div>
+
+<div id="safari" style="z-index: 20; left: 0px; top: 26px; position: absolute;">
+<img src="safari.png" usemap="#safari.png" width="800" height="574" border="0" alt="">
+<map name="safari.png">
+<area shape="circle" coords="15,12,7" href="#" alt="Close" onclick="window.close();">
+</map>
+</div>
+
+<div id="safarifinder" style="z-index: 110; left: 0px; top: 0px; position: absolute;">
+<img src="safarifinder.png" usemap="#safarifinder.png" width="800" height="23" border="0" alt="">
+<map name="safarifinder.png">
+<area shape="rect" coords="10,0,45,22" href="#" alt="Apple" onmouseover="MM_showHideLayers('safariappmenu','','show')" onmouseout="MM_showHideLayers('safariappmenu','','hide')">
+<area shape="rect" coords="45,0,105,22" href="#" alt="Safari" onmouseover="MM_showHideLayers('safarisafari','','show')" onmouseout="MM_showHideLayers('safarisafari','','hide')">
+<area shape="rect" coords="105,0,147,22" href="#" alt="File" onmouseover="MM_showHideLayers('safarifile','','show')" onmouseout="MM_showHideLayers('safarifile','','hide')">
+<area shape="rect" coords="147,0,191,22" href="#" alt="Edit" onmouseover="MM_showHideLayers('safariedit','','show')" onmouseout="MM_showHideLayers('safariedit','','hide')">
+<area shape="rect" coords="191,0,241,22" href="#" alt="View" onmouseover="MM_showHideLayers('safariview','','show')" onmouseout="MM_showHideLayers('safariview','','hide')">
+<area shape="rect" coords="241,0,308,22" href="#" alt="History" onmouseover="MM_showHideLayers('safarihist','','show')" onmouseout="MM_showHideLayers('safarihist','','hide')">
+<area shape="rect" coords="308,0,401,22" href="#" alt="Bookmarks" onmouseover="MM_showHideLayers('safaribook','','show')" onmouseout="MM_showHideLayers('safaribook','','hide')">
+<area shape="rect" coords="401,0,472,22" href="#" alt="Window" onmouseover="MM_showHideLayers('safariwin','','show')" onmouseout="MM_showHideLayers('safariwin','','hide')">
+<area shape="rect" coords="472,0,521,22" href="#" alt="Help" onmouseover="MM_showHideLayers('safarihelp','','show')" onmouseout="MM_showHideLayers('safarihelp','','hide')">
+</map>
+</div>
+
+<div id="safariappmenu" style="z-index: 110; left: 10px; top: 22px; position: absolute;" onmouseover="MM_showHideLayers('safariappmenu','','show')" onmouseout="MM_showHideLayers('safariappmenu','','hide')">
+<img src="safariappmenu.png" width="241" height="298" border="0" alt="">
+</div>
+
+<div id="safarisafari" style="z-index: 110; left: 45px; top: 22px; position: absolute;" onmouseover="MM_showHideLayers('safarisafari','','show')" onmouseout="MM_showHideLayers('safarisafari','','hide')">
+<img src="safarisafari.png" usemap="#safarisafari.png" width="236" height="298" border="0" alt="">
+<map name="safarisafari.png">
+<area shape="rect" coords="1,1,234,24" href="#" alt="About Safari" onclick="MM_showHideLayers('safariabout','','show','safarisafari','','hide')">
+<area shape="rect" coords="1,49,234,73" href="#" alt="Preferences" onclick="MM_showHideLayers('safariprefgen','','show','safarisafari','','hide')">
+<area shape="rect" coords="1,99,234,123" href="#" alt="Private Browsing" onclick="MM_showHideLayers('safaripb','','show','safarisafari','','hide')">
+<area shape="rect" coords="1,123,234,142" href="#" alt="Reset Safari" onclick="MM_showHideLayers('safarireset','','show','safarisafari','','hide')">
+<area shape="rect" coords="1,142,234,166" href="#" alt="Empty Cache" onclick="MM_showHideLayers('safariec','','show','safarisafari','','hide')">
+<area shape="rect" coords="1,268,234,296" href="#" alt="Quit Safari" onclick="window.close();">
+</map>
+</div>
+
+<div id="safarifile" style="z-index: 110; left: 105px; top: 22px; position: absolute;" onmouseover="MM_showHideLayers('safarifile','','show')" onmouseout="MM_showHideLayers('safarifile','','hide')">
+<img src="safarifile.png" width="261" height="267" border="0" alt="">
+</div>
+
+<div id="safariedit" style="z-index: 110; left: 147px; top: 22px; position: absolute;" onmouseover="MM_showHideLayers('safariedit','','show')" onmouseout="MM_showHideLayers('safariedit','','hide')">
+<img src="safariedit.png" width="232" height="267" border="0" alt="">
+</div>
+
+<div id="safariview" style="z-index: 110; left: 191px; top: 22px; position: absolute;" onmouseover="MM_showHideLayers('safariview','','show')" onmouseout="MM_showHideLayers('safariview','','hide')">
+<img src="safariview.png" width="235" height="248" border="0" alt="">
+</div>
+
+<div id="safarihist" style="z-index: 110; left: 241px; top: 22px; position: absolute;" onmouseover="MM_showHideLayers('safarihist','','show')" onmouseout="MM_showHideLayers('safarihist','','hide')">
+<img src="safarihist.png" width="260" height="200" border="0" alt="">
+</div>
+
+<div id="safaribook" style="z-index: 110; left: 308px; top: 22px; position: absolute;" onmouseover="MM_showHideLayers('safaribook','','show')" onmouseout="MM_showHideLayers('safaribook','','hide')">
+<img src="safaribook.png" width="253" height="100" border="0" alt="">
+</div>
+
+<div id="safariwin" style="z-index: 110; left: 401px; top: 22px; position: absolute;" onmouseover="MM_showHideLayers('safariwin','','show')" onmouseout="MM_showHideLayers('safariwin','','hide')">
+<img src="safariwin.png" width="177" height="160" border="0" alt="">
+</div>
+
+<div id="safarihelp" style="z-index: 110; left: 472px; top: 22px; position: absolute;" onmouseover="MM_showHideLayers('safarihelp','','show')" onmouseout="MM_showHideLayers('safarihelp','','hide')">
+<img src="safarihelp.png" width="181" height="110" border="0" alt="">
+</div>
+
+<div id="safariabout" style="z-index: 30; left: 255px; top: 210px; position: absolute;">
+<img src="safariabout.png" usemap="#safariabout.png" width="286" height="202" border="0" alt="">
+<map name="safariabout.png">
+<area shape="circle" coords="16,12,7" href="#" alt="Close" onclick="MM_showHideLayers('safariabout','','hide')">
+</map>
+</div>
+
+<div id="safariprefgen" style="z-index: 30; left: 145px; top: 70px; position: absolute;">
+<img src="safariprefgen.png" usemap="#safariprefgen.png" width="510" height="487" border="0" alt="">
+<map name="safariprefgen.png">
+<area shape="circle" coords="16,12,7" href="#" alt="Close" onclick="MM_showHideLayers('safariprefgen','','hide')">
+<area shape="rect" coords="55,23,128,77" href="#" alt="Appearance" onclick="MM_showHideLayers('safariprefapp','','show','safariprefgen','','hide')">
+<area shape="rect" coords="128,23,198,77" href="#" alt="Bookmarks" onclick="MM_showHideLayers('safariprefbook','','show','safariprefgen','','hide')">
+<area shape="rect" coords="198,23,241,77" href="#" alt="Tabs" onclick="MM_showHideLayers('safaripreftabs','','show','safariprefgen','','hide')">
+<area shape="rect" coords="241,23,282,77" href="#" alt="RSS" onclick="MM_showHideLayers('safariprefrss','','show','safariprefgen','','hide')">
+<area shape="rect" coords="282,23,333,77" href="#" alt="AutoFill" onclick="MM_showHideLayers('safariprefaf','','show','safariprefgen','','hide')">
+<area shape="rect" coords="333,23,386,77" href="#" alt="Security" onclick="MM_showHideLayers('safariprefsec','','show','safariprefgen','','hide')">
+<area shape="rect" coords="386,23,448,77" href="#" alt="Advanced" onclick="MM_showHideLayers('safariprefadv','','show','safariprefgen','','hide')">
+</map>
+</div>
+
+<div id="safariprefapp" style="z-index: 30; left: 145px; top: 70px; position: absolute;">
+<img src="safariprefapp.png" usemap="#safariprefapp.png" width="510" height="269" border="0" alt="">
+<map name="safariprefapp.png">
+<area shape="circle" coords="16,12,7" href="#" alt="Close" onclick="MM_showHideLayers('safariprefapp','','hide')">
+<area shape="rect" coords="1,23,56,77" href="#" alt="General" onclick="MM_showHideLayers('safariprefgen','','show','safariprefapp','','hide')">
+<area shape="rect" coords="128,23,198,77" href="#" alt="Bookmarks" onclick="MM_showHideLayers('safariprefbook','','show','safariprefapp','','hide')">
+<area shape="rect" coords="198,23,241,77" href="#" alt="Tabs" onclick="MM_showHideLayers('safaripreftabs','','show','safariprefapp','','hide')">
+<area shape="rect" coords="241,23,282,77" href="#" alt="RSS" onclick="MM_showHideLayers('safariprefrss','','show','safariprefapp','','hide')">
+<area shape="rect" coords="282,23,333,77" href="#" alt="AutoFill" onclick="MM_showHideLayers('safariprefaf','','show','safariprefapp','','hide')">
+<area shape="rect" coords="333,23,386,77" href="#" alt="Security" onclick="MM_showHideLayers('safariprefsec','','show','safariprefapp','','hide')">
+<area shape="rect" coords="386,23,448,77" href="#" alt="Advanced" onclick="MM_showHideLayers('safariprefadv','','show','safariprefapp','','hide')">
+</map>
+</div>
+
+<div id="safariprefbook" style="z-index: 30; left: 145px; top: 70px; position: absolute;">
+<img src="safariprefbook.png" usemap="#safariprefbook.png" width="510" height="386" border="0" alt="">
+<map name="safariprefbook.png">
+<area shape="circle" coords="16,12,7" href="#" alt="Close" onclick="MM_showHideLayers('safariprefbook','','hide')">
+<area shape="rect" coords="1,23,56,77" href="#" alt="General" onclick="MM_showHideLayers('safariprefgen','','show','safariprefbook','','hide')">
+<area shape="rect" coords="56,23,129,77" href="#" alt="Appearance" onclick="MM_showHideLayers('safariprefapp','','show','safariprefbook','','hide')">
+<area shape="rect" coords="198,23,241,77" href="#" alt="Tabs" onclick="MM_showHideLayers('safaripreftabs','','show','safariprefbook','','hide')">
+<area shape="rect" coords="241,23,282,77" href="#" alt="RSS" onclick="MM_showHideLayers('safariprefrss','','show','safariprefbook','','hide')">
+<area shape="rect" coords="282,23,333,77" href="#" alt="AutoFill" onclick="MM_showHideLayers('safariprefaf','','show','safariprefbook','','hide')">
+<area shape="rect" coords="333,23,386,77" href="#" alt="Security" onclick="MM_showHideLayers('safariprefsec','','show','safariprefbook','','hide')">
+<area shape="rect" coords="386,23,448,77" href="#" alt="Advanced" onclick="MM_showHideLayers('safariprefadv','','show','safariprefbook','','hide')">
+</map>
+</div>
+
+<div id="safaripreftabs" style="z-index: 30; left: 145px; top: 70px; position: absolute;">
+<img src="safaripreftabs.png" usemap="#safaripreftabs.png" width="510" height="285" border="0" alt="">
+<map name="safaripreftabs.png">
+<area shape="circle" coords="16,12,7" href="#" alt="Close" onclick="MM_showHideLayers('safaripreftabs','','hide')">
+<area shape="rect" coords="1,23,56,77" href="#" alt="General" onclick="MM_showHideLayers('safariprefgen','','show','safaripreftabs','','hide')">
+<area shape="rect" coords="56,23,129,77" href="#" alt="Appearance" onclick="MM_showHideLayers('safariprefapp','','show','safaripreftabs','','hide')">
+<area shape="rect" coords="129,23,199,77" href="#" alt="Bookmarks" onclick="MM_showHideLayers('safariprefbook','','show','safaripreftabs','','hide')">
+<area shape="rect" coords="240,23,282,77" href="#" alt="RSS" onclick="MM_showHideLayers('safariprefrss','','show','safaripreftabs','','hide')">
+<area shape="rect" coords="282,23,333,77" href="#" alt="AutoFill" onclick="MM_showHideLayers('safariprefaf','','show','safaripreftabs','','hide')">
+<area shape="rect" coords="333,23,386,77" href="#" alt="Security" onclick="MM_showHideLayers('safariprefsec','','show','safaripreftabs','','hide')">
+<area shape="rect" coords="386,23,448,77" href="#" alt="Advanced" onclick="MM_showHideLayers('safariprefadv','','show','safaripreftabs','','hide')">
+</map>
+</div>
+
+<div id="safariprefrss" style="z-index: 30; left: 145px; top: 70px; position: absolute;">
+<img src="safariprefrss.png" usemap="#safariprefrss.png" width="510" height="356" border="0" alt="">
+<map name="safariprefrss.png">
+<area shape="circle" coords="16,12,7" href="#" alt="Close" onclick="MM_showHideLayers('safariprefrss','','hide')">
+<area shape="rect" coords="1,23,56,77" href="#" alt="General" onclick="MM_showHideLayers('safariprefgen','','show','safariprefrss','','hide')">
+<area shape="rect" coords="56,23,129,77" href="#" alt="Appearance" onclick="MM_showHideLayers('safariprefapp','','show','safariprefrss','','hide')">
+<area shape="rect" coords="129,23,199,77" href="#" alt="Bookmarks" onclick="MM_showHideLayers('safariprefbook','','show','safariprefrss','','hide')">
+<area shape="rect" coords="199,23,241,77" href="#" alt="Tabs" onclick="MM_showHideLayers('safaripreftabs','','show','safariprefrss','','hide')">
+<area shape="rect" coords="282,23,333,77" href="#" alt="AutoFill" onclick="MM_showHideLayers('safariprefaf','','show','safariprefrss','','hide')">
+<area shape="rect" coords="333,23,386,77" href="#" alt="Security" onclick="MM_showHideLayers('safariprefsec','','show','safariprefrss','','hide')">
+<area shape="rect" coords="386,23,448,77" href="#" alt="Advanced" onclick="MM_showHideLayers('safariprefadv','','show','safariprefrss','','hide')">
+<area shape="rect" coords="252,310,361,330" href="#" alt="Remove Now" onclick="MM_showHideLayers('safariprefrssrem','','show')">
+</map>
+</div>
+
+<div id="safariprefrssrem" style="z-index: 40; left: 189px; top: 92px; position: absolute;">
+<img src="safariprefrssrem.png" usemap="#safariprefrssrem.png" width="422" height="133" border="0" alt="">
+<map name="safariprefrssrem.png">
+<area shape="rect" coords="183,92,266,112" href="#" alt="Cancel" onclick="MM_showHideLayers('safariprefrssrem','','hide')">
+<area shape="rect" coords="281,92,400,112" href="#" alt="Remove Now" onclick="MM_showHideLayers('safariprefrssrem','','hide')">
+</map>
+</div>
+
+<div id="safariprefaf" style="z-index: 30; left: 145px; top: 70px; position: absolute;">
+<img src="safariprefaf.png" usemap="#safariprefaf.png" width="510" height="226" border="0" alt="">
+<map name="safariprefaf.png">
+<area shape="circle" coords="16,12,7" href="#" alt="Close" onclick="MM_showHideLayers('safariprefaf','','hide')">
+<area shape="rect" coords="1,23,56,77" href="#" alt="General" onclick="MM_showHideLayers('safariprefgen','','show','safariprefaf','','hide')">
+<area shape="rect" coords="56,23,129,77" href="#" alt="Appearance" onclick="MM_showHideLayers('safariprefapp','','show','safariprefaf','','hide')">
+<area shape="rect" coords="129,23,199,77" href="#" alt="Bookmarks" onclick="MM_showHideLayers('safariprefbook','','show','safariprefaf','','hide')">
+<area shape="rect" coords="199,23,241,77" href="#" alt="Tabs" onclick="MM_showHideLayers('safaripreftabs','','show','safariprefaf','','hide')">
+<area shape="rect" coords="241,23,283,77" href="#" alt="RSS" onclick="MM_showHideLayers('safariprefrss','','show','safariprefaf','','hide')">
+<area shape="rect" coords="333,23,386,77" href="#" alt="Security" onclick="MM_showHideLayers('safariprefsec','','show','safariprefaf','','hide')">
+<area shape="rect" coords="386,23,448,77" href="#" alt="Advanced" onclick="MM_showHideLayers('safariprefadv','','show','safariprefaf','','hide')">
+<area shape="rect" coords="424,128,491,144" href="#" alt="Edit" onclick="MM_showHideLayers('safariprefafuseredit','','show')">
+<area shape="rect" coords="424,157,491,174" href="#" alt="Edit" onclick="MM_showHideLayers('safariprefafformedit','','show')">
+</map>
+</div>
+
+<div id="safariprefafuseredit" style="z-index: 40; left: 157px; top: 92px; position: absolute;">
+<img src="safariprefafuseredit.png" usemap="#safariprefafuseredit.png" width="486" height="362" border="0" alt="">
+<map name="safariprefafuseredit.png">
+<area shape="rect" coords="393,321,464,341" href="#" alt="Done" onclick="MM_showHideLayers('safariprefafuseredit','','hide')">
+</map>
+</div>
+
+<div id="safariprefafformedit" style="z-index: 40; left: 215px; top: 92px; position: absolute;">
+<img src="safariprefafformedit.png" usemap="#safariprefafformedit.png" width="370" height="291" border="0" alt="">
+<map name="safariprefafformedit.png">
+<area shape="rect" coords="277,250,348,270" href="#" alt="Done" onclick="MM_showHideLayers('safariprefafformedit','','hide')">
+</map>
+</div>
+
+<div id="safariprefsec" style="z-index: 30; left: 145px; top: 70px; position: absolute;">
+<img src="safariprefsec.png" usemap="#safariprefsec.png" width="510" height="402" border="0" alt="">
+<map name="safariprefsec.png">
+<area shape="circle" coords="16,12,7" href="#" alt="Close" onclick="MM_showHideLayers('safariprefsec','','hide')">
+<area shape="rect" coords="1,23,56,77" href="#" alt="General" onclick="MM_showHideLayers('safariprefgen','','show','safariprefsec','','hide')">
+<area shape="rect" coords="56,23,129,77" href="#" alt="Appearance" onclick="MM_showHideLayers('safariprefapp','','show','safariprefsec','','hide')">
+<area shape="rect" coords="129,23,199,77" href="#" alt="Bookmarks" onclick="MM_showHideLayers('safariprefbook','','show','safariprefsec','','hide')">
+<area shape="rect" coords="199,23,241,77" href="#" alt="Tabs" onclick="MM_showHideLayers('safaripreftabs','','show','safariprefsec','','hide')">
+<area shape="rect" coords="241,23,283,77" href="#" alt="RSS" onclick="MM_showHideLayers('safariprefrss','','show','safariprefsec','','hide')">
+<area shape="rect" coords="283,23,334,77" href="#" alt="AutoFill" onclick="MM_showHideLayers('safariprefaf','','show','safariprefsec','','hide')">
+<area shape="rect" coords="386,23,448,77" href="#" alt="Advanced" onclick="MM_showHideLayers('safariprefadv','','show','safariprefsec','','hide')">
+<area shape="rect" coords="166,281,281,301" href="#" alt="Show Cookies" onclick="MM_showHideLayers('safariprefseccook','','show')">
+</map>
+</div>
+
+<div id="safariprefseccook" style="z-index: 40; left: 87px; top: 92px; position: absolute;">
+<img src="safariprefseccook.png" usemap="#safariprefseccook.png" width="627" height="361" border="0" alt="">
+<map name="safariprefseccook.png">
+<area shape="rect" coords="534,320,605,340" href="#" alt="Done" onclick="MM_showHideLayers('safariprefseccook','','hide')">
+</map>
+</div>
+
+<div id="safariprefadv" style="z-index: 30; left: 145px; top: 70px; position: absolute;">
+<img src="safariprefadv.png" usemap="#safariprefadv.png" width="510" height="286" border="0" alt="">
+<map name="safariprefadv.png">
+<area shape="circle" coords="16,12,7" href="#" alt="Close" onclick="MM_showHideLayers('safariprefadv','','hide')">
+<area shape="rect" coords="1,23,56,77" href="#" alt="General" onclick="MM_showHideLayers('safariprefgen','','show','safariprefadv','','hide')">
+<area shape="rect" coords="56,23,129,77" href="#" alt="Appearance" onclick="MM_showHideLayers('safariprefapp','','show','safariprefadv','','hide')">
+<area shape="rect" coords="129,23,199,77" href="#" alt="Bookmarks" onclick="MM_showHideLayers('safariprefbook','','show','safariprefadv','','hide')">
+<area shape="rect" coords="199,23,241,77" href="#" alt="Tabs" onclick="MM_showHideLayers('safaripreftabs','','show','safariprefadv','','hide')">
+<area shape="rect" coords="241,23,283,77" href="#" alt="RSS" onclick="MM_showHideLayers('safariprefrss','','show','safariprefadv','','hide')">
+<area shape="rect" coords="283,23,334,77" href="#" alt="AutoFill" onclick="MM_showHideLayers('safariprefaf','','show','safariprefadv','','hide')">
+<area shape="rect" coords="334,23,387,77" href="#" alt="Security" onclick="MM_showHideLayers('safariprefsec','','show','safariprefadv','','hide')">
+</map>
+</div>
+
+<div id="safaripb" style="z-index: 30; left: 190px; top: 190px; position: absolute;">
+<img src="safaripb.png" usemap="#safaripb.png" width="422" height="245" border="0" alt="">
+<map name="safaripb.png">
+<area shape="rect" coords="224,204,307,224" href="#" alt="Cancel" onclick="MM_showHideLayers('safaripb','','hide')">
+<area shape="rect" coords="322,204,400,224" href="#" alt="OK" onclick="MM_showHideLayers('safaripb','','hide')">
+</map>
+</div>
+
+<div id="safarireset" style="z-index: 30; left: 190px; top: 220px; position: absolute;">
+<img src="safarireset.png" usemap="#safarireset.png" width="422" height="186" border="0" alt="">
+<map name="safarireset.png">
+<area shape="rect" coords="224,145,307,165" href="#" alt="Cancel" onclick="MM_showHideLayers('safarireset','','hide')">
+<area shape="rect" coords="322,145,400,165" href="#" alt="Reset" onclick="MM_showHideLayers('safarireset','','hide')">
+</map>
+</div>
+
+<div id="safariec" style="z-index: 30; left: 190px; top: 220px; position: absolute;">
+<img src="safariec.png" usemap="#safariec.png" width="422" height="161" border="0" alt="">
+<map name="safariec.png">
+<area shape="rect" coords="224,120,307,140" href="#" alt="Cancel" onclick="MM_showHideLayers('safariec','','hide')">
+<area shape="rect" coords="322,120,400,140" href="#" alt="Empty" onclick="MM_showHideLayers('safariec','','hide')">
+</map>
+</div>
+
+</body>
+</html>

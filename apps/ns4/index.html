@@ -1,0 +1,1279 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Netscape 4 Virtual Desktop</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script language="javascript" type="text/javascript">
+<!--
+function MM_findObj(n, d) { //v4.0
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && document.getElementById) x=document.getElementById(n); return x;
+}
+
+function MM_showHideLayers() { //v3.0
+  var i,p,v,obj,args=MM_showHideLayers.arguments;
+  for (i=0; i<(args.length-2); i+=3) if ((obj=MM_findObj(args[i]))!=null) { v=args[i+2];
+    if (obj.style) { obj=obj.style; v=(v=='show')?'visible':(v='hide')?'hidden':v; }
+    obj.visibility=v; }
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+//-->
+</script>
+</head>
+
+<body bgcolor="#008080" style="margin: 0px;" onload="show_clock();
+MM_showHideLayers('loading','','hide','loadmsg','','hide','taskbar','','show','clock','','show','ns4','','show','ns4file','','hide','ns4edit','','hide','ns4view','','hide','ns4go','','hide','ns4comm','','hide','ns4help','','hide','ns4filenew','','hide','ns4commbook','','hide','ns4commtool','','hide','ns4bm','','hide','ns4si','','hide','ns4mc','','hide','ns4m','','hide','ns4mfile','','hide','ns4medit','','hide','ns4mview','','hide','ns4mgo','','hide','ns4mmsg','','hide','ns4mcomm','','hide','ns4mhelp','','hide','ns4mfilenew','','hide','ns4mviewsort','','hide','ns4mviewmsg','','hide','ns4mviewhead','','hide','ns4mcommbook','','hide','ns4mcommtool','','hide','ns4msub','','hide','ns4mmf','','hide','ns4mmfed','','hide','ns4mmfedadv','','hide','ns4mmfedsel1','','hide','ns4mmfedsel2','','hide','ns4mmfedsel3','','hide','ns4mfp','','hide','ns4newmsg','','hide','ns4newmsgfile','','hide','ns4newmsgedit','','hide','ns4newmsgview','','hide','ns4newmsgins','','hide','ns4newmsgform','','hide','ns4newmsgtool','','hide','ns4newmsgcomm','','hide','ns4newmsghelp','','hide','ns4newmsgopt','','hide','ns4prefapp','','hide','ns4preffont','','hide','ns4prefcol','','hide','ns4prefnav','','hide','ns4preflang','','hide','ns4prefappl','','hide','ns4prefsb','','hide','ns4prefmn','','hide','ns4prefident','','hide','ns4prefms','','hide','ns4prefns','','hide','ns4prefaddr','','hide','ns4prefmsg','','hide','ns4prefws','','hide','ns4prefcf','','hide','ns4prefform','','hide','ns4prefrr','','hide','ns4prefds','','hide','ns4prefra','','hide','ns4prefsi','','hide','ns4prefis','','hide','ns4prefcomp','','hide','ns4prefpub','','hide','ns4prefoff','','hide','ns4prefdown','','hide','ns4prefadv','','hide','ns4prefcache','','hide','ns4prefprox','','hide','ns4prefsu','','hide','ns4preflangadd','','hide','ns4prefapplnt','','hide','ns4prefidentecname','','hide','ns4prefidenteccont','','hide','ns4prefidentecnote','','hide','ns4prefmsadd','','hide','ns4prefmsedgen','','hide','ns4prefmsedpop','','hide','ns4prefnsadd','','hide','ns4prefnsed','','hide','ns4prefcfcf','','hide','ns4prefrrcust','','hide','ns4prefdownsel','','hide','ns4prefprox2','','hide','ns4prefproxview','','hide','ns4about','','hide','ns4back','','hide');
+MM_preloadImages('loading.png','tbar.png','ns4.png','ns4file.png','ns4edit.png','ns4view.png','ns4go.png','ns4comm.png','ns4help.png','ns4filenew.png','ns4commbook.png','ns4commtool.png','ns4bm.png','ns4si.png','ns4mc.png','ns4m.png','ns4mfile.png','ns4medit.png','ns4mview.png','ns4mgo.png','ns4mmsg.png','ns4mcomm.png','ns4mhelp.png','ns4mfilenew.png','ns4mviewsort.png','ns4mviewmsg.png','ns4mviewhead.png','ns4mcommbook.png','ns4mcommtool.png','ns4msub.png','ns4mmf.png','ns4mmfed.png','ns4mmfedadv.png','ns4mmfedsel1.png','ns4mmfedsel2.png','ns4mmfedsel3.png','ns4mfp.png','ns4newmsg.png','ns4newmsgfile.png','ns4newmsgedit.png','ns4newmsgview.png','ns4newmsgins.png','ns4newmsgform.png','ns4newmsgtool.png','ns4newmsgcomm.png','ns4newmsghelp.png','ns4newmsgopt.png','ns4prefapp.png','ns4preffont.png','ns4prefcol.png','ns4prefnav.png','ns4preflang.png','ns4prefappl.png','ns4prefsb.png','ns4prefmn.png','ns4prefident.png','ns4prefms.png','ns4prefns.png','ns4prefaddr.png','ns4prefmsg.png','ns4prefws.png','ns4prefcf.png','ns4prefform.png','ns4prefrr.png','ns4prefds.png','ns4prefra.png','ns4prefsi.png','ns4prefis.png','ns4prefcomp.png','ns4prefpub.png','ns4prefoff.png','ns4prefdown.png','ns4prefadv.png','ns4prefcache.png','ns4prefprox.png','ns4prefsu.png','ns4preflangadd.png','ns4prefapplnt.png','ns4prefidentecname.png','ns4prefidenteccont.png','ns4prefidentecnote.png','ns4prefmsadd.png','ns4prefmsedgen.png','ns4prefmsedpop.png','ns4prefnsadd.png','ns4prefnsed.png','ns4prefcfcf.png','ns4prefrrcust.png','ns4prefdownsel.png','ns4prefprox2.png','ns4prefproxview.png','ns4about.png','ns4back.png');
+return document.MM_returnValue;">
+
+<div id="loading" style="z-index: 499; left: 0px; top: 0px; position: absolute;">
+<img src="loading.png" width="800" height="600" border="0" alt="">
+</div>
+
+<div id="loadmsg" style="z-index: 500; left: 20px; top: 20px; width: 300; height: 300; position: absolute;">
+<center><span style="font-family: Arial; font-size: 24px;">Please Wait...</span></center><br>
+<span style="font-family: Arial; font-size: 13px;">Images for the virtual desktop are now being preloaded into RAM. When this is complete, you will be presented with the desktop and be able to browse all available options without the need for further loading.</span>
+</div>
+
+<div id="taskbar" style="z-index: 99; left: 0px; top: 572px; position: absolute;">
+<img src="tbar.png" width="800" height="28" border="0" alt="">
+</div>
+
+<div id="clock" style="z-index: 100; left: 760px; top: 579px; position: absolute;">
+<script language="javascript" type="text/javascript" src="clock.js">
+/*
+Live Clock Script-
+By Mark Plachetta (astro@bigpond.net.au) based on code from DynamicDrive.com
+For full source code, 100's more DHTML scripts, and Terms Of Use,
+visit http://www.dynamicdrive.com
+*/
+</script>
+</div>
+
+<div id="ns4" style="z-index: 10; left: 0px; top: 0px; position: absolute;">
+<img src="ns4.png" usemap="#ns4.png" width="800" height="576" border="0" alt="">
+<map name="ns4.png">
+<area shape="rect" coords="782,2,797,15" href="#" alt="Close" onclick="window.close();">
+<area shape="rect" coords="0,19,28,37" href="#" alt="File" onmouseover="MM_showHideLayers('ns4file','','show')" onmouseout="MM_showHideLayers('ns4file','','hide')">
+<area shape="rect" coords="28,19,58,37" href="#" alt="Edit" onmouseover="MM_showHideLayers('ns4edit','','show')" onmouseout="MM_showHideLayers('ns4edit','','hide')">
+<area shape="rect" coords="58,19,93,37" href="#" alt="View" onmouseover="MM_showHideLayers('ns4view','','show')" onmouseout="MM_showHideLayers('ns4view','','hide')">
+<area shape="rect" coords="93,19,119,37" href="#" alt="Go" onmouseover="MM_showHideLayers('ns4go','','show')" onmouseout="MM_showHideLayers('ns4go','','hide')">
+<area shape="rect" coords="119,19,198,37" href="#" alt="Communicator" onmouseover="MM_showHideLayers('ns4comm','','show')" onmouseout="MM_showHideLayers('ns4comm','','hide')">
+<area shape="rect" coords="198,19,232,37" href="#" alt="Help" onmouseover="MM_showHideLayers('ns4help','','show')" onmouseout="MM_showHideLayers('ns4help','','hide')">
+<area shape="rect" coords="654,557,687,571" href="#" alt="Inbox" onclick="MM_showHideLayers('ns4m','','show','ns4','','hide','ns4about','','hide','ns4back','','hide')">
+</map>
+</div>
+
+<div id="ns4file" style="z-index: 30; left: 0px; top: 37px; position: absolute;" onmouseover="MM_showHideLayers('ns4file','','show')" onmouseout="MM_showHideLayers('ns4file','','hide')">
+<img src="ns4file.png" usemap="#ns4file.png" width="167" height="280" border="0" alt="">
+<map name="ns4file.png">
+<area shape="rect" coords="2,2,164,20" href="#" alt="New" onmouseover="MM_showHideLayers('ns4filenew','','show')" onmouseout="MM_showHideLayers('ns4filenew','','hide')">
+<area shape="rect" coords="2,259,164,277" href="#" alt="Exit" onclick="window.close();">
+</map>
+</div>
+
+<div id="ns4edit" style="z-index: 30; left: 28px; top: 37px; position: absolute;" onmouseover="MM_showHideLayers('ns4edit','','show')" onmouseout="MM_showHideLayers('ns4edit','','hide')">
+<img src="ns4edit.png" usemap="#ns4edit.png" width="156" height="169" border="0" alt="">
+<map name="ns4edit.png">
+<area shape="rect" coords="2,145,153,166" href="#" alt="Preferences" onclick="MM_showHideLayers('ns4prefapp','','show','ns4edit','','hide')">
+</map>
+</div>
+
+<div id="ns4view" style="z-index: 30; left: 58px; top: 37px; position: absolute;" onmouseover="MM_showHideLayers('ns4view','','show')" onmouseout="MM_showHideLayers('ns4view','','hide')">
+<img src="ns4view.png" width="175" height="220" border="0" alt="">
+</div>
+
+<div id="ns4go" style="z-index: 30; left: 93px; top: 37px; position: absolute;" onmouseover="MM_showHideLayers('ns4go','','show')" onmouseout="MM_showHideLayers('ns4go','','hide')">
+<img src="ns4go.png" width="146" height="83" border="0" alt="">
+</div>
+
+<div id="ns4comm" style="z-index: 30; left: 119px; top: 37px; position: absolute;" onmouseover="MM_showHideLayers('ns4comm','','show')" onmouseout="MM_showHideLayers('ns4comm','','hide')">
+<img src="ns4comm.png" usemap="#ns4comm.png" width="258" height="220" border="0" alt="">
+<map name="ns4comm.png">
+<area shape="rect" coords="2,19,255,37" href="#" alt="Messenger" onclick="MM_showHideLayers('ns4m','','show','ns4','','hide','ns4about','','hide','ns4back','','hide','ns4comm','','hide')">
+<area shape="rect" coords="2,93,255,113" href="#" alt="Bookmarks" onmouseover="MM_showHideLayers('ns4commbook','','show')" onmouseout="MM_showHideLayers('ns4commbook','','hide')">
+<area shape="rect" coords="2,153,255,174" href="#" alt="Tools" onmouseover="MM_showHideLayers('ns4commtool','','show')" onmouseout="MM_showHideLayers('ns4commtool','','hide')">
+</map>
+</div>
+
+<div id="ns4help" style="z-index: 30; left: 198px; top: 37px; position: absolute;" onmouseover="MM_showHideLayers('ns4help','','show')" onmouseout="MM_showHideLayers('ns4help','','hide')">
+<img src="ns4help.png" usemap="#ns4help.png" width="219" height="271" border="0" alt="">
+<map name="ns4help.png">
+<area shape="rect" coords="2,250,216,268" href="#" alt="About Communicator" onclick="MM_showHideLayers('ns4about','','show','ns4back','','show','ns4help','','hide')">
+</map>
+</div>
+
+<div id="ns4filenew" style="z-index: 30; left: 161px; top: 37px; position: absolute;" onmouseover="MM_showHideLayers('ns4file','','show','ns4filenew','','show')" onmouseout="MM_showHideLayers('ns4file','','hide','ns4filenew','','hide')">
+<img src="ns4filenew.png" usemap="#ns4filenew.png" width="217" height="100" border="0" alt="">
+<map name="ns4filenew.png">
+<area shape="rect" coords="2,19,214,37" href="#" alt="Message" onclick="MM_showHideLayers('ns4newmsg','','show','ns4file','','hide','ns4filenew','','hide')">
+</map>
+</div>
+
+<div id="ns4commbook" style="z-index: 40; left: 371px; top: 131px; position: absolute;" onmouseover="MM_showHideLayers('ns4comm','','show','ns4commbook','','show')" onmouseout="MM_showHideLayers('ns4comm','','hide','ns4commbook','','hide')">
+<img src="ns4commbook.png" usemap="#ns4commbook.png" width="258" height="230" border="0" alt="">
+<map name="ns4commbook.png">
+<area shape="rect" coords="2,37,255,56" href="#" alt="Edit Bookmarks" onclick="MM_showHideLayers('ns4bm','','show','ns4comm','','hide','ns4commbook','','hide')">
+</map>
+</div>
+
+<div id="ns4commtool" style="z-index: 40; left: 371px; top: 191px; position: absolute;" onmouseover="MM_showHideLayers('ns4comm','','show','ns4commtool','','show')" onmouseout="MM_showHideLayers('ns4comm','','hide','ns4commtool','','hide')">
+<img src="ns4commtool.png" usemap="#ns4commtool.png" width="185" height="91" border="0" alt="">
+<map name="ns4commtool.png">
+<area shape="rect" coords="2,19,182,36" href="#" alt="Security Info" onclick="MM_showHideLayers('ns4si','','show','ns4comm','','hide','ns4commtool','','hide')">
+<area shape="rect" coords="2,36,182,54" href="#" alt="Message Center" onclick="MM_showHideLayers('ns4mc','','show','ns4comm','','hide','ns4commtool','','hide')">
+</map>
+</div>
+
+<div id="ns4bm" style="z-index: 30; left: 100px; top: 80px; position: absolute;">
+<img src="ns4bm.png" usemap="#ns4bm.png" width="600" height="411" border="0" alt="">
+<map name="ns4bm.png">
+<area shape="rect" coords="578,6,593,19" href="#" alt="Close" onclick="MM_showHideLayers('ns4bm','','hide')">
+</map>
+</div>
+
+<div id="ns4si" style="z-index: 30; left: 75px; top: 45px; position: absolute;">
+<img src="ns4si.png" usemap="#ns4si.png" width="652" height="481" border="0" alt="">
+<map name="ns4si.png">
+<area shape="rect" coords="252,426,279,449" href="#" alt="OK" onclick="MM_showHideLayers('ns4si','','hide')">
+<area shape="rect" coords="290,426,349,449" href="#" alt="Cancel" onclick="MM_showHideLayers('ns4si','','hide')">
+</map>
+</div>
+
+<div id="ns4mc" style="z-index: 30; left: 100px; top: 80px; position: absolute;">
+<img src="ns4mc.png" usemap="#ns4mc.png" width="600" height="411" border="0" alt="">
+<map name="ns4mc.png">
+<area shape="rect" coords="578,6,593,19" href="#" alt="Close" onclick="MM_showHideLayers('ns4mc','','hide')">
+</map>
+</div>
+
+<div id="ns4m" style="z-index: 10; left: 0px; top: 0px; position: absolute;">
+<img src="ns4m.png" usemap="#ns4m.png" width="800" height="576" border="0" alt="">
+<map name="ns4m.png">
+<area shape="rect" coords="782,2,797,15" href="#" alt="Close" onclick="window.close();">
+<area shape="rect" coords="0,19,28,37" href="#" alt="File" onmouseover="MM_showHideLayers('ns4mfile','','show')" onmouseout="MM_showHideLayers('ns4mfile','','hide')">
+<area shape="rect" coords="28,19,58,37" href="#" alt="Edit" onmouseover="MM_showHideLayers('ns4medit','','show')" onmouseout="MM_showHideLayers('ns4medit','','hide')">
+<area shape="rect" coords="58,19,93,37" href="#" alt="View" onmouseover="MM_showHideLayers('ns4mview','','show')" onmouseout="MM_showHideLayers('ns4mview','','hide')">
+<area shape="rect" coords="93,19,119,37" href="#" alt="Go" onmouseover="MM_showHideLayers('ns4mgo','','show')" onmouseout="MM_showHideLayers('ns4mgo','','hide')">
+<area shape="rect" coords="119,19,174,37" href="#" alt="Message" onmouseover="MM_showHideLayers('ns4mmsg','','show')" onmouseout="MM_showHideLayers('ns4mmsg','','hide')">
+<area shape="rect" coords="174,19,253,37" href="#" alt="Communicator" onmouseover="MM_showHideLayers('ns4mcomm','','show')" onmouseout="MM_showHideLayers('ns4mcomm','','hide')">
+<area shape="rect" coords="253,19,287,37" href="#" alt="Help" onmouseover="MM_showHideLayers('ns4mhelp','','show')" onmouseout="MM_showHideLayers('ns4mhelp','','hide')">
+<area shape="rect" coords="71,40,130,81" href="#" alt="New Msg" onclick="MM_showHideLayers('ns4newmsg','','show')">
+<area shape="rect" coords="620,557,653,571" href="#" alt="Navigator" onclick="MM_showHideLayers('ns4','','show','ns4m','','hide')">
+</map>
+</div>
+
+<div id="ns4mfile" style="z-index: 30; left: 0px; top: 37px; position: absolute;" onmouseover="MM_showHideLayers('ns4mfile','','show')" onmouseout="MM_showHideLayers('ns4mfile','','hide')">
+<img src="ns4mfile.png" usemap="#ns4mfile.png" width="211" height="366" border="0" alt="">
+<map name="ns4mfile.png">
+<area shape="rect" coords="2,2,208,20" href="#" alt="New" onmouseover="MM_showHideLayers('ns4mfilenew','','show')" onmouseout="MM_showHideLayers('ns4mfilenew','','hide')">
+<area shape="rect" coords="2,130,208,150" href="#" alt="Subscribe" onclick="MM_showHideLayers('ns4msub','','show','ns4mfile','','hide')">
+<area shape="rect" coords="2,345,208,363" href="#" alt="Exit" onclick="window.close();">
+</map>
+</div>
+
+<div id="ns4medit" style="z-index: 30; left: 28px; top: 37px; position: absolute;" onmouseover="MM_showHideLayers('ns4medit','','show')" onmouseout="MM_showHideLayers('ns4medit','','hide')">
+<img src="ns4medit.png" usemap="#ns4medit.png" width="193" height="272" border="0" alt="">
+<map name="ns4medit.png">
+<area shape="rect" coords="2,205,190,226" href="#" alt="Message Filters" onclick="MM_showHideLayers('ns4mmf','','show','ns4medit','','hide')">
+<area shape="rect" coords="2,226,190,245" href="#" alt="Folder Properties" onclick="MM_showHideLayers('ns4mfp','','show','ns4medit','','hide')">
+<area shape="rect" coords="2,248,190,269" href="#" alt="Preferences" onclick="MM_showHideLayers('ns4prefapp','','show','ns4medit','','hide')">
+</map>
+</div>
+
+<div id="ns4mview" style="z-index: 30; left: 58px; top: 37px; position: absolute;" onmouseover="MM_showHideLayers('ns4mview','','show')" onmouseout="MM_showHideLayers('ns4mview','','hide')">
+<img src="ns4mview.png" usemap="#ns4mview.png" width="186" height="315" border="0" alt="">
+<map name="ns4mview.png">
+<area shape="rect" coords="2,25,183,45" href="#" alt="Sort" onmouseover="MM_showHideLayers('ns4mviewsort','','show')" onmouseout="MM_showHideLayers('ns4mviewsort','','hide')">
+<area shape="rect" coords="2,45,183,63" href="#" alt="Messages" onmouseover="MM_showHideLayers('ns4mviewmsg','','show')" onmouseout="MM_showHideLayers('ns4mviewmsg','','hide')">
+<area shape="rect" coords="2,63,183,82" href="#" alt="Headers" onmouseover="MM_showHideLayers('ns4mviewhead','','show')" onmouseout="MM_showHideLayers('ns4mviewhead','','hide')">
+</map>
+</div>
+
+<div id="ns4mgo" style="z-index: 30; left: 93px; top: 37px; position: absolute;" onmouseover="MM_showHideLayers('ns4mgo','','show')" onmouseout="MM_showHideLayers('ns4mgo','','hide')">
+<img src="ns4mgo.png" width="187" height="126" border="0" alt="">
+</div>
+
+<div id="ns4mmsg" style="z-index: 30; left: 119px; top: 37px; position: absolute;" onmouseover="MM_showHideLayers('ns4mmsg','','show')" onmouseout="MM_showHideLayers('ns4mmsg','','hide')">
+<img src="ns4mmsg.png" usemap="#ns4mmsg.png" width="247" height="263" border="0" alt="">
+<map name="ns4mmsg.png">
+<area shape="rect" coords="2,2,244,20" href="#" alt="New Message" onclick="MM_showHideLayers('ns4newmsg','','show','ns4mmsg','','hide')">
+</map>
+</div>
+
+<div id="ns4mcomm" style="z-index: 30; left: 174px; top: 37px; position: absolute;" onmouseover="MM_showHideLayers('ns4mcomm','','show')" onmouseout="MM_showHideLayers('ns4mcomm','','hide')">
+<img src="ns4mcomm.png" usemap="#ns4mcomm.png" width="258" height="220" border="0" alt="">
+<map name="ns4mcomm.png">
+<area shape="rect" coords="2,2,255,20" href="#" alt="Navigator" onclick="MM_showHideLayers('ns4','','show','ns4m','','hide','ns4mcomm','','hide')">
+<area shape="rect" coords="2,93,255,113" href="#" alt="Bookmarks" onmouseover="MM_showHideLayers('ns4mcommbook','','show')" onmouseout="MM_showHideLayers('ns4mcommbook','','hide')">
+<area shape="rect" coords="2,153,255,174" href="#" alt="Tools" onmouseover="MM_showHideLayers('ns4mcommtool','','show')" onmouseout="MM_showHideLayers('ns4mcommtool','','hide')">
+</map>
+</div>
+
+<div id="ns4mhelp" style="z-index: 30; left: 253px; top: 37px; position: absolute;" onmouseover="MM_showHideLayers('ns4mhelp','','show')" onmouseout="MM_showHideLayers('ns4mhelp','','hide')">
+<img src="ns4mhelp.png" width="219" height="271" border="0" alt="">
+</div>
+
+<div id="ns4mfilenew" style="z-index: 40; left: 205px; top: 37px; position: absolute;" onmouseover="MM_showHideLayers('ns4mfile','','show','ns4mfilenew','','show')" onmouseout="MM_showHideLayers('ns4mfile','','hide','ns4mfilenew','','hide')">
+<img src="ns4mfilenew.png" usemap="#ns4mfilenew.png" width="217" height="100" border="0" alt="">
+<map name="ns4mfilenew.png">
+<area shape="rect" coords="2,19,214,37" href="#" alt="Message" onclick="MM_showHideLayers('ns4newmsg','','show','ns4mfile','','hide','ns4mfilenew','','hide')">
+</map>
+</div>
+
+<div id="ns4mviewsort" style="z-index: 40; left: 238px; top: 63px; position: absolute;" onmouseover="MM_showHideLayers('ns4mview','','show','ns4mviewsort','','show')" onmouseout="MM_showHideLayers('ns4mview','','hide','ns4mviewsort','','hide')">
+<img src="ns4mviewsort.png" width="132" height="219" border="0" alt="">
+</div>
+
+<div id="ns4mviewmsg" style="z-index: 40; left: 238px; top: 80px; position: absolute;" onmouseover="MM_showHideLayers('ns4mview','','show','ns4mviewmsg','','show')" onmouseout="MM_showHideLayers('ns4mview','','hide','ns4mviewmsg','','hide')">
+<img src="ns4mviewmsg.png" width="194" height="100" border="0" alt="">
+</div>
+
+<div id="ns4mviewhead" style="z-index: 40; left: 238px; top: 97px; position: absolute;" onmouseover="MM_showHideLayers('ns4mview','','show','ns4mviewhead','','show')" onmouseout="MM_showHideLayers('ns4mview','','hide','ns4mviewhead','','hide')">
+<img src="ns4mviewhead.png" width="81" height="57" border="0" alt="">
+</div>
+
+<div id="ns4mcommbook" style="z-index: 40; left: 426px; top: 131px; position: absolute;" onmouseover="MM_showHideLayers('ns4mcomm','','show','ns4mcommbook','','show')" onmouseout="MM_showHideLayers('ns4mcomm','','hide','ns4mcommbook','','hide')">
+<img src="ns4mcommbook.png" usemap="#ns4mcommbook.png" width="258" height="230" border="0" alt="">
+<map name="ns4mcommbook.png">
+<area shape="rect" coords="2,37,255,56" href="#" alt="Edit Bookmarks" onclick="MM_showHideLayers('ns4bm','','show','ns4mcomm','','hide','ns4mcommbook','','hide')">
+</map>
+</div>
+	
+<div id="ns4mcommtool" style="z-index: 40; left: 426px; top: 191px; position: absolute;" onmouseover="MM_showHideLayers('ns4mcomm','','show','ns4mcommtool','','show')" onmouseout="MM_showHideLayers('ns4mcomm','','hide','ns4mcommtool','','hide')">
+<img src="ns4mcommtool.png" usemap="#ns4mcommtool.png" width="185" height="91" border="0" alt="">
+<map name="ns4mcommtool.png">
+<area shape="rect" coords="2,19,182,36" href="#" alt="Security Info" onclick="MM_showHideLayers('ns4si','','show','ns4mcomm','','hide','ns4mcommtool','','hide')">
+<area shape="rect" coords="2,36,182,54" href="#" alt="Message Center" onclick="MM_showHideLayers('ns4mc','','show','ns4mcomm','','hide','ns4mcommtool','','hide')">
+</map>
+</div>
+
+<div id="ns4msub" style="z-index: 30; left: 115px; top: 55px; position: absolute;">
+<img src="ns4msub.png" usemap="#ns4msub.png" width="566" height="462" border="0" alt="">
+<map name="ns4msub.png">
+<area shape="rect" coords="545,5,560,18" href="#" alt="Close" onclick="MM_showHideLayers('ns4msub','','hide')">
+<area shape="rect" coords="320,410,394,432" href="#" alt="OK" onclick="MM_showHideLayers('ns4msub','','hide')">
+<area shape="rect" coords="401,410,475,432" href="#" alt="Cancel" onclick="MM_showHideLayers('ns4msub','','hide')">
+</map>
+</div>
+
+<div id="ns4mmf" style="z-index: 30; left: 200px; top: 90px; position: absolute;">
+<img src="ns4mmf.png" usemap="#ns4mmf.png" width="401" height="392" border="0" alt="">
+<map name="ns4mmf.png">
+<area shape="rect" coords="380,5,395,18" href="#" alt="Close" onclick="MM_showHideLayers('ns4mmf','','hide')">
+<area shape="rect" coords="312,103,386,125" href="#" alt="New" onclick="MM_showHideLayers('ns4mmfed','','show')">
+<area shape="rect" coords="312,133,386,155" href="#" alt="Edit" onclick="MM_showHideLayers('ns4mmfed','','show')">
+<area shape="rect" coords="149,355,223,377" href="#" alt="OK" onclick="MM_showHideLayers('ns4mmf','','hide')">
+<area shape="rect" coords="230,355,304,377" href="#" alt="Cancel" onclick="MM_showHideLayers('ns4mmf','','hide')">
+</map>
+</div>
+
+<div id="ns4mmfed" style="z-index: 40; left: 115px; top: 135px; position: absolute;">
+<img src="ns4mmfed.png" usemap="#ns4mmfed.png" width="570" height="300" border="0" alt="">
+<map name="ns4mmfed.png">
+<area shape="rect" coords="482,33,556,55" href="#" alt="Advanced" onclick="MM_showHideLayers('ns4mmfedadv','','show')">
+<area shape="rect" coords="170,110,185,126" href="#" alt="Select" onclick="MM_showHideLayers('ns4mmfedsel1','','show')">
+<area shape="rect" coords="368,110,383,126" href="#" alt="Select" onclick="MM_showHideLayers('ns4mmfedsel2','','show')">
+<area shape="rect" coords="204,177,219,193" href="#" alt="Select" onclick="MM_showHideLayers('ns4mmfedsel3','','show')">
+<area shape="rect" coords="321,263,395,285" href="#" alt="OK" onclick="MM_showHideLayers('ns4mmfed','','hide')">
+<area shape="rect" coords="401,263,475,285" href="#" alt="Cancel" onclick="MM_showHideLayers('ns4mmfed','','hide')">
+</map>
+</div>
+
+<div id="ns4mmfedadv" style="z-index: 50; left: 230px; top: 145px; position: absolute;">
+<img src="ns4mmfedadv.png" usemap="#ns4mmfedadv.png" width="344" height="284" border="0" alt="">
+<map name="ns4mmfedadv.png">
+<area shape="rect" coords="323,5,338,18" href="#" alt="Close" onclick="MM_showHideLayers('ns4mmfedadv','','hide')">
+<area shape="rect" coords="98,251,172,273" href="#" alt="OK" onclick="MM_showHideLayers('ns4mmfedadv','','hide')">
+<area shape="rect" coords="179,251,253,273" href="#" alt="Cancel" onclick="MM_showHideLayers('ns4mmfedadv','','hide')">
+</map>
+</div>
+
+<div id="ns4mmfedsel1" style="z-index: 50; left: 183px; top: 264px; position: absolute;">
+<img src="ns4mmfedsel1.png" usemap="#ns4mmfedsel1.png" width="120" height="132" border="0" alt="">
+<map name="ns4mmfedsel1.png">
+<area shape="rect" coords="0,0,119,131" href="#" alt="Select" onclick="MM_showHideLayers('ns4mmfedsel1','','hide')">
+</map>
+</div>
+
+<div id="ns4mmfedsel2" style="z-index: 50; left: 384px; top: 264px; position: absolute;">
+<img src="ns4mmfedsel2.png" usemap="#ns4mmfedsel2.png" width="117" height="80" border="0" alt="">
+<map name="ns4mmfedsel2.png">
+<area shape="rect" coords="0,0,116,79" href="#" alt="Select" onclick="MM_showHideLayers('ns4mmfedsel2','','hide')">
+</map>
+</div>
+
+<div id="ns4mmfedsel3" style="z-index: 50; left: 193px; top: 331px; position: absolute;">
+<img src="ns4mmfedsel3.png" usemap="#ns4mmfedsel3.png" width="144" height="80" border="0" alt="">
+<map name="ns4mmfedsel3.png">
+<area shape="rect" coords="0,0,143,79" href="#" alt="Select" onclick="MM_showHideLayers('ns4mmfedsel3','','hide')">
+</map>
+</div>
+
+<div id="ns4mfp" style="z-index: 30; left: 230px; top: 130px; position: absolute;">
+<img src="ns4mfp.png" usemap="#ns4mfp.png" width="344" height="310" border="0" alt="">
+<map name="ns4mfp.png">
+<area shape="rect" coords="323,5,338,18" href="#" alt="Close" onclick="MM_showHideLayers('ns4mfp','','hide')">
+<area shape="rect" coords="98,277,172,299" href="#" alt="OK" onclick="MM_showHideLayers('ns4mfp','','hide')">
+<area shape="rect" coords="179,277,253,299" href="#" alt="Cancel" onclick="MM_showHideLayers('ns4mfp','','hide')">
+</map>
+</div>
+
+<div id="ns4newmsg" style="z-index: 30; left: 125px; top: 85px; position: absolute;">
+<img src="ns4newmsg.png" usemap="#ns4newmsg.png" width="553" height="400" border="0" alt="">
+<map name="ns4newmsg.png">
+<area shape="rect" coords="531,6,546,19" href="#" alt="Close" onclick="MM_showHideLayers('ns4newmsg','','hide','ns4newmsgopt','','hide')">
+<area shape="rect" coords="4,23,32,41" href="#" alt="File" onmouseover="MM_showHideLayers('ns4newmsgfile','','show')" onmouseout="MM_showHideLayers('ns4newmsgfile','','hide')">
+<area shape="rect" coords="32,23,62,41" href="#" alt="Edit" onmouseover="MM_showHideLayers('ns4newmsgedit','','show')" onmouseout="MM_showHideLayers('ns4newmsgedit','','hide')">
+<area shape="rect" coords="62,23,97,41" href="#" alt="View" onmouseover="MM_showHideLayers('ns4newmsgview','','show')" onmouseout="MM_showHideLayers('ns4newmsgview','','hide')">
+<area shape="rect" coords="97,23,135,41" href="#" alt="Insert" onmouseover="MM_showHideLayers('ns4newmsgins','','show')" onmouseout="MM_showHideLayers('ns4newmsgins','','hide')">
+<area shape="rect" coords="135,23,179,41" href="#" alt="Format" onmouseover="MM_showHideLayers('ns4newmsgform','','show')" onmouseout="MM_showHideLayers('ns4newmsgform','','hide')">
+<area shape="rect" coords="179,23,217,41" href="#" alt="Tools" onmouseover="MM_showHideLayers('ns4newmsgtool','','show')" onmouseout="MM_showHideLayers('ns4newmsgtool','','hide')">
+<area shape="rect" coords="217,23,296,41" href="#" alt="Communicator" onmouseover="MM_showHideLayers('ns4newmsgcomm','','show')" onmouseout="MM_showHideLayers('ns4newmsgcomm','','hide')">
+<area shape="rect" coords="296,23,330,41" href="#" alt="Help" onmouseover="MM_showHideLayers('ns4newmsghelp','','show')" onmouseout="MM_showHideLayers('ns4newmsghelp','','hide')">
+<area shape="rect" coords="26,44,65,85" href="#" alt="Send" onclick="MM_showHideLayers('ns4newmsg','','hide','ns4newmsgopt','','hide')">
+<area shape="rect" coords="213,44,263,85" href="#" alt="Options" onclick="MM_showHideLayers('ns4newmsgopt','','show')">
+<area shape="rect" coords="24,137,46,158" href="#" alt="Options" onclick="MM_showHideLayers('ns4newmsgopt','','show')">
+</map>
+</div>
+
+<div id="ns4newmsgfile" style="z-index: 50; left: 129px; top: 126px; position: absolute;" onmouseover="MM_showHideLayers('ns4newmsgfile','','show')" onmouseout="MM_showHideLayers('ns4newmsgfile','','hide')">
+<img src="ns4newmsgfile.png" usemap="#ns4newmsgfile.png" width="213" height="254" border="0" alt="">
+<map name="ns4newmsgfile.png">
+<area shape="rect" coords="2,76,210,97" href="#" alt="Send Now" onclick="MM_showHideLayers('ns4newmsg','','hide','ns4newmsgopt','','hide','ns4newmsgfile','','hide')">
+<area shape="rect" coords="2,213,210,234" href="#" alt="Close" onclick="MM_showHideLayers('ns4newmsg','','hide','ns4newmsgopt','','hide','ns4newmsgfile','','hide')">
+</map>
+</div>
+
+<div id="ns4newmsgedit" style="z-index: 50; left: 157px; top: 126px; position: absolute;" onmouseover="MM_showHideLayers('ns4newmsgedit','','show')" onmouseout="MM_showHideLayers('ns4newmsgedit','','hide')">
+<img src="ns4newmsgedit.png" width="209" height="306" border="0" alt="">
+</div>
+
+<div id="ns4newmsgview" style="z-index: 50; left: 187px; top: 126px; position: absolute;" onmouseover="MM_showHideLayers('ns4newmsgview','','show')" onmouseout="MM_showHideLayers('ns4newmsgview','','hide')">
+<img src="ns4newmsgview.png" usemap="#ns4newmsgview.png" width="113" height="152" border="0" alt="">
+<map name="ns4newmsgview.png">
+<area shape="rect" coords="2,62,110,82" href="#" alt="Options" onclick="MM_showHideLayers('ns4newmsgopt','','show','ns4newmsgview','','hide')">
+</map>
+</div>
+
+<div id="ns4newmsgins" style="z-index: 50; left: 222px; top: 126px; position: absolute;" onmouseover="MM_showHideLayers('ns4newmsgins','','show')" onmouseout="MM_showHideLayers('ns4newmsgins','','hide')">
+<img src="ns4newmsgins.png" width="210" height="151" border="0" alt="">
+</div>
+
+<div id="ns4newmsgform" style="z-index: 50; left: 260px; top: 126px; position: absolute;" onmouseover="MM_showHideLayers('ns4newmsgform','','show')" onmouseout="MM_showHideLayers('ns4newmsgform','','hide')">
+<img src="ns4newmsgform.png" width="237" height="271" border="0" alt="">
+</div>
+
+<div id="ns4newmsgtool" style="z-index: 50; left: 304px; top: 126px; position: absolute;" onmouseover="MM_showHideLayers('ns4newmsgtool','','show')" onmouseout="MM_showHideLayers('ns4newmsgtool','','hide')">
+<img src="ns4newmsgtool.png" width="172" height="100" border="0" alt="">
+</div>
+
+<div id="ns4newmsgcomm" style="z-index: 50; left: 342px; top: 126px; position: absolute;" onmouseover="MM_showHideLayers('ns4newmsgcomm','','show')" onmouseout="MM_showHideLayers('ns4newmsgcomm','','hide')">
+<img src="ns4newmsgcomm.png" width="258" height="203" border="0" alt="">
+</div>
+
+<div id="ns4newmsghelp" style="z-index: 50; left: 421px; top: 126px; position: absolute;" onmouseover="MM_showHideLayers('ns4newmsghelp','','show')" onmouseout="MM_showHideLayers('ns4newmsghelp','','hide')">
+<img src="ns4newmsghelp.png" width="219" height="271" border="0" alt="">
+</div>
+
+<div id="ns4newmsgopt" style="z-index: 40; left: 138px; top: 175px; position: absolute;">
+<img src="ns4newmsgopt.png" usemap="#ns4newmsgopt.png" width="534" height="74" border="0" alt="">
+<map name="ns4newmsgopt.png">
+<area shape="rect" coords="11,7,33,27" href="#" alt="Close" onclick="MM_showHideLayers('ns4newmsgopt','','hide')">
+</map>
+</div>
+
+<div id="ns4prefapp" style="z-index: 30; left: 130px; top: 55px; position: absolute;">
+<img src="ns4prefapp.png" usemap="#ns4prefapp.png" width="545" height="459" border="0" alt="">
+<map name="ns4prefapp.png">
+<area shape="rect" coords="524,5,539,18" href="#" alt="Close" onclick="MM_showHideLayers('ns4prefapp','','hide')">
+<area shape="rect" coords="16,61,139,77" href="#" alt="Fonts" onclick="MM_showHideLayers('ns4preffont','','show','ns4prefapp','','hide')">
+<area shape="rect" coords="16,77,139,93" href="#" alt="Colors" onclick="MM_showHideLayers('ns4prefcol','','show','ns4prefapp','','hide')">
+<area shape="rect" coords="16,93,139,109" href="#" alt="Navigator" onclick="MM_showHideLayers('ns4prefnav','','show','ns4prefapp','','hide')">
+<area shape="rect" coords="16,109,139,125" href="#" alt="Languages" onclick="MM_showHideLayers('ns4preflang','','show','ns4prefapp','','hide')">
+<area shape="rect" coords="16,125,139,141" href="#" alt="Applications" onclick="MM_showHideLayers('ns4prefappl','','show','ns4prefapp','','hide')">
+<area shape="rect" coords="16,141,139,157" href="#" alt="Smart Browsing" onclick="MM_showHideLayers('ns4prefsb','','show','ns4prefapp','','hide')">
+<area shape="rect" coords="16,157,139,173" href="#" alt="Mail &amp; Newsgroups" onclick="MM_showHideLayers('ns4prefmn','','show','ns4prefapp','','hide')">
+<area shape="rect" coords="16,173,139,189" href="#" alt="Identity" onclick="MM_showHideLayers('ns4prefident','','show','ns4prefapp','','hide')">
+<area shape="rect" coords="16,189,139,205" href="#" alt="Mail Servers" onclick="MM_showHideLayers('ns4prefms','','show','ns4prefapp','','hide')">
+<area shape="rect" coords="16,205,139,221" href="#" alt="Newsgroup Servers" onclick="MM_showHideLayers('ns4prefns','','show','ns4prefapp','','hide')">
+<area shape="rect" coords="16,221,139,237" href="#" alt="Addressing" onclick="MM_showHideLayers('ns4prefaddr','','show','ns4prefapp','','hide')">
+<area shape="rect" coords="16,237,139,253" href="#" alt="Messages" onclick="MM_showHideLayers('ns4prefmsg','','show','ns4prefapp','','hide')">
+<area shape="rect" coords="16,253,139,269" href="#" alt="Window Settings" onclick="MM_showHideLayers('ns4prefws','','show','ns4prefapp','','hide')">
+<area shape="rect" coords="16,269,139,285" href="#" alt="Copies and Folders" onclick="MM_showHideLayers('ns4prefcf','','show','ns4prefapp','','hide')">
+<area shape="rect" coords="16,285,139,301" href="#" alt="Formatting" onclick="MM_showHideLayers('ns4prefform','','show','ns4prefapp','','hide')">
+<area shape="rect" coords="16,301,139,317" href="#" alt="Return Receipts" onclick="MM_showHideLayers('ns4prefrr','','show','ns4prefapp','','hide')">
+<area shape="rect" coords="16,317,139,333" href="#" alt="Disk Space" onclick="MM_showHideLayers('ns4prefds','','show','ns4prefapp','','hide')">
+<area shape="rect" coords="140,358,155,373" href="#" alt="Down" onclick="MM_showHideLayers('ns4prefra','','show','ns4prefapp','','hide')">
+<area shape="rect" coords="287,422,361,444" href="#" alt="OK" onclick="MM_showHideLayers('ns4prefapp','','hide')">
+<area shape="rect" coords="371,422,445,444" href="#" alt="Cancel" onclick="MM_showHideLayers('ns4prefapp','','hide')">
+</map>
+</div>
+
+<div id="ns4preffont" style="z-index: 30; left: 130px; top: 55px; position: absolute;">
+<img src="ns4preffont.png" usemap="#ns4preffont.png" width="545" height="459" border="0" alt="">
+<map name="ns4preffont.png">
+<area shape="rect" coords="524,5,539,18" href="#" alt="Close" onclick="MM_showHideLayers('ns4preffont','','hide')">
+<area shape="rect" coords="16,45,139,61" href="#" alt="Appearance" onclick="MM_showHideLayers('ns4prefapp','','show','ns4preffont','','hide')">
+<area shape="rect" coords="16,77,139,93" href="#" alt="Colors" onclick="MM_showHideLayers('ns4prefcol','','show','ns4preffont','','hide')">
+<area shape="rect" coords="16,93,139,109" href="#" alt="Navigator" onclick="MM_showHideLayers('ns4prefnav','','show','ns4preffont','','hide')">
+<area shape="rect" coords="16,109,139,125" href="#" alt="Languages" onclick="MM_showHideLayers('ns4preflang','','show','ns4preffont','','hide')">
+<area shape="rect" coords="16,125,139,141" href="#" alt="Applications" onclick="MM_showHideLayers('ns4prefappl','','show','ns4preffont','','hide')">
+<area shape="rect" coords="16,141,139,157" href="#" alt="Smart Browsing" onclick="MM_showHideLayers('ns4prefsb','','show','ns4preffont','','hide')">
+<area shape="rect" coords="16,157,139,173" href="#" alt="Mail &amp; Newsgroups" onclick="MM_showHideLayers('ns4prefmn','','show','ns4preffont','','hide')">
+<area shape="rect" coords="16,173,139,189" href="#" alt="Identity" onclick="MM_showHideLayers('ns4prefident','','show','ns4preffont','','hide')">
+<area shape="rect" coords="16,189,139,205" href="#" alt="Mail Servers" onclick="MM_showHideLayers('ns4prefms','','show','ns4preffont','','hide')">
+<area shape="rect" coords="16,205,139,221" href="#" alt="Newsgroup Servers" onclick="MM_showHideLayers('ns4prefns','','show','ns4preffont','','hide')">
+<area shape="rect" coords="16,221,139,237" href="#" alt="Addressing" onclick="MM_showHideLayers('ns4prefaddr','','show','ns4preffont','','hide')">
+<area shape="rect" coords="16,237,139,253" href="#" alt="Messages" onclick="MM_showHideLayers('ns4prefmsg','','show','ns4preffont','','hide')">
+<area shape="rect" coords="16,253,139,269" href="#" alt="Window Settings" onclick="MM_showHideLayers('ns4prefws','','show','ns4preffont','','hide')">
+<area shape="rect" coords="16,269,139,285" href="#" alt="Copies and Folders" onclick="MM_showHideLayers('ns4prefcf','','show','ns4preffont','','hide')">
+<area shape="rect" coords="16,285,139,301" href="#" alt="Formatting" onclick="MM_showHideLayers('ns4prefform','','show','ns4preffont','','hide')">
+<area shape="rect" coords="16,301,139,317" href="#" alt="Return Receipts" onclick="MM_showHideLayers('ns4prefrr','','show','ns4preffont','','hide')">
+<area shape="rect" coords="16,317,139,333" href="#" alt="Disk Space" onclick="MM_showHideLayers('ns4prefds','','show','ns4preffont','','hide')">
+<area shape="rect" coords="140,358,155,373" href="#" alt="Down" onclick="MM_showHideLayers('ns4prefra','','show','ns4preffont','','hide')">
+<area shape="rect" coords="287,422,361,444" href="#" alt="OK" onclick="MM_showHideLayers('ns4preffont','','hide')">
+<area shape="rect" coords="371,422,445,444" href="#" alt="Cancel" onclick="MM_showHideLayers('ns4preffont','','hide')">
+</map>
+</div>
+
+<div id="ns4prefcol" style="z-index: 30; left: 130px; top: 55px; position: absolute;">
+<img src="ns4prefcol.png" usemap="#ns4prefcol.png" width="545" height="459" border="0" alt="">
+<map name="ns4prefcol.png">
+<area shape="rect" coords="524,5,539,18" href="#" alt="Close" onclick="MM_showHideLayers('ns4prefcol','','hide')">
+<area shape="rect" coords="16,45,139,61" href="#" alt="Appearance" onclick="MM_showHideLayers('ns4prefapp','','show','ns4prefcol','','hide')">
+<area shape="rect" coords="16,61,139,77" href="#" alt="Fonts" onclick="MM_showHideLayers('ns4preffont','','show','ns4prefcol','','hide')">
+<area shape="rect" coords="16,93,139,109" href="#" alt="Navigator" onclick="MM_showHideLayers('ns4prefnav','','show','ns4prefcol','','hide')">
+<area shape="rect" coords="16,109,139,125" href="#" alt="Languages" onclick="MM_showHideLayers('ns4preflang','','show','ns4prefcol','','hide')">
+<area shape="rect" coords="16,125,139,141" href="#" alt="Applications" onclick="MM_showHideLayers('ns4prefappl','','show','ns4prefcol','','hide')">
+<area shape="rect" coords="16,141,139,157" href="#" alt="Smart Browsing" onclick="MM_showHideLayers('ns4prefsb','','show','ns4prefcol','','hide')">
+<area shape="rect" coords="16,157,139,173" href="#" alt="Mail &amp; Newsgroups" onclick="MM_showHideLayers('ns4prefmn','','show','ns4prefcol','','hide')">
+<area shape="rect" coords="16,173,139,189" href="#" alt="Identity" onclick="MM_showHideLayers('ns4prefident','','show','ns4prefcol','','hide')">
+<area shape="rect" coords="16,189,139,205" href="#" alt="Mail Servers" onclick="MM_showHideLayers('ns4prefms','','show','ns4prefcol','','hide')">
+<area shape="rect" coords="16,205,139,221" href="#" alt="Newsgroup Servers" onclick="MM_showHideLayers('ns4prefns','','show','ns4prefcol','','hide')">
+<area shape="rect" coords="16,221,139,237" href="#" alt="Addressing" onclick="MM_showHideLayers('ns4prefaddr','','show','ns4prefcol','','hide')">
+<area shape="rect" coords="16,237,139,253" href="#" alt="Messages" onclick="MM_showHideLayers('ns4prefmsg','','show','ns4prefcol','','hide')">
+<area shape="rect" coords="16,253,139,269" href="#" alt="Window Settings" onclick="MM_showHideLayers('ns4prefws','','show','ns4prefcol','','hide')">
+<area shape="rect" coords="16,269,139,285" href="#" alt="Copies and Folders" onclick="MM_showHideLayers('ns4prefcf','','show','ns4prefcol','','hide')">
+<area shape="rect" coords="16,285,139,301" href="#" alt="Formatting" onclick="MM_showHideLayers('ns4prefform','','show','ns4prefcol','','hide')">
+<area shape="rect" coords="16,301,139,317" href="#" alt="Return Receipts" onclick="MM_showHideLayers('ns4prefrr','','show','ns4prefcol','','hide')">
+<area shape="rect" coords="16,317,139,333" href="#" alt="Disk Space" onclick="MM_showHideLayers('ns4prefds','','show','ns4prefcol','','hide')">
+<area shape="rect" coords="140,358,155,373" href="#" alt="Down" onclick="MM_showHideLayers('ns4prefra','','show','ns4prefcol','','hide')">
+<area shape="rect" coords="287,422,361,444" href="#" alt="OK" onclick="MM_showHideLayers('ns4prefcol','','hide')">
+<area shape="rect" coords="371,422,445,444" href="#" alt="Cancel" onclick="MM_showHideLayers('ns4prefcol','','hide')">
+</map>
+</div>
+
+<div id="ns4prefnav" style="z-index: 30; left: 130px; top: 55px; position: absolute;">
+<img src="ns4prefnav.png" usemap="#ns4prefnav.png" width="545" height="459" border="0" alt="">
+<map name="ns4prefnav.png">
+<area shape="rect" coords="524,5,539,18" href="#" alt="Close" onclick="MM_showHideLayers('ns4prefnav','','hide')">
+<area shape="rect" coords="16,45,139,61" href="#" alt="Appearance" onclick="MM_showHideLayers('ns4prefapp','','show','ns4prefnav','','hide')">
+<area shape="rect" coords="16,61,139,77" href="#" alt="Fonts" onclick="MM_showHideLayers('ns4preffont','','show','ns4prefnav','','hide')">
+<area shape="rect" coords="16,77,139,93" href="#" alt="Colors" onclick="MM_showHideLayers('ns4prefcol','','show','ns4prefnav','','hide')">
+<area shape="rect" coords="16,109,139,125" href="#" alt="Languages" onclick="MM_showHideLayers('ns4preflang','','show','ns4prefnav','','hide')">
+<area shape="rect" coords="16,125,139,141" href="#" alt="Applications" onclick="MM_showHideLayers('ns4prefappl','','show','ns4prefnav','','hide')">
+<area shape="rect" coords="16,141,139,157" href="#" alt="Smart Browsing" onclick="MM_showHideLayers('ns4prefsb','','show','ns4prefnav','','hide')">
+<area shape="rect" coords="16,157,139,173" href="#" alt="Mail &amp; Newsgroups" onclick="MM_showHideLayers('ns4prefmn','','show','ns4prefnav','','hide')">
+<area shape="rect" coords="16,173,139,189" href="#" alt="Identity" onclick="MM_showHideLayers('ns4prefident','','show','ns4prefnav','','hide')">
+<area shape="rect" coords="16,189,139,205" href="#" alt="Mail Servers" onclick="MM_showHideLayers('ns4prefms','','show','ns4prefnav','','hide')">
+<area shape="rect" coords="16,205,139,221" href="#" alt="Newsgroup Servers" onclick="MM_showHideLayers('ns4prefns','','show','ns4prefnav','','hide')">
+<area shape="rect" coords="16,221,139,237" href="#" alt="Addressing" onclick="MM_showHideLayers('ns4prefaddr','','show','ns4prefnav','','hide')">
+<area shape="rect" coords="16,237,139,253" href="#" alt="Messages" onclick="MM_showHideLayers('ns4prefmsg','','show','ns4prefnav','','hide')">
+<area shape="rect" coords="16,253,139,269" href="#" alt="Window Settings" onclick="MM_showHideLayers('ns4prefws','','show','ns4prefnav','','hide')">
+<area shape="rect" coords="16,269,139,285" href="#" alt="Copies and Folders" onclick="MM_showHideLayers('ns4prefcf','','show','ns4prefnav','','hide')">
+<area shape="rect" coords="16,285,139,301" href="#" alt="Formatting" onclick="MM_showHideLayers('ns4prefform','','show','ns4prefnav','','hide')">
+<area shape="rect" coords="16,301,139,317" href="#" alt="Return Receipts" onclick="MM_showHideLayers('ns4prefrr','','show','ns4prefnav','','hide')">
+<area shape="rect" coords="16,317,139,333" href="#" alt="Disk Space" onclick="MM_showHideLayers('ns4prefds','','show','ns4prefnav','','hide')">
+<area shape="rect" coords="140,358,155,373" href="#" alt="Down" onclick="MM_showHideLayers('ns4prefra','','show','ns4prefnav','','hide')">
+<area shape="rect" coords="287,422,361,444" href="#" alt="OK" onclick="MM_showHideLayers('ns4prefnav','','hide')">
+<area shape="rect" coords="371,422,445,444" href="#" alt="Cancel" onclick="MM_showHideLayers('ns4prefnav','','hide')">
+</map>
+</div>
+
+<div id="ns4preflang" style="z-index: 30; left: 130px; top: 55px; position: absolute;">
+<img src="ns4preflang.png" usemap="#ns4preflang.png" width="545" height="459" border="0" alt="">
+<map name="ns4preflang.png">
+<area shape="rect" coords="524,5,539,18" href="#" alt="Close" onclick="MM_showHideLayers('ns4preflang','','hide')">
+<area shape="rect" coords="16,45,139,61" href="#" alt="Appearance" onclick="MM_showHideLayers('ns4prefapp','','show','ns4preflang','','hide')">
+<area shape="rect" coords="16,61,139,77" href="#" alt="Fonts" onclick="MM_showHideLayers('ns4preffont','','show','ns4preflang','','hide')">
+<area shape="rect" coords="16,77,139,93" href="#" alt="Colors" onclick="MM_showHideLayers('ns4prefcol','','show','ns4preflang','','hide')">
+<area shape="rect" coords="16,93,139,109" href="#" alt="Navigator" onclick="MM_showHideLayers('ns4prefnav','','show','ns4preflang','','hide')">
+<area shape="rect" coords="16,125,139,141" href="#" alt="Applications" onclick="MM_showHideLayers('ns4prefappl','','show','ns4preflang','','hide')">
+<area shape="rect" coords="16,141,139,157" href="#" alt="Smart Browsing" onclick="MM_showHideLayers('ns4prefsb','','show','ns4preflang','','hide')">
+<area shape="rect" coords="16,157,139,173" href="#" alt="Mail &amp; Newsgroups" onclick="MM_showHideLayers('ns4prefmn','','show','ns4preflang','','hide')">
+<area shape="rect" coords="16,173,139,189" href="#" alt="Identity" onclick="MM_showHideLayers('ns4prefident','','show','ns4preflang','','hide')">
+<area shape="rect" coords="16,189,139,205" href="#" alt="Mail Servers" onclick="MM_showHideLayers('ns4prefms','','show','ns4preflang','','hide')">
+<area shape="rect" coords="16,205,139,221" href="#" alt="Newsgroup Servers" onclick="MM_showHideLayers('ns4prefns','','show','ns4preflang','','hide')">
+<area shape="rect" coords="16,221,139,237" href="#" alt="Addressing" onclick="MM_showHideLayers('ns4prefaddr','','show','ns4preflang','','hide')">
+<area shape="rect" coords="16,237,139,253" href="#" alt="Messages" onclick="MM_showHideLayers('ns4prefmsg','','show','ns4preflang','','hide')">
+<area shape="rect" coords="16,253,139,269" href="#" alt="Window Settings" onclick="MM_showHideLayers('ns4prefws','','show','ns4preflang','','hide')">
+<area shape="rect" coords="16,269,139,285" href="#" alt="Copies and Folders" onclick="MM_showHideLayers('ns4prefcf','','show','ns4preflang','','hide')">
+<area shape="rect" coords="16,285,139,301" href="#" alt="Formatting" onclick="MM_showHideLayers('ns4prefform','','show','ns4preflang','','hide')">
+<area shape="rect" coords="16,301,139,317" href="#" alt="Return Receipts" onclick="MM_showHideLayers('ns4prefrr','','show','ns4preflang','','hide')">
+<area shape="rect" coords="16,317,139,333" href="#" alt="Disk Space" onclick="MM_showHideLayers('ns4prefds','','show','ns4preflang','','hide')">
+<area shape="rect" coords="140,358,155,373" href="#" alt="Down" onclick="MM_showHideLayers('ns4prefra','','show','ns4preflang','','hide')">
+<area shape="rect" coords="443,160,517,182" href="#" alt="Add" onclick="MM_showHideLayers('ns4preflangadd','','show')">
+<area shape="rect" coords="287,422,361,444" href="#" alt="OK" onclick="MM_showHideLayers('ns4preflang','','hide')">
+<area shape="rect" coords="371,422,445,444" href="#" alt="Cancel" onclick="MM_showHideLayers('ns4preflang','','hide')">
+</map>
+</div>
+
+<div id="ns4prefappl" style="z-index: 30; left: 130px; top: 55px; position: absolute;">
+<img src="ns4prefappl.png" usemap="#ns4prefappl.png" width="545" height="459" border="0" alt="">
+<map name="ns4prefappl.png">
+<area shape="rect" coords="524,5,539,18" href="#" alt="Close" onclick="MM_showHideLayers('ns4prefappl','','hide')">
+<area shape="rect" coords="16,45,139,61" href="#" alt="Appearance" onclick="MM_showHideLayers('ns4prefapp','','show','ns4prefappl','','hide')">
+<area shape="rect" coords="16,61,139,77" href="#" alt="Fonts" onclick="MM_showHideLayers('ns4preffont','','show','ns4prefappl','','hide')">
+<area shape="rect" coords="16,77,139,93" href="#" alt="Colors" onclick="MM_showHideLayers('ns4prefcol','','show','ns4prefappl','','hide')">
+<area shape="rect" coords="16,93,139,109" href="#" alt="Navigator" onclick="MM_showHideLayers('ns4prefnav','','show','ns4prefappl','','hide')">
+<area shape="rect" coords="16,109,139,125" href="#" alt="Languages" onclick="MM_showHideLayers('ns4preflang','','show','ns4prefappl','','hide')">
+<area shape="rect" coords="16,141,139,157" href="#" alt="Smart Browsing" onclick="MM_showHideLayers('ns4prefsb','','show','ns4prefappl','','hide')">
+<area shape="rect" coords="16,157,139,173" href="#" alt="Mail &amp; Newsgroups" onclick="MM_showHideLayers('ns4prefmn','','show','ns4prefappl','','hide')">
+<area shape="rect" coords="16,173,139,189" href="#" alt="Identity" onclick="MM_showHideLayers('ns4prefident','','show','ns4prefappl','','hide')">
+<area shape="rect" coords="16,189,139,205" href="#" alt="Mail Servers" onclick="MM_showHideLayers('ns4prefms','','show','ns4prefappl','','hide')">
+<area shape="rect" coords="16,205,139,221" href="#" alt="Newsgroup Servers" onclick="MM_showHideLayers('ns4prefns','','show','ns4prefappl','','hide')">
+<area shape="rect" coords="16,221,139,237" href="#" alt="Addressing" onclick="MM_showHideLayers('ns4prefaddr','','show','ns4prefappl','','hide')">
+<area shape="rect" coords="16,237,139,253" href="#" alt="Messages" onclick="MM_showHideLayers('ns4prefmsg','','show','ns4prefappl','','hide')">
+<area shape="rect" coords="16,253,139,269" href="#" alt="Window Settings" onclick="MM_showHideLayers('ns4prefws','','show','ns4prefappl','','hide')">
+<area shape="rect" coords="16,269,139,285" href="#" alt="Copies and Folders" onclick="MM_showHideLayers('ns4prefcf','','show','ns4prefappl','','hide')">
+<area shape="rect" coords="16,285,139,301" href="#" alt="Formatting" onclick="MM_showHideLayers('ns4prefform','','show','ns4prefappl','','hide')">
+<area shape="rect" coords="16,301,139,317" href="#" alt="Return Receipts" onclick="MM_showHideLayers('ns4prefrr','','show','ns4prefappl','','hide')">
+<area shape="rect" coords="16,317,139,333" href="#" alt="Disk Space" onclick="MM_showHideLayers('ns4prefds','','show','ns4prefappl','','hide')">
+<area shape="rect" coords="140,358,155,373" href="#" alt="Down" onclick="MM_showHideLayers('ns4prefra','','show','ns4prefappl','','hide')">
+<area shape="rect" coords="457,93,531,115" href="#" alt="New Type" onclick="MM_showHideLayers('ns4prefapplnt','','show')">
+<area shape="rect" coords="287,422,361,444" href="#" alt="OK" onclick="MM_showHideLayers('ns4prefappl','','hide')">
+<area shape="rect" coords="371,422,445,444" href="#" alt="Cancel" onclick="MM_showHideLayers('ns4prefappl','','hide')">
+</map>
+</div>
+
+<div id="ns4prefsb" style="z-index: 30; left: 130px; top: 55px; position: absolute;">
+<img src="ns4prefsb.png" usemap="#ns4prefsb.png" width="545" height="459" border="0" alt="">
+<map name="ns4prefsb.png">
+<area shape="rect" coords="524,5,539,18" href="#" alt="Close" onclick="MM_showHideLayers('ns4prefsb','','hide')">
+<area shape="rect" coords="16,45,139,61" href="#" alt="Appearance" onclick="MM_showHideLayers('ns4prefapp','','show','ns4prefsb','','hide')">
+<area shape="rect" coords="16,61,139,77" href="#" alt="Fonts" onclick="MM_showHideLayers('ns4preffont','','show','ns4prefsb','','hide')">
+<area shape="rect" coords="16,77,139,93" href="#" alt="Colors" onclick="MM_showHideLayers('ns4prefcol','','show','ns4prefsb','','hide')">
+<area shape="rect" coords="16,93,139,109" href="#" alt="Navigator" onclick="MM_showHideLayers('ns4prefnav','','show','ns4prefsb','','hide')">
+<area shape="rect" coords="16,109,139,125" href="#" alt="Languages" onclick="MM_showHideLayers('ns4preflang','','show','ns4prefsb','','hide')">
+<area shape="rect" coords="16,125,139,141" href="#" alt="Applications" onclick="MM_showHideLayers('ns4prefappl','','show','ns4prefsb','','hide')">
+<area shape="rect" coords="16,157,139,173" href="#" alt="Mail &amp; Newsgroups" onclick="MM_showHideLayers('ns4prefmn','','show','ns4prefsb','','hide')">
+<area shape="rect" coords="16,173,139,189" href="#" alt="Identity" onclick="MM_showHideLayers('ns4prefident','','show','ns4prefsb','','hide')">
+<area shape="rect" coords="16,189,139,205" href="#" alt="Mail Servers" onclick="MM_showHideLayers('ns4prefms','','show','ns4prefsb','','hide')">
+<area shape="rect" coords="16,205,139,221" href="#" alt="Newsgroup Servers" onclick="MM_showHideLayers('ns4prefns','','show','ns4prefsb','','hide')">
+<area shape="rect" coords="16,221,139,237" href="#" alt="Addressing" onclick="MM_showHideLayers('ns4prefaddr','','show','ns4prefsb','','hide')">
+<area shape="rect" coords="16,237,139,253" href="#" alt="Messages" onclick="MM_showHideLayers('ns4prefmsg','','show','ns4prefsb','','hide')">
+<area shape="rect" coords="16,253,139,269" href="#" alt="Window Settings" onclick="MM_showHideLayers('ns4prefws','','show','ns4prefsb','','hide')">
+<area shape="rect" coords="16,269,139,285" href="#" alt="Copies and Folders" onclick="MM_showHideLayers('ns4prefcf','','show','ns4prefsb','','hide')">
+<area shape="rect" coords="16,285,139,301" href="#" alt="Formatting" onclick="MM_showHideLayers('ns4prefform','','show','ns4prefsb','','hide')">
+<area shape="rect" coords="16,301,139,317" href="#" alt="Return Receipts" onclick="MM_showHideLayers('ns4prefrr','','show','ns4prefsb','','hide')">
+<area shape="rect" coords="16,317,139,333" href="#" alt="Disk Space" onclick="MM_showHideLayers('ns4prefds','','show','ns4prefsb','','hide')">
+<area shape="rect" coords="140,358,155,373" href="#" alt="Down" onclick="MM_showHideLayers('ns4prefra','','show','ns4prefsb','','hide')">
+<area shape="rect" coords="287,422,361,444" href="#" alt="OK" onclick="MM_showHideLayers('ns4prefsb','','hide')">
+<area shape="rect" coords="371,422,445,444" href="#" alt="Cancel" onclick="MM_showHideLayers('ns4prefsb','','hide')">
+</map>
+</div>
+
+<div id="ns4prefmn" style="z-index: 30; left: 130px; top: 55px; position: absolute;">
+<img src="ns4prefmn.png" usemap="#ns4prefmn.png" width="545" height="459" border="0" alt="">
+<map name="ns4prefmn.png">
+<area shape="rect" coords="524,5,539,18" href="#" alt="Close" onclick="MM_showHideLayers('ns4prefmn','','hide')">
+<area shape="rect" coords="16,45,139,61" href="#" alt="Appearance" onclick="MM_showHideLayers('ns4prefapp','','show','ns4prefmn','','hide')">
+<area shape="rect" coords="16,61,139,77" href="#" alt="Fonts" onclick="MM_showHideLayers('ns4preffont','','show','ns4prefmn','','hide')">
+<area shape="rect" coords="16,77,139,93" href="#" alt="Colors" onclick="MM_showHideLayers('ns4prefcol','','show','ns4prefmn','','hide')">
+<area shape="rect" coords="16,93,139,109" href="#" alt="Navigator" onclick="MM_showHideLayers('ns4prefnav','','show','ns4prefmn','','hide')">
+<area shape="rect" coords="16,109,139,125" href="#" alt="Languages" onclick="MM_showHideLayers('ns4preflang','','show','ns4prefmn','','hide')">
+<area shape="rect" coords="16,125,139,141" href="#" alt="Applications" onclick="MM_showHideLayers('ns4prefappl','','show','ns4prefmn','','hide')">
+<area shape="rect" coords="16,141,139,157" href="#" alt="Smart Browsing" onclick="MM_showHideLayers('ns4prefsb','','show','ns4prefmn','','hide')">
+<area shape="rect" coords="16,173,139,189" href="#" alt="Identity" onclick="MM_showHideLayers('ns4prefident','','show','ns4prefmn','','hide')">
+<area shape="rect" coords="16,189,139,205" href="#" alt="Mail Servers" onclick="MM_showHideLayers('ns4prefms','','show','ns4prefmn','','hide')">
+<area shape="rect" coords="16,205,139,221" href="#" alt="Newsgroup Servers" onclick="MM_showHideLayers('ns4prefns','','show','ns4prefmn','','hide')">
+<area shape="rect" coords="16,221,139,237" href="#" alt="Addressing" onclick="MM_showHideLayers('ns4prefaddr','','show','ns4prefmn','','hide')">
+<area shape="rect" coords="16,237,139,253" href="#" alt="Messages" onclick="MM_showHideLayers('ns4prefmsg','','show','ns4prefmn','','hide')">
+<area shape="rect" coords="16,253,139,269" href="#" alt="Window Settings" onclick="MM_showHideLayers('ns4prefws','','show','ns4prefmn','','hide')">
+<area shape="rect" coords="16,269,139,285" href="#" alt="Copies and Folders" onclick="MM_showHideLayers('ns4prefcf','','show','ns4prefmn','','hide')">
+<area shape="rect" coords="16,285,139,301" href="#" alt="Formatting" onclick="MM_showHideLayers('ns4prefform','','show','ns4prefmn','','hide')">
+<area shape="rect" coords="16,301,139,317" href="#" alt="Return Receipts" onclick="MM_showHideLayers('ns4prefrr','','show','ns4prefmn','','hide')">
+<area shape="rect" coords="16,317,139,333" href="#" alt="Disk Space" onclick="MM_showHideLayers('ns4prefds','','show','ns4prefmn','','hide')">
+<area shape="rect" coords="140,358,155,373" href="#" alt="Down" onclick="MM_showHideLayers('ns4prefra','','show','ns4prefmn','','hide')">
+<area shape="rect" coords="287,422,361,444" href="#" alt="OK" onclick="MM_showHideLayers('ns4prefmn','','hide')">
+<area shape="rect" coords="371,422,445,444" href="#" alt="Cancel" onclick="MM_showHideLayers('ns4prefmn','','hide')">
+</map>
+</div>
+
+<div id="ns4prefident" style="z-index: 30; left: 130px; top: 55px; position: absolute;">
+<img src="ns4prefident.png" usemap="#ns4prefident.png" width="545" height="459" border="0" alt="">
+<map name="ns4prefident.png">
+<area shape="rect" coords="524,5,539,18" href="#" alt="Close" onclick="MM_showHideLayers('ns4prefident','','hide')">
+<area shape="rect" coords="16,45,139,61" href="#" alt="Appearance" onclick="MM_showHideLayers('ns4prefapp','','show','ns4prefident','','hide')">
+<area shape="rect" coords="16,61,139,77" href="#" alt="Fonts" onclick="MM_showHideLayers('ns4preffont','','show','ns4prefident','','hide')">
+<area shape="rect" coords="16,77,139,93" href="#" alt="Colors" onclick="MM_showHideLayers('ns4prefcol','','show','ns4prefident','','hide')">
+<area shape="rect" coords="16,93,139,109" href="#" alt="Navigator" onclick="MM_showHideLayers('ns4prefnav','','show','ns4prefident','','hide')">
+<area shape="rect" coords="16,109,139,125" href="#" alt="Languages" onclick="MM_showHideLayers('ns4preflang','','show','ns4prefident','','hide')">
+<area shape="rect" coords="16,125,139,141" href="#" alt="Applications" onclick="MM_showHideLayers('ns4prefappl','','show','ns4prefident','','hide')">
+<area shape="rect" coords="16,141,139,157" href="#" alt="Smart Browsing" onclick="MM_showHideLayers('ns4prefsb','','show','ns4prefident','','hide')">
+<area shape="rect" coords="16,157,139,173" href="#" alt="Mail &amp; Newsgroups" onclick="MM_showHideLayers('ns4prefmn','','show','ns4prefident','','hide')">
+<area shape="rect" coords="16,189,139,205" href="#" alt="Mail Servers" onclick="MM_showHideLayers('ns4prefms','','show','ns4prefident','','hide')">
+<area shape="rect" coords="16,205,139,221" href="#" alt="Newsgroup Servers" onclick="MM_showHideLayers('ns4prefns','','show','ns4prefident','','hide')">
+<area shape="rect" coords="16,221,139,237" href="#" alt="Addressing" onclick="MM_showHideLayers('ns4prefaddr','','show','ns4prefident','','hide')">
+<area shape="rect" coords="16,237,139,253" href="#" alt="Messages" onclick="MM_showHideLayers('ns4prefmsg','','show','ns4prefident','','hide')">
+<area shape="rect" coords="16,253,139,269" href="#" alt="Window Settings" onclick="MM_showHideLayers('ns4prefws','','show','ns4prefident','','hide')">
+<area shape="rect" coords="16,269,139,285" href="#" alt="Copies and Folders" onclick="MM_showHideLayers('ns4prefcf','','show','ns4prefident','','hide')">
+<area shape="rect" coords="16,285,139,301" href="#" alt="Formatting" onclick="MM_showHideLayers('ns4prefform','','show','ns4prefident','','hide')">
+<area shape="rect" coords="16,301,139,317" href="#" alt="Return Receipts" onclick="MM_showHideLayers('ns4prefrr','','show','ns4prefident','','hide')">
+<area shape="rect" coords="16,317,139,333" href="#" alt="Disk Space" onclick="MM_showHideLayers('ns4prefds','','show','ns4prefident','','hide')">
+<area shape="rect" coords="140,358,155,373" href="#" alt="Down" onclick="MM_showHideLayers('ns4prefra','','show','ns4prefident','','hide')">
+<area shape="rect" coords="454,351,521,373" href="#" alt="Edit Card" onclick="MM_showHideLayers('ns4prefidentecname','','show')">
+<area shape="rect" coords="287,422,361,444" href="#" alt="OK" onclick="MM_showHideLayers('ns4prefident','','hide')">
+<area shape="rect" coords="371,422,445,444" href="#" alt="Cancel" onclick="MM_showHideLayers('ns4prefident','','hide')">
+</map>
+</div>
+
+<div id="ns4prefms" style="z-index: 30; left: 130px; top: 55px; position: absolute;">
+<img src="ns4prefms.png" usemap="#ns4prefms.png" width="545" height="459" border="0" alt="">
+<map name="ns4prefms.png">
+<area shape="rect" coords="524,5,539,18" href="#" alt="Close" onclick="MM_showHideLayers('ns4prefms','','hide')">
+<area shape="rect" coords="16,45,139,61" href="#" alt="Appearance" onclick="MM_showHideLayers('ns4prefapp','','show','ns4prefms','','hide')">
+<area shape="rect" coords="16,61,139,77" href="#" alt="Fonts" onclick="MM_showHideLayers('ns4preffont','','show','ns4prefms','','hide')">
+<area shape="rect" coords="16,77,139,93" href="#" alt="Colors" onclick="MM_showHideLayers('ns4prefcol','','show','ns4prefms','','hide')">
+<area shape="rect" coords="16,93,139,109" href="#" alt="Navigator" onclick="MM_showHideLayers('ns4prefnav','','show','ns4prefms','','hide')">
+<area shape="rect" coords="16,109,139,125" href="#" alt="Languages" onclick="MM_showHideLayers('ns4preflang','','show','ns4prefms','','hide')">
+<area shape="rect" coords="16,125,139,141" href="#" alt="Applications" onclick="MM_showHideLayers('ns4prefappl','','show','ns4prefms','','hide')">
+<area shape="rect" coords="16,141,139,157" href="#" alt="Smart Browsing" onclick="MM_showHideLayers('ns4prefsb','','show','ns4prefms','','hide')">
+<area shape="rect" coords="16,157,139,173" href="#" alt="Mail &amp; Newsgroups" onclick="MM_showHideLayers('ns4prefmn','','show','ns4prefms','','hide')">
+<area shape="rect" coords="16,173,139,189" href="#" alt="Identity" onclick="MM_showHideLayers('ns4prefident','','show','ns4prefms','','hide')">
+<area shape="rect" coords="16,205,139,221" href="#" alt="Newsgroup Servers" onclick="MM_showHideLayers('ns4prefns','','show','ns4prefms','','hide')">
+<area shape="rect" coords="16,221,139,237" href="#" alt="Addressing" onclick="MM_showHideLayers('ns4prefaddr','','show','ns4prefms','','hide')">
+<area shape="rect" coords="16,237,139,253" href="#" alt="Messages" onclick="MM_showHideLayers('ns4prefmsg','','show','ns4prefms','','hide')">
+<area shape="rect" coords="16,253,139,269" href="#" alt="Window Settings" onclick="MM_showHideLayers('ns4prefws','','show','ns4prefms','','hide')">
+<area shape="rect" coords="16,269,139,285" href="#" alt="Copies and Folders" onclick="MM_showHideLayers('ns4prefcf','','show','ns4prefms','','hide')">
+<area shape="rect" coords="16,285,139,301" href="#" alt="Formatting" onclick="MM_showHideLayers('ns4prefform','','show','ns4prefms','','hide')">
+<area shape="rect" coords="16,301,139,317" href="#" alt="Return Receipts" onclick="MM_showHideLayers('ns4prefrr','','show','ns4prefms','','hide')">
+<area shape="rect" coords="16,317,139,333" href="#" alt="Disk Space" onclick="MM_showHideLayers('ns4prefds','','show','ns4prefms','','hide')">
+<area shape="rect" coords="140,358,155,373" href="#" alt="Down" onclick="MM_showHideLayers('ns4prefra','','show','ns4prefms','','hide')">
+<area shape="rect" coords="439,93,522,113" href="#" alt="Add" onclick="MM_showHideLayers('ns4prefmsadd','','show')">
+<area shape="rect" coords="439,121,522,141" href="#" alt="Edit" onclick="MM_showHideLayers('ns4prefmsedgen','','show')">
+<area shape="rect" coords="287,422,361,444" href="#" alt="OK" onclick="MM_showHideLayers('ns4prefms','','hide')">
+<area shape="rect" coords="371,422,445,444" href="#" alt="Cancel" onclick="MM_showHideLayers('ns4prefms','','hide')">
+</map>
+</div>
+
+<div id="ns4prefns" style="z-index: 30; left: 130px; top: 55px; position: absolute;">
+<img src="ns4prefns.png" usemap="#ns4prefns.png" width="545" height="459" border="0" alt="">
+<map name="ns4prefns.png">
+<area shape="rect" coords="524,5,539,18" href="#" alt="Close" onclick="MM_showHideLayers('ns4prefns','','hide')">
+<area shape="rect" coords="16,45,139,61" href="#" alt="Appearance" onclick="MM_showHideLayers('ns4prefapp','','show','ns4prefns','','hide')">
+<area shape="rect" coords="16,61,139,77" href="#" alt="Fonts" onclick="MM_showHideLayers('ns4preffont','','show','ns4prefns','','hide')">
+<area shape="rect" coords="16,77,139,93" href="#" alt="Colors" onclick="MM_showHideLayers('ns4prefcol','','show','ns4prefns','','hide')">
+<area shape="rect" coords="16,93,139,109" href="#" alt="Navigator" onclick="MM_showHideLayers('ns4prefnav','','show','ns4prefns','','hide')">
+<area shape="rect" coords="16,109,139,125" href="#" alt="Languages" onclick="MM_showHideLayers('ns4preflang','','show','ns4prefns','','hide')">
+<area shape="rect" coords="16,125,139,141" href="#" alt="Applications" onclick="MM_showHideLayers('ns4prefappl','','show','ns4prefns','','hide')">
+<area shape="rect" coords="16,141,139,157" href="#" alt="Smart Browsing" onclick="MM_showHideLayers('ns4prefsb','','show','ns4prefns','','hide')">
+<area shape="rect" coords="16,157,139,173" href="#" alt="Mail &amp; Newsgroups" onclick="MM_showHideLayers('ns4prefmn','','show','ns4prefns','','hide')">
+<area shape="rect" coords="16,173,139,189" href="#" alt="Identity" onclick="MM_showHideLayers('ns4prefident','','show','ns4prefns','','hide')">
+<area shape="rect" coords="16,189,139,205" href="#" alt="Mail Servers" onclick="MM_showHideLayers('ns4prefms','','show','ns4prefns','','hide')">
+<area shape="rect" coords="16,221,139,237" href="#" alt="Addressing" onclick="MM_showHideLayers('ns4prefaddr','','show','ns4prefns','','hide')">
+<area shape="rect" coords="16,237,139,253" href="#" alt="Messages" onclick="MM_showHideLayers('ns4prefmsg','','show','ns4prefns','','hide')">
+<area shape="rect" coords="16,253,139,269" href="#" alt="Window Settings" onclick="MM_showHideLayers('ns4prefws','','show','ns4prefns','','hide')">
+<area shape="rect" coords="16,269,139,285" href="#" alt="Copies and Folders" onclick="MM_showHideLayers('ns4prefcf','','show','ns4prefns','','hide')">
+<area shape="rect" coords="16,285,139,301" href="#" alt="Formatting" onclick="MM_showHideLayers('ns4prefform','','show','ns4prefns','','hide')">
+<area shape="rect" coords="16,301,139,317" href="#" alt="Return Receipts" onclick="MM_showHideLayers('ns4prefrr','','show','ns4prefns','','hide')">
+<area shape="rect" coords="16,317,139,333" href="#" alt="Disk Space" onclick="MM_showHideLayers('ns4prefds','','show','ns4prefns','','hide')">
+<area shape="rect" coords="140,358,155,373" href="#" alt="Down" onclick="MM_showHideLayers('ns4prefra','','show','ns4prefns','','hide')">
+<area shape="rect" coords="431,93,514,115" href="#" alt="Add" onclick="MM_showHideLayers('ns4prefnsadd','','show')">
+<area shape="rect" coords="431,122,514,144" href="#" alt="Edit" onclick="MM_showHideLayers('ns4prefnsed','','show')">
+<area shape="rect" coords="287,422,361,444" href="#" alt="OK" onclick="MM_showHideLayers('ns4prefns','','hide')">
+<area shape="rect" coords="371,422,445,444" href="#" alt="Cancel" onclick="MM_showHideLayers('ns4prefns','','hide')">
+</map>
+</div>
+
+<div id="ns4prefaddr" style="z-index: 30; left: 130px; top: 55px; position: absolute;">
+<img src="ns4prefaddr.png" usemap="#ns4prefaddr.png" width="545" height="459" border="0" alt="">
+<map name="ns4prefaddr.png">
+<area shape="rect" coords="524,5,539,18" href="#" alt="Close" onclick="MM_showHideLayers('ns4prefaddr','','hide')">
+<area shape="rect" coords="16,45,139,61" href="#" alt="Appearance" onclick="MM_showHideLayers('ns4prefapp','','show','ns4prefaddr','','hide')">
+<area shape="rect" coords="16,61,139,77" href="#" alt="Fonts" onclick="MM_showHideLayers('ns4preffont','','show','ns4prefaddr','','hide')">
+<area shape="rect" coords="16,77,139,93" href="#" alt="Colors" onclick="MM_showHideLayers('ns4prefcol','','show','ns4prefaddr','','hide')">
+<area shape="rect" coords="16,93,139,109" href="#" alt="Navigator" onclick="MM_showHideLayers('ns4prefnav','','show','ns4prefaddr','','hide')">
+<area shape="rect" coords="16,109,139,125" href="#" alt="Languages" onclick="MM_showHideLayers('ns4preflang','','show','ns4prefaddr','','hide')">
+<area shape="rect" coords="16,125,139,141" href="#" alt="Applications" onclick="MM_showHideLayers('ns4prefappl','','show','ns4prefaddr','','hide')">
+<area shape="rect" coords="16,141,139,157" href="#" alt="Smart Browsing" onclick="MM_showHideLayers('ns4prefsb','','show','ns4prefaddr','','hide')">
+<area shape="rect" coords="16,157,139,173" href="#" alt="Mail &amp; Newsgroups" onclick="MM_showHideLayers('ns4prefmn','','show','ns4prefaddr','','hide')">
+<area shape="rect" coords="16,173,139,189" href="#" alt="Identity" onclick="MM_showHideLayers('ns4prefident','','show','ns4prefaddr','','hide')">
+<area shape="rect" coords="16,189,139,205" href="#" alt="Mail Servers" onclick="MM_showHideLayers('ns4prefms','','show','ns4prefaddr','','hide')">
+<area shape="rect" coords="16,205,139,221" href="#" alt="Newsgroup Servers" onclick="MM_showHideLayers('ns4prefns','','show','ns4prefaddr','','hide')">
+<area shape="rect" coords="16,237,139,253" href="#" alt="Messages" onclick="MM_showHideLayers('ns4prefmsg','','show','ns4prefaddr','','hide')">
+<area shape="rect" coords="16,253,139,269" href="#" alt="Window Settings" onclick="MM_showHideLayers('ns4prefws','','show','ns4prefaddr','','hide')">
+<area shape="rect" coords="16,269,139,285" href="#" alt="Copies and Folders" onclick="MM_showHideLayers('ns4prefcf','','show','ns4prefaddr','','hide')">
+<area shape="rect" coords="16,285,139,301" href="#" alt="Formatting" onclick="MM_showHideLayers('ns4prefform','','show','ns4prefaddr','','hide')">
+<area shape="rect" coords="16,301,139,317" href="#" alt="Return Receipts" onclick="MM_showHideLayers('ns4prefrr','','show','ns4prefaddr','','hide')">
+<area shape="rect" coords="16,317,139,333" href="#" alt="Disk Space" onclick="MM_showHideLayers('ns4prefds','','show','ns4prefaddr','','hide')">
+<area shape="rect" coords="140,358,155,373" href="#" alt="Down" onclick="MM_showHideLayers('ns4prefra','','show','ns4prefaddr','','hide')">
+<area shape="rect" coords="287,422,361,444" href="#" alt="OK" onclick="MM_showHideLayers('ns4prefaddr','','hide')">
+<area shape="rect" coords="371,422,445,444" href="#" alt="Cancel" onclick="MM_showHideLayers('ns4prefaddr','','hide')">
+</map>
+</div>
+
+<div id="ns4prefmsg" style="z-index: 30; left: 130px; top: 55px; position: absolute;">
+<img src="ns4prefmsg.png" usemap="#ns4prefmsg.png" width="545" height="459" border="0" alt="">
+<map name="ns4prefmsg.png">
+<area shape="rect" coords="524,5,539,18" href="#" alt="Close" onclick="MM_showHideLayers('ns4prefmsg','','hide')">
+<area shape="rect" coords="16,45,139,61" href="#" alt="Appearance" onclick="MM_showHideLayers('ns4prefapp','','show','ns4prefmsg','','hide')">
+<area shape="rect" coords="16,61,139,77" href="#" alt="Fonts" onclick="MM_showHideLayers('ns4preffont','','show','ns4prefmsg','','hide')">
+<area shape="rect" coords="16,77,139,93" href="#" alt="Colors" onclick="MM_showHideLayers('ns4prefcol','','show','ns4prefmsg','','hide')">
+<area shape="rect" coords="16,93,139,109" href="#" alt="Navigator" onclick="MM_showHideLayers('ns4prefnav','','show','ns4prefmsg','','hide')">
+<area shape="rect" coords="16,109,139,125" href="#" alt="Languages" onclick="MM_showHideLayers('ns4preflang','','show','ns4prefmsg','','hide')">
+<area shape="rect" coords="16,125,139,141" href="#" alt="Applications" onclick="MM_showHideLayers('ns4prefappl','','show','ns4prefmsg','','hide')">
+<area shape="rect" coords="16,141,139,157" href="#" alt="Smart Browsing" onclick="MM_showHideLayers('ns4prefsb','','show','ns4prefmsg','','hide')">
+<area shape="rect" coords="16,157,139,173" href="#" alt="Mail &amp; Newsgroups" onclick="MM_showHideLayers('ns4prefmn','','show','ns4prefmsg','','hide')">
+<area shape="rect" coords="16,173,139,189" href="#" alt="Identity" onclick="MM_showHideLayers('ns4prefident','','show','ns4prefmsg','','hide')">
+<area shape="rect" coords="16,189,139,205" href="#" alt="Mail Servers" onclick="MM_showHideLayers('ns4prefms','','show','ns4prefmsg','','hide')">
+<area shape="rect" coords="16,205,139,221" href="#" alt="Newsgroup Servers" onclick="MM_showHideLayers('ns4prefns','','show','ns4prefmsg','','hide')">
+<area shape="rect" coords="16,221,139,237" href="#" alt="Addressing" onclick="MM_showHideLayers('ns4prefaddr','','show','ns4prefmsg','','hide')">
+<area shape="rect" coords="16,253,139,269" href="#" alt="Window Settings" onclick="MM_showHideLayers('ns4prefws','','show','ns4prefmsg','','hide')">
+<area shape="rect" coords="16,269,139,285" href="#" alt="Copies and Folders" onclick="MM_showHideLayers('ns4prefcf','','show','ns4prefmsg','','hide')">
+<area shape="rect" coords="16,285,139,301" href="#" alt="Formatting" onclick="MM_showHideLayers('ns4prefform','','show','ns4prefmsg','','hide')">
+<area shape="rect" coords="16,301,139,317" href="#" alt="Return Receipts" onclick="MM_showHideLayers('ns4prefrr','','show','ns4prefmsg','','hide')">
+<area shape="rect" coords="16,317,139,333" href="#" alt="Disk Space" onclick="MM_showHideLayers('ns4prefds','','show','ns4prefmsg','','hide')">
+<area shape="rect" coords="140,358,155,373" href="#" alt="Down" onclick="MM_showHideLayers('ns4prefra','','show','ns4prefmsg','','hide')">
+<area shape="rect" coords="287,422,361,444" href="#" alt="OK" onclick="MM_showHideLayers('ns4prefmsg','','hide')">
+<area shape="rect" coords="371,422,445,444" href="#" alt="Cancel" onclick="MM_showHideLayers('ns4prefmsg','','hide')">
+</map>
+</div>
+
+<div id="ns4prefws" style="z-index: 30; left: 130px; top: 55px; position: absolute;">
+<img src="ns4prefws.png" usemap="#ns4prefws.png" width="545" height="459" border="0" alt="">
+<map name="ns4prefws.png">
+<area shape="rect" coords="524,5,539,18" href="#" alt="Close" onclick="MM_showHideLayers('ns4prefws','','hide')">
+<area shape="rect" coords="16,45,139,61" href="#" alt="Appearance" onclick="MM_showHideLayers('ns4prefapp','','show','ns4prefws','','hide')">
+<area shape="rect" coords="16,61,139,77" href="#" alt="Fonts" onclick="MM_showHideLayers('ns4prefws','','show','ns4prefws','','hide')">
+<area shape="rect" coords="16,77,139,93" href="#" alt="Colors" onclick="MM_showHideLayers('ns4prefcol','','show','ns4prefws','','hide')">
+<area shape="rect" coords="16,93,139,109" href="#" alt="Navigator" onclick="MM_showHideLayers('ns4prefnav','','show','ns4prefws','','hide')">
+<area shape="rect" coords="16,109,139,125" href="#" alt="Languages" onclick="MM_showHideLayers('ns4preflang','','show','ns4prefws','','hide')">
+<area shape="rect" coords="16,125,139,141" href="#" alt="Applications" onclick="MM_showHideLayers('ns4prefappl','','show','ns4prefws','','hide')">
+<area shape="rect" coords="16,141,139,157" href="#" alt="Smart Browsing" onclick="MM_showHideLayers('ns4prefsb','','show','ns4prefws','','hide')">
+<area shape="rect" coords="16,157,139,173" href="#" alt="Mail &amp; Newsgroups" onclick="MM_showHideLayers('ns4prefmn','','show','ns4prefws','','hide')">
+<area shape="rect" coords="16,173,139,189" href="#" alt="Identity" onclick="MM_showHideLayers('ns4prefident','','show','ns4prefws','','hide')">
+<area shape="rect" coords="16,189,139,205" href="#" alt="Mail Servers" onclick="MM_showHideLayers('ns4prefms','','show','ns4prefws','','hide')">
+<area shape="rect" coords="16,205,139,221" href="#" alt="Newsgroup Servers" onclick="MM_showHideLayers('ns4prefns','','show','ns4prefws','','hide')">
+<area shape="rect" coords="16,221,139,237" href="#" alt="Addressing" onclick="MM_showHideLayers('ns4prefaddr','','show','ns4prefws','','hide')">
+<area shape="rect" coords="16,237,139,253" href="#" alt="Messages" onclick="MM_showHideLayers('ns4prefmsg','','show','ns4prefws','','hide')">
+<area shape="rect" coords="16,269,139,285" href="#" alt="Copies and Folders" onclick="MM_showHideLayers('ns4prefcf','','show','ns4prefws','','hide')">
+<area shape="rect" coords="16,285,139,301" href="#" alt="Formatting" onclick="MM_showHideLayers('ns4prefform','','show','ns4prefws','','hide')">
+<area shape="rect" coords="16,301,139,317" href="#" alt="Return Receipts" onclick="MM_showHideLayers('ns4prefrr','','show','ns4prefws','','hide')">
+<area shape="rect" coords="16,317,139,333" href="#" alt="Disk Space" onclick="MM_showHideLayers('ns4prefds','','show','ns4prefws','','hide')">
+<area shape="rect" coords="140,358,155,373" href="#" alt="Down" onclick="MM_showHideLayers('ns4prefra','','show','ns4prefws','','hide')">
+<area shape="rect" coords="287,422,361,444" href="#" alt="OK" onclick="MM_showHideLayers('ns4prefws','','hide')">
+<area shape="rect" coords="371,422,445,444" href="#" alt="Cancel" onclick="MM_showHideLayers('ns4prefws','','hide')">
+</map>
+</div>
+
+<div id="ns4prefcf" style="z-index: 30; left: 130px; top: 55px; position: absolute;">
+<img src="ns4prefcf.png" usemap="#ns4prefcf.png" width="545" height="459" border="0" alt="">
+<map name="ns4prefcf.png">
+<area shape="rect" coords="524,5,539,18" href="#" alt="Close" onclick="MM_showHideLayers('ns4prefcf','','hide')">
+<area shape="rect" coords="16,45,139,61" href="#" alt="Appearance" onclick="MM_showHideLayers('ns4prefapp','','show','ns4prefcf','','hide')">
+<area shape="rect" coords="16,61,139,77" href="#" alt="Fonts" onclick="MM_showHideLayers('ns4preffont','','show','ns4prefcf','','hide')">
+<area shape="rect" coords="16,77,139,93" href="#" alt="Colors" onclick="MM_showHideLayers('ns4prefcol','','show','ns4prefcf','','hide')">
+<area shape="rect" coords="16,93,139,109" href="#" alt="Navigator" onclick="MM_showHideLayers('ns4prefnav','','show','ns4prefcf','','hide')">
+<area shape="rect" coords="16,109,139,125" href="#" alt="Languages" onclick="MM_showHideLayers('ns4preflang','','show','ns4prefcf','','hide')">
+<area shape="rect" coords="16,125,139,141" href="#" alt="Applications" onclick="MM_showHideLayers('ns4prefappl','','show','ns4prefcf','','hide')">
+<area shape="rect" coords="16,141,139,157" href="#" alt="Smart Browsing" onclick="MM_showHideLayers('ns4prefsb','','show','ns4prefcf','','hide')">
+<area shape="rect" coords="16,157,139,173" href="#" alt="Mail &amp; Newsgroups" onclick="MM_showHideLayers('ns4prefmn','','show','ns4prefcf','','hide')">
+<area shape="rect" coords="16,173,139,189" href="#" alt="Identity" onclick="MM_showHideLayers('ns4prefident','','show','ns4prefcf','','hide')">
+<area shape="rect" coords="16,189,139,205" href="#" alt="Mail Servers" onclick="MM_showHideLayers('ns4prefms','','show','ns4prefcf','','hide')">
+<area shape="rect" coords="16,205,139,221" href="#" alt="Newsgroup Servers" onclick="MM_showHideLayers('ns4prefns','','show','ns4prefcf','','hide')">
+<area shape="rect" coords="16,221,139,237" href="#" alt="Addressing" onclick="MM_showHideLayers('ns4prefaddr','','show','ns4prefcf','','hide')">
+<area shape="rect" coords="16,237,139,253" href="#" alt="Messages" onclick="MM_showHideLayers('ns4prefmsg','','show','ns4prefcf','','hide')">
+<area shape="rect" coords="16,253,139,269" href="#" alt="Window Settings" onclick="MM_showHideLayers('ns4prefws','','show','ns4prefcf','','hide')">
+<area shape="rect" coords="16,285,139,301" href="#" alt="Formatting" onclick="MM_showHideLayers('ns4prefform','','show','ns4prefcf','','hide')">
+<area shape="rect" coords="16,301,139,317" href="#" alt="Return Receipts" onclick="MM_showHideLayers('ns4prefrr','','show','ns4prefcf','','hide')">
+<area shape="rect" coords="16,317,139,333" href="#" alt="Disk Space" onclick="MM_showHideLayers('ns4prefds','','show','ns4prefcf','','hide')">
+<area shape="rect" coords="140,358,155,373" href="#" alt="Down" onclick="MM_showHideLayers('ns4prefra','','show','ns4prefcf','','hide')">
+<area shape="rect" coords="440,100,529,117" href="#" alt="Choose Folder" onclick="MM_showHideLayers('ns4prefcfcf','','show')">
+<area shape="rect" coords="440,207,529,224" href="#" alt="Choose Folder" onclick="MM_showHideLayers('ns4prefcfcf','','show')">
+<area shape="rect" coords="440,314,529,331" href="#" alt="Choose Folder" onclick="MM_showHideLayers('ns4prefcfcf','','show')">
+<area shape="rect" coords="440,340,529,357" href="#" alt="Choose Folder" onclick="MM_showHideLayers('ns4prefcfcf','','show')">
+<area shape="rect" coords="287,422,361,444" href="#" alt="OK" onclick="MM_showHideLayers('ns4prefcf','','hide')">
+<area shape="rect" coords="371,422,445,444" href="#" alt="Cancel" onclick="MM_showHideLayers('ns4prefcf','','hide')">
+</map>
+</div>
+
+<div id="ns4prefform" style="z-index: 30; left: 130px; top: 55px; position: absolute;">
+<img src="ns4prefform.png" usemap="#ns4prefform.png" width="545" height="459" border="0" alt="">
+<map name="ns4prefform.png">
+<area shape="rect" coords="524,5,539,18" href="#" alt="Close" onclick="MM_showHideLayers('ns4prefform','','hide')">
+<area shape="rect" coords="16,45,139,61" href="#" alt="Appearance" onclick="MM_showHideLayers('ns4prefapp','','show','ns4prefform','','hide')">
+<area shape="rect" coords="16,61,139,77" href="#" alt="Fonts" onclick="MM_showHideLayers('ns4preffont','','show','ns4prefform','','hide')">
+<area shape="rect" coords="16,77,139,93" href="#" alt="Colors" onclick="MM_showHideLayers('ns4prefcol','','show','ns4prefform','','hide')">
+<area shape="rect" coords="16,93,139,109" href="#" alt="Navigator" onclick="MM_showHideLayers('ns4prefnav','','show','ns4prefform','','hide')">
+<area shape="rect" coords="16,109,139,125" href="#" alt="Languages" onclick="MM_showHideLayers('ns4preflang','','show','ns4prefform','','hide')">
+<area shape="rect" coords="16,125,139,141" href="#" alt="Applications" onclick="MM_showHideLayers('ns4prefappl','','show','ns4prefform','','hide')">
+<area shape="rect" coords="16,141,139,157" href="#" alt="Smart Browsing" onclick="MM_showHideLayers('ns4prefsb','','show','ns4prefform','','hide')">
+<area shape="rect" coords="16,157,139,173" href="#" alt="Mail &amp; Newsgroups" onclick="MM_showHideLayers('ns4prefmn','','show','ns4prefform','','hide')">
+<area shape="rect" coords="16,173,139,189" href="#" alt="Identity" onclick="MM_showHideLayers('ns4prefident','','show','ns4prefform','','hide')">
+<area shape="rect" coords="16,189,139,205" href="#" alt="Mail Servers" onclick="MM_showHideLayers('ns4prefms','','show','ns4prefform','','hide')">
+<area shape="rect" coords="16,205,139,221" href="#" alt="Newsgroup Servers" onclick="MM_showHideLayers('ns4prefns','','show','ns4prefform','','hide')">
+<area shape="rect" coords="16,221,139,237" href="#" alt="Addressing" onclick="MM_showHideLayers('ns4prefaddr','','show','ns4prefform','','hide')">
+<area shape="rect" coords="16,237,139,253" href="#" alt="Messages" onclick="MM_showHideLayers('ns4prefmsg','','show','ns4prefform','','hide')">
+<area shape="rect" coords="16,253,139,269" href="#" alt="Window Settings" onclick="MM_showHideLayers('ns4prefws','','show','ns4prefform','','hide')">
+<area shape="rect" coords="16,269,139,285" href="#" alt="Copies and Folders" onclick="MM_showHideLayers('ns4prefcf','','show','ns4prefform','','hide')">
+<area shape="rect" coords="16,301,139,317" href="#" alt="Return Receipts" onclick="MM_showHideLayers('ns4prefrr','','show','ns4prefform','','hide')">
+<area shape="rect" coords="16,317,139,333" href="#" alt="Disk Space" onclick="MM_showHideLayers('ns4prefds','','show','ns4prefform','','hide')">
+<area shape="rect" coords="140,358,155,373" href="#" alt="Down" onclick="MM_showHideLayers('ns4prefra','','show','ns4prefform','','hide')">
+<area shape="rect" coords="287,422,361,444" href="#" alt="OK" onclick="MM_showHideLayers('ns4prefform','','hide')">
+<area shape="rect" coords="371,422,445,444" href="#" alt="Cancel" onclick="MM_showHideLayers('ns4prefform','','hide')">
+</map>
+</div>
+
+<div id="ns4prefrr" style="z-index: 30; left: 130px; top: 55px; position: absolute;">
+<img src="ns4prefrr.png" usemap="#ns4prefrr.png" width="545" height="459" border="0" alt="">
+<map name="ns4prefrr.png">
+<area shape="rect" coords="524,5,539,18" href="#" alt="Close" onclick="MM_showHideLayers('ns4prefrr','','hide')">
+<area shape="rect" coords="16,45,139,61" href="#" alt="Appearance" onclick="MM_showHideLayers('ns4prefapp','','show','ns4prefrr','','hide')">
+<area shape="rect" coords="16,61,139,77" href="#" alt="Fonts" onclick="MM_showHideLayers('ns4preffont','','show','ns4prefrr','','hide')">
+<area shape="rect" coords="16,77,139,93" href="#" alt="Colors" onclick="MM_showHideLayers('ns4prefcol','','show','ns4prefrr','','hide')">
+<area shape="rect" coords="16,93,139,109" href="#" alt="Navigator" onclick="MM_showHideLayers('ns4prefnav','','show','ns4prefrr','','hide')">
+<area shape="rect" coords="16,109,139,125" href="#" alt="Languages" onclick="MM_showHideLayers('ns4preflang','','show','ns4prefrr','','hide')">
+<area shape="rect" coords="16,125,139,141" href="#" alt="Applications" onclick="MM_showHideLayers('ns4prefappl','','show','ns4prefrr','','hide')">
+<area shape="rect" coords="16,141,139,157" href="#" alt="Smart Browsing" onclick="MM_showHideLayers('ns4prefsb','','show','ns4prefrr','','hide')">
+<area shape="rect" coords="16,157,139,173" href="#" alt="Mail &amp; Newsgroups" onclick="MM_showHideLayers('ns4prefmn','','show','ns4prefrr','','hide')">
+<area shape="rect" coords="16,173,139,189" href="#" alt="Identity" onclick="MM_showHideLayers('ns4prefident','','show','ns4prefrr','','hide')">
+<area shape="rect" coords="16,189,139,205" href="#" alt="Mail Servers" onclick="MM_showHideLayers('ns4prefms','','show','ns4prefrr','','hide')">
+<area shape="rect" coords="16,205,139,221" href="#" alt="Newsgroup Servers" onclick="MM_showHideLayers('ns4prefns','','show','ns4prefrr','','hide')">
+<area shape="rect" coords="16,221,139,237" href="#" alt="Addressing" onclick="MM_showHideLayers('ns4prefaddr','','show','ns4prefrr','','hide')">
+<area shape="rect" coords="16,237,139,253" href="#" alt="Messages" onclick="MM_showHideLayers('ns4prefmsg','','show','ns4prefrr','','hide')">
+<area shape="rect" coords="16,253,139,269" href="#" alt="Window Settings" onclick="MM_showHideLayers('ns4prefws','','show','ns4prefrr','','hide')">
+<area shape="rect" coords="16,269,139,285" href="#" alt="Copies and Folders" onclick="MM_showHideLayers('ns4prefcf','','show','ns4prefrr','','hide')">
+<area shape="rect" coords="16,285,139,301" href="#" alt="Formatting" onclick="MM_showHideLayers('ns4prefform','','show','ns4prefrr','','hide')">
+<area shape="rect" coords="16,317,139,333" href="#" alt="Disk Space" onclick="MM_showHideLayers('ns4prefds','','show','ns4prefrr','','hide')">
+<area shape="rect" coords="140,358,155,373" href="#" alt="Down" onclick="MM_showHideLayers('ns4prefra','','show','ns4prefrr','','hide')">
+<area shape="rect" coords="391,322,480,344" href="#" alt="Customize" onclick="MM_showHideLayers('ns4prefrrcust','','show')">
+<area shape="rect" coords="287,422,361,444" href="#" alt="OK" onclick="MM_showHideLayers('ns4prefrr','','hide')">
+<area shape="rect" coords="371,422,445,444" href="#" alt="Cancel" onclick="MM_showHideLayers('ns4prefrr','','hide')">
+</map>
+</div>
+
+<div id="ns4prefds" style="z-index: 30; left: 130px; top: 55px; position: absolute;">
+<img src="ns4prefds.png" usemap="#ns4prefds.png" width="545" height="459" border="0" alt="">
+<map name="ns4prefds.png">
+<area shape="rect" coords="524,5,539,18" href="#" alt="Close" onclick="MM_showHideLayers('ns4prefds','','hide')">
+<area shape="rect" coords="16,45,139,61" href="#" alt="Appearance" onclick="MM_showHideLayers('ns4prefapp','','show','ns4prefds','','hide')">
+<area shape="rect" coords="16,61,139,77" href="#" alt="Fonts" onclick="MM_showHideLayers('ns4preffont','','show','ns4prefds','','hide')">
+<area shape="rect" coords="16,77,139,93" href="#" alt="Colors" onclick="MM_showHideLayers('ns4prefcol','','show','ns4prefds','','hide')">
+<area shape="rect" coords="16,93,139,109" href="#" alt="Navigator" onclick="MM_showHideLayers('ns4prefnav','','show','ns4prefds','','hide')">
+<area shape="rect" coords="16,109,139,125" href="#" alt="Languages" onclick="MM_showHideLayers('ns4preflang','','show','ns4prefds','','hide')">
+<area shape="rect" coords="16,125,139,141" href="#" alt="Applications" onclick="MM_showHideLayers('ns4prefappl','','show','ns4prefds','','hide')">
+<area shape="rect" coords="16,141,139,157" href="#" alt="Smart Browsing" onclick="MM_showHideLayers('ns4prefsb','','show','ns4prefds','','hide')">
+<area shape="rect" coords="16,157,139,173" href="#" alt="Mail &amp; Newsgroups" onclick="MM_showHideLayers('ns4prefmn','','show','ns4prefds','','hide')">
+<area shape="rect" coords="16,173,139,189" href="#" alt="Identity" onclick="MM_showHideLayers('ns4prefident','','show','ns4prefds','','hide')">
+<area shape="rect" coords="16,189,139,205" href="#" alt="Mail Servers" onclick="MM_showHideLayers('ns4prefms','','show','ns4prefds','','hide')">
+<area shape="rect" coords="16,205,139,221" href="#" alt="Newsgroup Servers" onclick="MM_showHideLayers('ns4prefns','','show','ns4prefds','','hide')">
+<area shape="rect" coords="16,221,139,237" href="#" alt="Addressing" onclick="MM_showHideLayers('ns4prefaddr','','show','ns4prefds','','hide')">
+<area shape="rect" coords="16,237,139,253" href="#" alt="Messages" onclick="MM_showHideLayers('ns4prefmsg','','show','ns4prefds','','hide')">
+<area shape="rect" coords="16,253,139,269" href="#" alt="Window Settings" onclick="MM_showHideLayers('ns4prefws','','show','ns4prefds','','hide')">
+<area shape="rect" coords="16,269,139,285" href="#" alt="Copies and Folders" onclick="MM_showHideLayers('ns4prefcf','','show','ns4prefds','','hide')">
+<area shape="rect" coords="16,285,139,301" href="#" alt="Formatting" onclick="MM_showHideLayers('ns4prefform','','show','ns4prefds','','hide')">
+<area shape="rect" coords="16,301,139,317" href="#" alt="Return Receipts" onclick="MM_showHideLayers('ns4prefrr','','show','ns4prefds','','hide')">
+<area shape="rect" coords="140,358,155,373" href="#" alt="Down" onclick="MM_showHideLayers('ns4prefra','','show','ns4prefds','','hide')">
+<area shape="rect" coords="287,422,361,444" href="#" alt="OK" onclick="MM_showHideLayers('ns4prefds','','hide')">
+<area shape="rect" coords="371,422,445,444" href="#" alt="Cancel" onclick="MM_showHideLayers('ns4prefds','','hide')">
+</map>
+</div>
+
+<div id="ns4prefra" style="z-index: 30; left: 130px; top: 55px; position: absolute;">
+<img src="ns4prefra.png" usemap="#ns4prefra.png" width="545" height="459" border="0" alt="">
+<map name="ns4prefra.png">
+<area shape="rect" coords="524,5,539,18" href="#" alt="Close" onclick="MM_showHideLayers('ns4prefra','','hide')">
+<area shape="rect" coords="140,45,155,60" href="#" alt="Up" onclick="MM_showHideLayers('ns4prefapp','','show','ns4prefra','','hide')">
+<area shape="rect" coords="16,205,139,221" href="#" alt="Server Information" onclick="MM_showHideLayers('ns4prefsi','','show','ns4prefra','','hide')">
+<area shape="rect" coords="16,221,139,237" href="#" alt="Item Selection" onclick="MM_showHideLayers('ns4prefis','','show','ns4prefra','','hide')">
+<area shape="rect" coords="16,237,139,253" href="#" alt="Composer" onclick="MM_showHideLayers('ns4prefcomp','','show','ns4prefra','','hide')">
+<area shape="rect" coords="16,253,139,269" href="#" alt="Publishing" onclick="MM_showHideLayers('ns4prefpub','','show','ns4prefra','','hide')">
+<area shape="rect" coords="16,269,139,285" href="#" alt="Offline" onclick="MM_showHideLayers('ns4prefoff','','show','ns4prefra','','hide')">
+<area shape="rect" coords="16,285,139,301" href="#" alt="Download" onclick="MM_showHideLayers('ns4prefdown','','show','ns4prefra','','hide')">
+<area shape="rect" coords="16,301,139,317" href="#" alt="Advanced" onclick="MM_showHideLayers('ns4prefadv','','show','ns4prefra','','hide')">
+<area shape="rect" coords="16,317,139,333" href="#" alt="Cache" onclick="MM_showHideLayers('ns4prefcache','','show','ns4prefra','','hide')">
+<area shape="rect" coords="16,333,139,349" href="#" alt="Proxies" onclick="MM_showHideLayers('ns4prefprox','','show','ns4prefra','','hide')">
+<area shape="rect" coords="16,349,139,365" href="#" alt="SmartUpdate" onclick="MM_showHideLayers('ns4prefsu','','show','ns4prefra','','hide')">
+<area shape="rect" coords="287,422,361,444" href="#" alt="OK" onclick="MM_showHideLayers('ns4prefra','','hide')">
+<area shape="rect" coords="371,422,445,444" href="#" alt="Cancel" onclick="MM_showHideLayers('ns4prefra','','hide')">
+</map>
+</div>
+
+<div id="ns4prefsi" style="z-index: 30; left: 130px; top: 55px; position: absolute;">
+<img src="ns4prefsi.png" usemap="#ns4prefsi.png" width="545" height="459" border="0" alt="">
+<map name="ns4prefsi.png">
+<area shape="rect" coords="524,5,539,18" href="#" alt="Close" onclick="MM_showHideLayers('ns4prefsi','','hide')">
+<area shape="rect" coords="140,45,155,60" href="#" alt="Up" onclick="MM_showHideLayers('ns4prefapp','','show','ns4prefsi','','hide')">
+<area shape="rect" coords="16,189,139,205" href="#" alt="Roaming Access" onclick="MM_showHideLayers('ns4prefra','','show','ns4prefsi','','hide')">
+<area shape="rect" coords="16,221,139,237" href="#" alt="Item Selection" onclick="MM_showHideLayers('ns4prefis','','show','ns4prefsi','','hide')">
+<area shape="rect" coords="16,237,139,253" href="#" alt="Composer" onclick="MM_showHideLayers('ns4prefcomp','','show','ns4prefsi','','hide')">
+<area shape="rect" coords="16,253,139,269" href="#" alt="Publishing" onclick="MM_showHideLayers('ns4prefpub','','show','ns4prefsi','','hide')">
+<area shape="rect" coords="16,269,139,285" href="#" alt="Offline" onclick="MM_showHideLayers('ns4prefoff','','show','ns4prefsi','','hide')">
+<area shape="rect" coords="16,285,139,301" href="#" alt="Download" onclick="MM_showHideLayers('ns4prefdown','','show','ns4prefsi','','hide')">
+<area shape="rect" coords="16,301,139,317" href="#" alt="Advanced" onclick="MM_showHideLayers('ns4prefadv','','show','ns4prefsi','','hide')">
+<area shape="rect" coords="16,317,139,333" href="#" alt="Cache" onclick="MM_showHideLayers('ns4prefcache','','show','ns4prefsi','','hide')">
+<area shape="rect" coords="16,333,139,349" href="#" alt="Proxies" onclick="MM_showHideLayers('ns4prefprox','','show','ns4prefsi','','hide')">
+<area shape="rect" coords="16,349,139,365" href="#" alt="SmartUpdate" onclick="MM_showHideLayers('ns4prefsu','','show','ns4prefsi','','hide')">
+<area shape="rect" coords="287,422,361,444" href="#" alt="OK" onclick="MM_showHideLayers('ns4prefsi','','hide')">
+<area shape="rect" coords="371,422,445,444" href="#" alt="Cancel" onclick="MM_showHideLayers('ns4prefsi','','hide')">
+</map>
+</div>
+
+<div id="ns4prefis" style="z-index: 30; left: 130px; top: 55px; position: absolute;">
+<img src="ns4prefis.png" usemap="#ns4prefis.png" width="545" height="459" border="0" alt="">
+<map name="ns4prefis.png">
+<area shape="rect" coords="524,5,539,18" href="#" alt="Close" onclick="MM_showHideLayers('ns4prefis','','hide')">
+<area shape="rect" coords="140,45,155,60" href="#" alt="Up" onclick="MM_showHideLayers('ns4prefapp','','show','ns4prefis','','hide')">
+<area shape="rect" coords="16,189,139,205" href="#" alt="Roaming Access" onclick="MM_showHideLayers('ns4prefra','','show','ns4prefis','','hide')">
+<area shape="rect" coords="16,205,139,221" href="#" alt="Server Information" onclick="MM_showHideLayers('ns4prefsi','','show','ns4prefis','','hide')">
+<area shape="rect" coords="16,237,139,253" href="#" alt="Composer" onclick="MM_showHideLayers('ns4prefcomp','','show','ns4prefis','','hide')">
+<area shape="rect" coords="16,253,139,269" href="#" alt="Publishing" onclick="MM_showHideLayers('ns4prefpub','','show','ns4prefis','','hide')">
+<area shape="rect" coords="16,269,139,285" href="#" alt="Offline" onclick="MM_showHideLayers('ns4prefoff','','show','ns4prefis','','hide')">
+<area shape="rect" coords="16,285,139,301" href="#" alt="Download" onclick="MM_showHideLayers('ns4prefdown','','show','ns4prefis','','hide')">
+<area shape="rect" coords="16,301,139,317" href="#" alt="Advanced" onclick="MM_showHideLayers('ns4prefadv','','show','ns4prefis','','hide')">
+<area shape="rect" coords="16,317,139,333" href="#" alt="Cache" onclick="MM_showHideLayers('ns4prefcache','','show','ns4prefis','','hide')">
+<area shape="rect" coords="16,333,139,349" href="#" alt="Proxies" onclick="MM_showHideLayers('ns4prefprox','','show','ns4prefis','','hide')">
+<area shape="rect" coords="16,349,139,365" href="#" alt="SmartUpdate" onclick="MM_showHideLayers('ns4prefsu','','show','ns4prefis','','hide')">
+<area shape="rect" coords="287,422,361,444" href="#" alt="OK" onclick="MM_showHideLayers('ns4prefis','','hide')">
+<area shape="rect" coords="371,422,445,444" href="#" alt="Cancel" onclick="MM_showHideLayers('ns4prefis','','hide')">
+</map>
+</div>
+
+<div id="ns4prefcomp" style="z-index: 30; left: 130px; top: 55px; position: absolute;">
+<img src="ns4prefcomp.png" usemap="#ns4prefcomp.png" width="545" height="459" border="0" alt="">
+<map name="ns4prefcomp.png">
+<area shape="rect" coords="524,5,539,18" href="#" alt="Close" onclick="MM_showHideLayers('ns4prefcomp','','hide')">
+<area shape="rect" coords="140,45,155,60" href="#" alt="Up" onclick="MM_showHideLayers('ns4prefapp','','show','ns4prefcomp','','hide')">
+<area shape="rect" coords="16,189,139,205" href="#" alt="Roaming Access" onclick="MM_showHideLayers('ns4prefra','','show','ns4prefcomp','','hide')">
+<area shape="rect" coords="16,205,139,221" href="#" alt="Server Information" onclick="MM_showHideLayers('ns4prefsi','','show','ns4prefcomp','','hide')">
+<area shape="rect" coords="16,221,139,237" href="#" alt="Item Selection" onclick="MM_showHideLayers('ns4prefis','','show','ns4prefcomp','','hide')">
+<area shape="rect" coords="16,253,139,269" href="#" alt="Publishing" onclick="MM_showHideLayers('ns4prefpub','','show','ns4prefcomp','','hide')">
+<area shape="rect" coords="16,269,139,285" href="#" alt="Offline" onclick="MM_showHideLayers('ns4prefoff','','show','ns4prefcomp','','hide')">
+<area shape="rect" coords="16,285,139,301" href="#" alt="Download" onclick="MM_showHideLayers('ns4prefdown','','show','ns4prefcomp','','hide')">
+<area shape="rect" coords="16,301,139,317" href="#" alt="Advanced" onclick="MM_showHideLayers('ns4prefadv','','show','ns4prefcomp','','hide')">
+<area shape="rect" coords="16,317,139,333" href="#" alt="Cache" onclick="MM_showHideLayers('ns4prefcache','','show','ns4prefcomp','','hide')">
+<area shape="rect" coords="16,333,139,349" href="#" alt="Proxies" onclick="MM_showHideLayers('ns4prefprox','','show','ns4prefcomp','','hide')">
+<area shape="rect" coords="16,349,139,365" href="#" alt="SmartUpdate" onclick="MM_showHideLayers('ns4prefsu','','show','ns4prefcomp','','hide')">
+<area shape="rect" coords="287,422,361,444" href="#" alt="OK" onclick="MM_showHideLayers('ns4prefcomp','','hide')">
+<area shape="rect" coords="371,422,445,444" href="#" alt="Cancel" onclick="MM_showHideLayers('ns4prefcomp','','hide')">
+</map>
+</div>
+
+<div id="ns4prefpub" style="z-index: 30; left: 130px; top: 55px; position: absolute;">
+<img src="ns4prefpub.png" usemap="#ns4prefpub.png" width="545" height="459" border="0" alt="">
+<map name="ns4prefpub.png">
+<area shape="rect" coords="524,5,539,18" href="#" alt="Close" onclick="MM_showHideLayers('ns4prefpub','','hide')">
+<area shape="rect" coords="140,45,155,60" href="#" alt="Up" onclick="MM_showHideLayers('ns4prefapp','','show','ns4prefpub','','hide')">
+<area shape="rect" coords="16,189,139,205" href="#" alt="Roaming Access" onclick="MM_showHideLayers('ns4prefra','','show','ns4prefpub','','hide')">
+<area shape="rect" coords="16,205,139,221" href="#" alt="Server Information" onclick="MM_showHideLayers('ns4prefsi','','show','ns4prefpub','','hide')">
+<area shape="rect" coords="16,221,139,237" href="#" alt="Item Selection" onclick="MM_showHideLayers('ns4prefis','','show','ns4prefpub','','hide')">
+<area shape="rect" coords="16,237,139,253" href="#" alt="Composer" onclick="MM_showHideLayers('ns4prefcomp','','show','ns4prefpub','','hide')">
+<area shape="rect" coords="16,269,139,285" href="#" alt="Offline" onclick="MM_showHideLayers('ns4prefoff','','show','ns4prefpub','','hide')">
+<area shape="rect" coords="16,285,139,301" href="#" alt="Download" onclick="MM_showHideLayers('ns4prefdown','','show','ns4prefpub','','hide')">
+<area shape="rect" coords="16,301,139,317" href="#" alt="Advanced" onclick="MM_showHideLayers('ns4prefadv','','show','ns4prefpub','','hide')">
+<area shape="rect" coords="16,317,139,333" href="#" alt="Cache" onclick="MM_showHideLayers('ns4prefcache','','show','ns4prefpub','','hide')">
+<area shape="rect" coords="16,333,139,349" href="#" alt="Proxies" onclick="MM_showHideLayers('ns4prefprox','','show','ns4prefpub','','hide')">
+<area shape="rect" coords="16,349,139,365" href="#" alt="SmartUpdate" onclick="MM_showHideLayers('ns4prefsu','','show','ns4prefpub','','hide')">
+<area shape="rect" coords="287,422,361,444" href="#" alt="OK" onclick="MM_showHideLayers('ns4prefpub','','hide')">
+<area shape="rect" coords="371,422,445,444" href="#" alt="Cancel" onclick="MM_showHideLayers('ns4prefpub','','hide')">
+</map>
+</div>
+
+<div id="ns4prefoff" style="z-index: 30; left: 130px; top: 55px; position: absolute;">
+<img src="ns4prefoff.png" usemap="#ns4prefoff.png" width="545" height="459" border="0" alt="">
+<map name="ns4prefoff.png">
+<area shape="rect" coords="524,5,539,18" href="#" alt="Close" onclick="MM_showHideLayers('ns4prefoff','','hide')">
+<area shape="rect" coords="140,45,155,60" href="#" alt="Up" onclick="MM_showHideLayers('ns4prefapp','','show','ns4prefoff','','hide')">
+<area shape="rect" coords="16,189,139,205" href="#" alt="Roaming Access" onclick="MM_showHideLayers('ns4prefra','','show','ns4prefoff','','hide')">
+<area shape="rect" coords="16,205,139,221" href="#" alt="Server Information" onclick="MM_showHideLayers('ns4prefsi','','show','ns4prefoff','','hide')">
+<area shape="rect" coords="16,221,139,237" href="#" alt="Item Selection" onclick="MM_showHideLayers('ns4prefis','','show','ns4prefoff','','hide')">
+<area shape="rect" coords="16,237,139,253" href="#" alt="Composer" onclick="MM_showHideLayers('ns4prefcomp','','show','ns4prefoff','','hide')">
+<area shape="rect" coords="16,253,139,269" href="#" alt="Publishing" onclick="MM_showHideLayers('ns4prefpub','','show','ns4prefoff','','hide')">
+<area shape="rect" coords="16,285,139,301" href="#" alt="Download" onclick="MM_showHideLayers('ns4prefdown','','show','ns4prefoff','','hide')">
+<area shape="rect" coords="16,301,139,317" href="#" alt="Advanced" onclick="MM_showHideLayers('ns4prefadv','','show','ns4prefoff','','hide')">
+<area shape="rect" coords="16,317,139,333" href="#" alt="Cache" onclick="MM_showHideLayers('ns4prefcache','','show','ns4prefoff','','hide')">
+<area shape="rect" coords="16,333,139,349" href="#" alt="Proxies" onclick="MM_showHideLayers('ns4prefprox','','show','ns4prefoff','','hide')">
+<area shape="rect" coords="16,349,139,365" href="#" alt="SmartUpdate" onclick="MM_showHideLayers('ns4prefsu','','show','ns4prefoff','','hide')">
+<area shape="rect" coords="287,422,361,444" href="#" alt="OK" onclick="MM_showHideLayers('ns4prefoff','','hide')">
+<area shape="rect" coords="371,422,445,444" href="#" alt="Cancel" onclick="MM_showHideLayers('ns4prefoff','','hide')">
+</map>
+</div>
+
+<div id="ns4prefdown" style="z-index: 30; left: 130px; top: 55px; position: absolute;">
+<img src="ns4prefdown.png" usemap="#ns4prefdown.png" width="545" height="459" border="0" alt="">
+<map name="ns4prefdown.png">
+<area shape="rect" coords="524,5,539,18" href="#" alt="Close" onclick="MM_showHideLayers('ns4prefdown','','hide')">
+<area shape="rect" coords="140,45,155,60" href="#" alt="Up" onclick="MM_showHideLayers('ns4prefapp','','show','ns4prefdown','','hide')">
+<area shape="rect" coords="16,189,139,205" href="#" alt="Roaming Access" onclick="MM_showHideLayers('ns4prefra','','show','ns4prefdown','','hide')">
+<area shape="rect" coords="16,205,139,221" href="#" alt="Server Information" onclick="MM_showHideLayers('ns4prefsi','','show','ns4prefdown','','hide')">
+<area shape="rect" coords="16,221,139,237" href="#" alt="Item Selection" onclick="MM_showHideLayers('ns4prefis','','show','ns4prefdown','','hide')">
+<area shape="rect" coords="16,237,139,253" href="#" alt="Composer" onclick="MM_showHideLayers('ns4prefcomp','','show','ns4prefdown','','hide')">
+<area shape="rect" coords="16,253,139,269" href="#" alt="Publishing" onclick="MM_showHideLayers('ns4prefpub','','show','ns4prefdown','','hide')">
+<area shape="rect" coords="16,269,139,285" href="#" alt="Offline" onclick="MM_showHideLayers('ns4prefoff','','show','ns4prefdown','','hide')">
+<area shape="rect" coords="16,301,139,317" href="#" alt="Advanced" onclick="MM_showHideLayers('ns4prefadv','','show','ns4prefdown','','hide')">
+<area shape="rect" coords="16,317,139,333" href="#" alt="Cache" onclick="MM_showHideLayers('ns4prefcache','','show','ns4prefdown','','hide')">
+<area shape="rect" coords="16,333,139,349" href="#" alt="Proxies" onclick="MM_showHideLayers('ns4prefprox','','show','ns4prefdown','','hide')">
+<area shape="rect" coords="16,349,139,365" href="#" alt="SmartUpdate" onclick="MM_showHideLayers('ns4prefsu','','show','ns4prefdown','','hide')">
+<area shape="rect" coords="187,285,284,307" href="#" alt="Select" onclick="MM_showHideLayers('ns4prefdownsel','','show')">
+<area shape="rect" coords="287,422,361,444" href="#" alt="OK" onclick="MM_showHideLayers('ns4prefdown','','hide')">
+<area shape="rect" coords="371,422,445,444" href="#" alt="Cancel" onclick="MM_showHideLayers('ns4prefdown','','hide')">
+</map>
+</div>
+
+<div id="ns4prefadv" style="z-index: 30; left: 130px; top: 55px; position: absolute;">
+<img src="ns4prefadv.png" usemap="#ns4prefadv.png" width="545" height="459" border="0" alt="">
+<map name="ns4prefadv.png">
+<area shape="rect" coords="524,5,539,18" href="#" alt="Close" onclick="MM_showHideLayers('ns4prefadv','','hide')">
+<area shape="rect" coords="140,45,155,60" href="#" alt="Up" onclick="MM_showHideLayers('ns4prefapp','','show','ns4prefadv','','hide')">
+<area shape="rect" coords="16,189,139,205" href="#" alt="Roaming Access" onclick="MM_showHideLayers('ns4prefra','','show','ns4prefadv','','hide')">
+<area shape="rect" coords="16,205,139,221" href="#" alt="Server Information" onclick="MM_showHideLayers('ns4prefsi','','show','ns4prefadv','','hide')">
+<area shape="rect" coords="16,221,139,237" href="#" alt="Item Selection" onclick="MM_showHideLayers('ns4prefis','','show','ns4prefadv','','hide')">
+<area shape="rect" coords="16,237,139,253" href="#" alt="Composer" onclick="MM_showHideLayers('ns4prefcomp','','show','ns4prefadv','','hide')">
+<area shape="rect" coords="16,253,139,269" href="#" alt="Publishing" onclick="MM_showHideLayers('ns4prefpub','','show','ns4prefadv','','hide')">
+<area shape="rect" coords="16,269,139,285" href="#" alt="Offline" onclick="MM_showHideLayers('ns4prefoff','','show','ns4prefadv','','hide')">
+<area shape="rect" coords="16,285,139,301" href="#" alt="Download" onclick="MM_showHideLayers('ns4prefdown','','show','ns4prefadv','','hide')">
+<area shape="rect" coords="16,317,139,333" href="#" alt="Cache" onclick="MM_showHideLayers('ns4prefcache','','show','ns4prefadv','','hide')">
+<area shape="rect" coords="16,333,139,349" href="#" alt="Proxies" onclick="MM_showHideLayers('ns4prefprox','','show','ns4prefadv','','hide')">
+<area shape="rect" coords="16,349,139,365" href="#" alt="SmartUpdate" onclick="MM_showHideLayers('ns4prefsu','','show','ns4prefadv','','hide')">
+<area shape="rect" coords="287,422,361,444" href="#" alt="OK" onclick="MM_showHideLayers('ns4prefadv','','hide')">
+<area shape="rect" coords="371,422,445,444" href="#" alt="Cancel" onclick="MM_showHideLayers('ns4prefadv','','hide')">
+</map>
+</div>
+
+<div id="ns4prefcache" style="z-index: 30; left: 130px; top: 55px; position: absolute;">
+<img src="ns4prefcache.png" usemap="#ns4prefcache.png" width="545" height="459" border="0" alt="">
+<map name="ns4prefcache.png">
+<area shape="rect" coords="524,5,539,18" href="#" alt="Close" onclick="MM_showHideLayers('ns4prefcache','','hide')">
+<area shape="rect" coords="140,45,155,60" href="#" alt="Up" onclick="MM_showHideLayers('ns4prefapp','','show','ns4prefcache','','hide')">
+<area shape="rect" coords="16,189,139,205" href="#" alt="Roaming Access" onclick="MM_showHideLayers('ns4prefra','','show','ns4prefcache','','hide')">
+<area shape="rect" coords="16,205,139,221" href="#" alt="Server Information" onclick="MM_showHideLayers('ns4prefsi','','show','ns4prefcache','','hide')">
+<area shape="rect" coords="16,221,139,237" href="#" alt="Item Selection" onclick="MM_showHideLayers('ns4prefis','','show','ns4prefcache','','hide')">
+<area shape="rect" coords="16,237,139,253" href="#" alt="Composer" onclick="MM_showHideLayers('ns4prefcomp','','show','ns4prefcache','','hide')">
+<area shape="rect" coords="16,253,139,269" href="#" alt="Publishing" onclick="MM_showHideLayers('ns4prefpub','','show','ns4prefcache','','hide')">
+<area shape="rect" coords="16,269,139,285" href="#" alt="Offline" onclick="MM_showHideLayers('ns4prefoff','','show','ns4prefcache','','hide')">
+<area shape="rect" coords="16,285,139,301" href="#" alt="Download" onclick="MM_showHideLayers('ns4prefdown','','show','ns4prefcache','','hide')">
+<area shape="rect" coords="16,301,139,317" href="#" alt="Advanced" onclick="MM_showHideLayers('ns4prefadv','','show','ns4prefcache','','hide')">
+<area shape="rect" coords="16,333,139,349" href="#" alt="Proxies" onclick="MM_showHideLayers('ns4prefprox','','show','ns4prefcache','','hide')">
+<area shape="rect" coords="16,349,139,365" href="#" alt="SmartUpdate" onclick="MM_showHideLayers('ns4prefsu','','show','ns4prefcache','','hide')">
+<area shape="rect" coords="287,422,361,444" href="#" alt="OK" onclick="MM_showHideLayers('ns4prefcache','','hide')">
+<area shape="rect" coords="371,422,445,444" href="#" alt="Cancel" onclick="MM_showHideLayers('ns4prefcache','','hide')">
+</map>
+</div>
+
+<div id="ns4prefprox" style="z-index: 30; left: 130px; top: 55px; position: absolute;">
+<img src="ns4prefprox.png" usemap="#ns4prefprox.png" width="545" height="459" border="0" alt="">
+<map name="ns4prefprox.png">
+<area shape="rect" coords="524,5,539,18" href="#" alt="Close" onclick="MM_showHideLayers('ns4prefprox','','hide')">
+<area shape="rect" coords="140,45,155,60" href="#" alt="Up" onclick="MM_showHideLayers('ns4prefapp','','show','ns4prefprox','','hide')">
+<area shape="rect" coords="16,189,139,205" href="#" alt="Roaming Access" onclick="MM_showHideLayers('ns4prefra','','show','ns4prefprox','','hide')">
+<area shape="rect" coords="16,205,139,221" href="#" alt="Server Information" onclick="MM_showHideLayers('ns4prefsi','','show','ns4prefprox','','hide')">
+<area shape="rect" coords="16,221,139,237" href="#" alt="Item Selection" onclick="MM_showHideLayers('ns4prefis','','show','ns4prefprox','','hide')">
+<area shape="rect" coords="16,237,139,253" href="#" alt="Composer" onclick="MM_showHideLayers('ns4prefcomp','','show','ns4prefprox','','hide')">
+<area shape="rect" coords="16,253,139,269" href="#" alt="Publishing" onclick="MM_showHideLayers('ns4prefpub','','show','ns4prefprox','','hide')">
+<area shape="rect" coords="16,269,139,285" href="#" alt="Offline" onclick="MM_showHideLayers('ns4prefoff','','show','ns4prefprox','','hide')">
+<area shape="rect" coords="16,285,139,301" href="#" alt="Download" onclick="MM_showHideLayers('ns4prefdown','','show','ns4prefprox','','hide')">
+<area shape="rect" coords="16,301,139,317" href="#" alt="Advanced" onclick="MM_showHideLayers('ns4prefadv','','show','ns4prefprox','','hide')">
+<area shape="rect" coords="16,317,139,333" href="#" alt="Cache" onclick="MM_showHideLayers('ns4prefcache','','show','ns4prefprox','','hide')">
+<area shape="rect" coords="16,349,139,365" href="#" alt="SmartUpdate" onclick="MM_showHideLayers('ns4prefsu','','show','ns4prefprox','','hide')">
+<area shape="circle" coords="201,186,5" href="#" alt="Manual Proxy Configuration" onclick="MM_showHideLayers('ns4prefprox2','','show','ns4prefprox','','hide')">
+<area shape="rect" coords="287,422,361,444" href="#" alt="OK" onclick="MM_showHideLayers('ns4prefprox','','hide')">
+<area shape="rect" coords="371,422,445,444" href="#" alt="Cancel" onclick="MM_showHideLayers('ns4prefprox','','hide')">
+</map>
+</div>
+
+<div id="ns4prefsu" style="z-index: 30; left: 130px; top: 55px; position: absolute;">
+<img src="ns4prefsu.png" usemap="#ns4prefsu.png" width="545" height="459" border="0" alt="">
+<map name="ns4prefsu.png">
+<area shape="rect" coords="524,5,539,18" href="#" alt="Close" onclick="MM_showHideLayers('ns4prefsu','','hide')">
+<area shape="rect" coords="140,45,155,60" href="#" alt="Up" onclick="MM_showHideLayers('ns4prefapp','','show','ns4prefsu','','hide')">
+<area shape="rect" coords="16,189,139,205" href="#" alt="Roaming Access" onclick="MM_showHideLayers('ns4prefra','','show','ns4prefsu','','hide')">
+<area shape="rect" coords="16,205,139,221" href="#" alt="Server Information" onclick="MM_showHideLayers('ns4prefsi','','show','ns4prefsu','','hide')">
+<area shape="rect" coords="16,221,139,237" href="#" alt="Item Selection" onclick="MM_showHideLayers('ns4prefis','','show','ns4prefsu','','hide')">
+<area shape="rect" coords="16,237,139,253" href="#" alt="Composer" onclick="MM_showHideLayers('ns4prefcomp','','show','ns4prefsu','','hide')">
+<area shape="rect" coords="16,253,139,269" href="#" alt="Publishing" onclick="MM_showHideLayers('ns4prefpub','','show','ns4prefsu','','hide')">
+<area shape="rect" coords="16,269,139,285" href="#" alt="Offline" onclick="MM_showHideLayers('ns4prefoff','','show','ns4prefsu','','hide')">
+<area shape="rect" coords="16,285,139,301" href="#" alt="Download" onclick="MM_showHideLayers('ns4prefdown','','show','ns4prefsu','','hide')">
+<area shape="rect" coords="16,301,139,317" href="#" alt="Advanced" onclick="MM_showHideLayers('ns4prefadv','','show','ns4prefsu','','hide')">
+<area shape="rect" coords="16,317,139,333" href="#" alt="Cache" onclick="MM_showHideLayers('ns4prefcache','','show','ns4prefsu','','hide')">
+<area shape="rect" coords="16,333,139,349" href="#" alt="Proxies" onclick="MM_showHideLayers('ns4prefprox','','show','ns4prefsu','','hide')">
+<area shape="rect" coords="287,422,361,444" href="#" alt="OK" onclick="MM_showHideLayers('ns4prefsu','','hide')">
+<area shape="rect" coords="371,422,445,444" href="#" alt="Cancel" onclick="MM_showHideLayers('ns4prefsu','','hide')">
+</map>
+</div>
+
+<div id="ns4preflangadd" style="z-index: 40; left: 275px; top: 125px; position: absolute;">
+<img src="ns4preflangadd.png" usemap="#ns4preflangadd.png" width="248" height="321" border="0" alt="">
+<map name="ns4preflangadd.png">
+<area shape="rect" coords="227,5,242,18" href="#" alt="Close" onclick="MM_showHideLayers('ns4preflangadd','','hide')">
+<area shape="rect" coords="72,282,146,304" href="#" alt="OK" onclick="MM_showHideLayers('ns4preflangadd','','hide')">
+<area shape="rect" coords="153,282,227,304" href="#" alt="Cancel" onclick="MM_showHideLayers('ns4preflangadd','','hide')">
+</map>
+</div>
+
+<div id="ns4prefapplnt" style="z-index: 40; left: 230px; top: 160px; position: absolute;">
+<img src="ns4prefapplnt.png" usemap="#ns4prefapplnt.png" width="339" height="256" border="0" alt="">
+<map name="ns4prefapplnt.png">
+<area shape="rect" coords="318,5,333,18" href="#" alt="Close" onclick="MM_showHideLayers('ns4prefapplnt','','hide')">
+<area shape="rect" coords="167,219,241,241" href="#" alt="OK" onclick="MM_showHideLayers('ns4prefapplnt','','hide')">
+<area shape="rect" coords="251,219,325,241" href="#" alt="Cancel" onclick="MM_showHideLayers('ns4prefapplnt','','hide')">
+</map>
+</div>
+
+<div id="ns4prefidentecname" style="z-index: 40; left: 210px; top: 65px; position: absolute;">
+<img src="ns4prefidentecname.png" usemap="#ns4prefidentecname.png" width="376" height="443" border="0" alt="">
+<map name="ns4prefidentecname.png">
+<area shape="rect" coords="355,5,370,18" href="#" alt="Close" onclick="MM_showHideLayers('ns4prefidentecname','','hide')">
+<area shape="rect" coords="54,31,101,49" href="#" alt="Contact" onclick="MM_showHideLayers('ns4prefidenteccont','','show','ns4prefidentecname','','hide')">
+<area shape="rect" coords="102,31,143,49" href="#" alt="Notes" onclick="MM_showHideLayers('ns4prefidentecnote','','show','ns4prefidentecname','','hide')">
+<area shape="rect" coords="130,410,204,432" href="#" alt="OK" onclick="MM_showHideLayers('ns4prefidentecname','','hide')">
+<area shape="rect" coords="211,410,285,432" href="#" alt="Cancel" onclick="MM_showHideLayers('ns4prefidentecname','','hide')">
+</map>
+</div>
+
+<div id="ns4prefidenteccont" style="z-index: 40; left: 210px; top: 65px; position: absolute;">
+<img src="ns4prefidenteccont.png" usemap="#ns4prefidenteccont.png" width="376" height="443" border="0" alt="">
+<map name="ns4prefidenteccont.png">
+<area shape="rect" coords="355,5,370,18" href="#" alt="Close" onclick="MM_showHideLayers('ns4prefidenteccont','','hide')">
+<area shape="rect" coords="11,31,51,49" href="#" alt="Name" onclick="MM_showHideLayers('ns4prefidentecname','','show','ns4prefidenteccont','','hide')">
+<area shape="rect" coords="103,31,143,49" href="#" alt="Notes" onclick="MM_showHideLayers('ns4prefidentecnote','','show','ns4prefidenteccont','','hide')">
+<area shape="rect" coords="130,410,204,432" href="#" alt="OK" onclick="MM_showHideLayers('ns4prefidenteccont','','hide')">
+<area shape="rect" coords="211,410,285,432" href="#" alt="Cancel" onclick="MM_showHideLayers('ns4prefidenteccont','','hide')">
+</map>
+</div>
+
+<div id="ns4prefidentecnote" style="z-index: 40; left: 210px; top: 65px; position: absolute;">
+<img src="ns4prefidentecnote.png" usemap="#ns4prefidentecnote.png" width="376" height="443" border="0" alt="">
+<map name="ns4prefidentecnote.png">
+<area shape="rect" coords="355,5,370,18" href="#" alt="Close" onclick="MM_showHideLayers('ns4prefidentecnote','','hide')">
+<area shape="rect" coords="11,31,52,49" href="#" alt="Name" onclick="MM_showHideLayers('ns4prefidentecname','','show','ns4prefidentecnote','','hide')">
+<area shape="rect" coords="53,31,100,49" href="#" alt="Contact" onclick="MM_showHideLayers('ns4prefidenteccont','','show','ns4prefidentecnote','','hide')">
+<area shape="rect" coords="130,410,204,432" href="#" alt="OK" onclick="MM_showHideLayers('ns4prefidentecnote','','hide')">
+<area shape="rect" coords="211,410,285,432" href="#" alt="Cancel" onclick="MM_showHideLayers('ns4prefidentecnote','','hide')">
+</map>
+</div>
+
+<div id="ns4prefmsadd" style="z-index: 40; left: 155px; top: 235px; position: absolute;">
+<img src="ns4prefmsadd.png" usemap="#ns4prefmsadd.png" width="492" height="100" border="0" alt="">
+<map name="ns4prefmsadd.png">
+<area shape="rect" coords="209,63,283,85" href="#" alt="OK" onclick="MM_showHideLayers('ns4prefmsadd','','hide')">
+</map>
+</div>
+
+<div id="ns4prefmsedgen" style="z-index: 40; left: 205px; top: 110px; position: absolute;">
+<img src="ns4prefmsedgen.png" usemap="#ns4prefmsedgen.png" width="386" height="348" border="0" alt="">
+<map name="ns4prefmsedgen.png">
+<area shape="rect" coords="365,5,380,18" href="#" alt="Close" onclick="MM_showHideLayers('ns4prefmsedgen','','hide')">
+<area shape="rect" coords="61,31,101,49" href="#" alt="POP" onclick="MM_showHideLayers('ns4prefmsedpop','','show','ns4prefmsedgen','','hide')">
+<area shape="rect" coords="140,315,214,337" href="#" alt="OK" onclick="MM_showHideLayers('ns4prefmsedgen','','hide')">
+<area shape="rect" coords="221,315,295,337" href="#" alt="Cancel" onclick="MM_showHideLayers('ns4prefmsedgen','','hide')">
+</map>
+</div>
+
+<div id="ns4prefmsedpop" style="z-index: 40; left: 205px; top: 110px; position: absolute;">
+<img src="ns4prefmsedpop.png" usemap="#ns4prefmsedpop.png" width="386" height="348" border="0" alt="">
+<map name="ns4prefmsedpop.png">
+<area shape="rect" coords="365,5,380,18" href="#" alt="Close" onclick="MM_showHideLayers('ns4prefmsedpop','','hide')">
+<area shape="rect" coords="11,31,58,49" href="#" alt="General" onclick="MM_showHideLayers('ns4prefmsedgen','','show','ns4prefmsedpop','','hide')">
+<area shape="rect" coords="140,315,214,337" href="#" alt="OK" onclick="MM_showHideLayers('ns4prefmsedpop','','hide')">
+<area shape="rect" coords="221,315,295,337" href="#" alt="Cancel" onclick="MM_showHideLayers('ns4prefmsedpop','','hide')">
+</map>
+</div>
+
+<div id="ns4prefnsadd" style="z-index: 40; left: 260px; top: 190px; position: absolute;">
+<img src="ns4prefnsadd.png" usemap="#ns4prefnsadd.png" width="285" height="189" border="0" alt="">
+<map name="ns4prefnsadd.png">
+<area shape="rect" coords="264,5,279,18" href="#" alt="Close" onclick="MM_showHideLayers('ns4prefnsadd','','hide')">
+<area shape="rect" coords="35,152,109,174" href="#" alt="OK" onclick="MM_showHideLayers('ns4prefnsadd','','hide')">
+<area shape="rect" coords="116,152,190,174" href="#" alt="Cancel" onclick="MM_showHideLayers('ns4prefnsadd','','hide')">
+</map>
+</div>
+
+<div id="ns4prefnsed" style="z-index: 40; left: 215px; top: 155px; position: absolute;">
+<img src="ns4prefnsed.png" usemap="#ns4prefnsed.png" width="373" height="266" border="0" alt="">
+<map name="ns4prefnsed.png">
+<area shape="rect" coords="352,5,367,18" href="#" alt="Close" onclick="MM_showHideLayers('ns4prefnsed','','hide')">
+<area shape="rect" coords="127,233,201,255" href="#" alt="OK" onclick="MM_showHideLayers('ns4prefnsed','','hide')">
+<area shape="rect" coords="208,233,282,255" href="#" alt="Cancel" onclick="MM_showHideLayers('ns4prefnsed','','hide')">
+</map>
+</div>
+
+<div id="ns4prefcfcf" style="z-index: 40; left: 210px; top: 200px; position: absolute;">
+<img src="ns4prefcfcf.png" usemap="#ns4prefcfcf.png" width="383" height="171" border="0" alt="">
+<map name="ns4prefcfcf.png">
+<area shape="rect" coords="362,5,377,18" href="#" alt="Close" onclick="MM_showHideLayers('ns4prefcfcf','','hide')">
+<area shape="rect" coords="197,134,271,156" href="#" alt="OK" onclick="MM_showHideLayers('ns4prefcfcf','','hide')">
+<area shape="rect" coords="287,134,361,156" href="#" alt="Cancel" onclick="MM_showHideLayers('ns4prefcfcf','','hide')">
+</map>
+</div>
+
+<div id="ns4prefrrcust" style="z-index: 40; left: 220px; top: 160px; position: absolute;">
+<img src="ns4prefrrcust.png" usemap="#ns4prefrrcust.png" width="362" height="257" border="0" alt="">
+<map name="ns4prefrrcust.png">
+<area shape="rect" coords="164,217,238,239" href="#" alt="OK" onclick="MM_showHideLayers('ns4prefrrcust','','hide')">
+<area shape="rect" coords="261,217,335,239" href="#" alt="Cancel" onclick="MM_showHideLayers('ns4prefrrcust','','hide')">
+</map>
+</div>
+
+<div id="ns4prefdownsel" style="z-index: 40; left: 210px; top: 95px; position: absolute;">
+<img src="ns4prefdownsel.png" usemap="#ns4prefdownsel.png" width="383" height="384" border="0" alt="">
+<map name="ns4prefdownsel.png">
+<area shape="rect" coords="362,5,377,18" href="#" alt="Close" onclick="MM_showHideLayers('ns4prefdownsel','','hide')">
+<area shape="rect" coords="129,347,203,369" href="#" alt="OK" onclick="MM_showHideLayers('ns4prefdownsel','','hide')">
+<area shape="rect" coords="212,347,286,369" href="#" alt="Cancel" onclick="MM_showHideLayers('ns4prefdownsel','','hide')">
+</map>
+</div>
+
+<div id="ns4prefprox2" style="z-index: 30; left: 130px; top: 55px; position: absolute;">
+<img src="ns4prefprox2.png" usemap="#ns4prefprox2.png" width="545" height="459" border="0" alt="">
+<map name="ns4prefprox2.png">
+<area shape="rect" coords="524,5,539,18" href="#" alt="Close" onclick="MM_showHideLayers('ns4prefprox2','','hide')">
+<area shape="rect" coords="140,45,155,60" href="#" alt="Up" onclick="MM_showHideLayers('ns4prefapp','','show','ns4prefprox2','','hide')">
+<area shape="rect" coords="16,189,139,205" href="#" alt="Roaming Access" onclick="MM_showHideLayers('ns4prefra','','show','ns4prefprox2','','hide')">
+<area shape="rect" coords="16,205,139,221" href="#" alt="Server Information" onclick="MM_showHideLayers('ns4prefsi','','show','ns4prefprox2','','hide')">
+<area shape="rect" coords="16,221,139,237" href="#" alt="Item Selection" onclick="MM_showHideLayers('ns4prefis','','show','ns4prefprox2','','hide')">
+<area shape="rect" coords="16,237,139,253" href="#" alt="Composer" onclick="MM_showHideLayers('ns4prefcomp','','show','ns4prefprox2','','hide')">
+<area shape="rect" coords="16,253,139,269" href="#" alt="Publishing" onclick="MM_showHideLayers('ns4prefpub','','show','ns4prefprox2','','hide')">
+<area shape="rect" coords="16,269,139,285" href="#" alt="Offline" onclick="MM_showHideLayers('ns4prefoff','','show','ns4prefprox2','','hide')">
+<area shape="rect" coords="16,285,139,301" href="#" alt="Download" onclick="MM_showHideLayers('ns4prefdown','','show','ns4prefprox2','','hide')">
+<area shape="rect" coords="16,301,139,317" href="#" alt="Advanced" onclick="MM_showHideLayers('ns4prefadv','','show','ns4prefprox2','','hide')">
+<area shape="rect" coords="16,317,139,333" href="#" alt="Cache" onclick="MM_showHideLayers('ns4prefcache','','show','ns4prefprox2','','hide')">
+<area shape="rect" coords="16,349,139,365" href="#" alt="SmartUpdate" onclick="MM_showHideLayers('ns4prefsu','','show','ns4prefprox2','','hide')">
+<area shape="circle" coords="201,162,5" href="#" alt="Direct connection to the Internet" onclick="MM_showHideLayers('ns4prefprox','','show','ns4prefprox2','','hide')">
+<area shape="rect" coords="353,176,415,198" href="#" alt="View" onclick="MM_showHideLayers('ns4prefproxview','','show')">
+<area shape="rect" coords="287,422,361,444" href="#" alt="OK" onclick="MM_showHideLayers('ns4prefprox2','','hide')">
+<area shape="rect" coords="371,422,445,444" href="#" alt="Cancel" onclick="MM_showHideLayers('ns4prefprox2','','hide')">
+</map>
+</div>
+
+<div id="ns4prefproxview" style="z-index: 40; left: 205px; top: 85px; position: absolute;">
+<img src="ns4prefproxview.png" usemap="#ns4prefproxview.png" width="386" height="400" border="0" alt="">
+<map name="ns4prefproxview.png">
+<area shape="rect" coords="365,5,380,18" href="#" alt="Close" onclick="MM_showHideLayers('ns4prefproxview','','hide')">
+<area shape="rect" coords="216,363,290,385" href="#" alt="OK" onclick="MM_showHideLayers('ns4prefproxview','','hide')">
+<area shape="rect" coords="297,363,371,385" href="#" alt="Cancel" onclick="MM_showHideLayers('ns4prefproxview','','hide')">
+</map>
+</div>
+
+<div id="ns4about" style="z-index: 20; left: 0px; top: 128px; position: absolute;">
+<img src="ns4about.png" width="800" height="426" border="0" alt="">
+</div>
+
+<div id="ns4back" style="z-index: 20; left: 19px; top: 40px; position: absolute;">
+<img src="ns4back.png" usemap="#ns4back.png" width="54" height="42" border="0" alt="">
+<map name="ns4back.png">
+<area shape="rect" coords="0,0,53,41" href="#" alt="Back" onclick="MM_showHideLayers('ns4about','','hide','ns4back','','hide')">
+</map>
+</div>
+
+</body>
+</html>

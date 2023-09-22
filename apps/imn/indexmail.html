@@ -1,0 +1,282 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Internet Mail Virtual Desktop</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script language="javascript" type="text/javascript">
+<!--
+function MM_findObj(n, d) { //v4.0
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && document.getElementById) x=document.getElementById(n); return x;
+}
+
+function MM_showHideLayers() { //v3.0
+  var i,p,v,obj,args=MM_showHideLayers.arguments;
+  for (i=0; i<(args.length-2); i+=3) if ((obj=MM_findObj(args[i]))!=null) { v=args[i+2];
+    if (obj.style) { obj=obj.style; v=(v=='show')?'visible':(v='hide')?'hidden':v; }
+    obj.visibility=v; }
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+//-->
+</script>
+</head>
+
+<body bgcolor="#008080" style="margin: 0px;" onload="show_clock();
+MM_showHideLayers('loading','','hide','loadmsg','','hide','taskbar','','show','clock','','show','imail','','show','imailfile','','hide','imailedit','','hide','imailview','','hide','imailviewpp','','hide','imailmail','','hide','imailhelp','','hide','imailabout','','hide','imailia','','hide','imailiaprop','','hide','imailoptsend','','hide','imailoptread','','hide','imailoptserv','','hide','imailoptfont','','hide','imailoptsig','','hide','imailoptconn','','hide','imailoptservas','','hide','newmail','','hide','newmailfile','','hide','newmailedit','','hide','newmailview','','hide','newmailmail','','hide','newmailins','','hide','newmailform','','hide','newmailhelp','','hide');
+MM_preloadImages('imailload.png','tbar.png','imail.png','imail.png','imailedit.png','imailview.png','imailviewpp.png','imailmail.png','imailhelp.png','imailabout.png','imailia.png','imailiaprop.png','imailoptsend.png','imailoptread.png','imailoptserv.png','imailoptfont.png','imailoptsig.png','imailoptconn.png','imailoptservas.png','newmail.png','newmailfile.png','newmailedit.png','newmailview.png','newmailmail.png','newmailins.png','newmailform.png','newmailhelp.png');
+return document.MM_returnValue;">
+
+<div id="loading" style="z-index: 499; left: 0px; top: 0px; position: absolute;">
+<img src="imailload.png" width="800" height="600" border="0" alt="">
+</div>
+
+<div id="loadmsg" style="z-index: 500; left: 20px; top: 20px; width: 225; height: 400; position: absolute;">
+<center><span style="font-family: Arial; font-size: 24px;">Please Wait...</span></center><br>
+<span style="font-family: Arial; font-size: 13px;">Images for the virtual desktop are now being preloaded into RAM. When this is complete, you will be presented with the desktop and be able to browse all available options without the need for further loading.</span>
+</div>
+
+<div id="taskbar" style="z-index: 99; left: 0px; top: 572px; position: absolute;">
+<img src="tbar.png" width="800" height="28" border="0" alt="">
+</div>
+
+<div id="clock" style="z-index: 100; left: 760px; top: 579px; position: absolute;">
+<script language="javascript" type="text/javascript" src="clock.js">
+/*
+Live Clock Script-
+By Mark Plachetta (astro@bigpond.net.au) based on code from DynamicDrive.com
+For full source code, 100's more DHTML scripts, and Terms Of Use,
+visit http://www.dynamicdrive.com
+*/
+</script>
+</div>
+
+<div id="imail" style="z-index: 20; left: 0px; top: 0px; position: absolute;">
+<img src="imail.png" usemap="#imail.png" width="800" height="576" border="0" alt="">
+<map name="imail.png">
+<area shape="rect" coords="782,2,797,15" href="#" alt="Close" onclick="window.close();">
+<area shape="rect" coords="0,18,27,37" href="#" alt="File" onmouseover="MM_showHideLayers('imailfile','','show')" onmouseout="MM_showHideLayers('imailfile','','hide')">
+<area shape="rect" coords="28,18,57,37" href="#" alt="Edit" onmouseover="MM_showHideLayers('imailedit','','show')" onmouseout="MM_showHideLayers('imailedit','','hide')">
+<area shape="rect" coords="58,18,92,37" href="#" alt="View" onmouseover="MM_showHideLayers('imailview','','show')" onmouseout="MM_showHideLayers('imailview','','hide')">
+<area shape="rect" coords="93,18,123,37" href="#" alt="Mail" onmouseover="MM_showHideLayers('imailmail','','show')" onmouseout="MM_showHideLayers('imailmail','','hide')">
+<area shape="rect" coords="124,18,157,37" href="#" alt="Help" onmouseover="MM_showHideLayers('imailhelp','','show')" onmouseout="MM_showHideLayers('imailhelp','','hide')">
+<area shape="rect" coords="23,40,76,92" href="#" alt="New Message" onclick="MM_showHideLayers('newmail','','show')">
+</map>
+</div>
+
+<div id="imailfile" style="z-index: 30; left: 0px; top: 37px; position: absolute;" onmouseover="MM_showHideLayers('imailfile','','show')"  onmouseout="MM_showHideLayers('imailfile','','hide')">
+<img src="imailfile.png" usemap="#imailfile.png" width="161" height="281" border="0" alt="">
+<map name="imailfile.png">
+<area shape="rect" coords="2,257,158,278" href="#" alt="Close" onclick="window.close();">
+</map>
+</div>
+
+<div id="imailedit" style="z-index: 30; left: 28px; top: 37px; position: absolute;" onmouseover="MM_showHideLayers('imailedit','','show')"  onmouseout="MM_showHideLayers('imailedit','','hide')">
+<img src="imailedit.png" width="203" height="135" border="0" alt="">
+</div>
+
+<div id="imailview" style="z-index: 30; left: 58px; top: 37px; position: absolute;" onmouseover="MM_showHideLayers('imailview','','show')"  onmouseout="MM_showHideLayers('imailview','','hide')">
+<img src="imailview.png" usemap="#imailview.png" width="168" height="195" border="0" alt="">
+<map name="imailview.png">
+<area shape="rect" coords="3,36,164,55" href="#" alt="Preview Pane" onmouseover="MM_showHideLayers('imailviewpp','','show')"  onmouseout="MM_showHideLayers('imailviewpp','','hide')">
+</map>
+</div>
+
+<div id="imailviewpp" style="z-index: 40; left: 220px; top: 71px; position: absolute;" onmouseover="MM_showHideLayers('imailview','','show','imailviewpp','','show')"  onmouseout="MM_showHideLayers('imailview','','hide','imailviewpp','','hide')">
+<img src="imailviewpp.png" width="138" height="83" border="0" alt="">
+</div>
+
+<div id="imailmail" style="z-index: 30; left: 93px; top: 37px; position: absolute;" onmouseover="MM_showHideLayers('imailmail','','show')"  onmouseout="MM_showHideLayers('imailmail','','hide')">
+<img src="imailmail.png" usemap="#imailmail.png" width="219" height="212" border="0" alt="">
+<map name="imailmail.png">
+<area shape="rect" coords="3,3,215,21" href="#" alt="New Message" onclick="MM_showHideLayers('newmail','','show','imailmail','','hide')">
+<area shape="rect" coords="3,172,215,191" href="#" alt="Inbox Assistant" onclick="MM_showHideLayers('imailia','','show','imailmail','','hide')">
+<area shape="rect" coords="3,192,215,208" href="#" alt="Options" onclick="MM_showHideLayers('imailoptsend','','show','imailmail','','hide')">
+</map>
+</div>
+
+<div id="imailhelp" style="z-index: 30; left: 124px; top: 37px; position: absolute;" onmouseover="MM_showHideLayers('imailhelp','','show')"  onmouseout="MM_showHideLayers('imailhelp','','hide')">
+<img src="imailhelp.png" usemap="#imailhelp.png" width="252" height="109" border="0" alt="">
+<map name="imailhelp.png">
+<area shape="rect" coords="2,69,249,88" href="#" alt="About Microsoft Internet Mail and News" onclick="MM_showHideLayers('imailabout','','show','imailhelp','','hide')">
+</map>
+</div>
+
+<div id="imailabout" style="z-index: 30; left: 200px; top: 125px; position: absolute;">
+<img src="imailabout.png" usemap="#imailabout.png" width="285" height="254" border="0" alt="">
+<map name="imailabout.png">
+<area shape="rect" coords="264,5,279,18" href="#" alt="Close" onclick="MM_showHideLayers('imailabout','','hide')">
+<area shape="rect" coords="105,214,179,236" href="#" alt="OK" onclick="MM_showHideLayers('imailabout','','hide')">
+</map>
+</div>
+
+<div id="imailia" style="z-index: 30; left: 125px; top: 125px; position: absolute;">
+<img src="imailia.png" usemap="#imailia.png" width="473" height="272" border="0" alt="">
+<map name="imailia.png">
+<area shape="rect" coords="452,5,466,17" href="#" alt="Close" onclick="MM_showHideLayers('imailia','','hide')">
+<area shape="rect" coords="14,194,88,216" href="#" alt="Add" onclick="MM_showHideLayers('imailiaprop','','show')">
+<area shape="rect" coords="176,194,250,216" href="#" alt="Properties" onclick="MM_showHideLayers('imailiaprop','','show')">
+<area shape="rect" coords="302,235,376,257" href="#" alt="OK" onclick="MM_showHideLayers('imailia','','hide')">
+<area shape="rect" coords="384,235,458,257" href="#" alt="Cancel" onclick="MM_showHideLayers('imailia','','hide')">
+</map>
+</div>
+
+<div id="imailiaprop" style="z-index: 40; left: 175px; top: 125px; position: absolute;">
+<img src="imailiaprop.png" usemap="#imailiaprop.png" width="374" height="272" border="0" alt="">
+<map name="imailiaprop.png">
+<area shape="rect" coords="353,5,367,17" href="#" alt="Close" onclick="MM_showHideLayers('imailiaprop','','hide')">
+<area shape="rect" coords="203,233,277,255" href="#" alt="OK" onclick="MM_showHideLayers('imailiaprop','','hide')">
+<area shape="rect" coords="285,233,359,255" href="#" alt="Cancel" onclick="MM_showHideLayers('imailiaprop','','hide')">
+</map>
+</div>
+
+<div id="imailoptsend" style="z-index: 30; left: 200px; top: 75px; position: absolute;">
+<img src="imailoptsend.png" usemap="#imailoptsend.png" width="367" height="443" border="0" alt="">
+<map name="imailoptsend.png">
+<area shape="rect" coords="346,5,360,17" href="#" alt="Close" onclick="MM_showHideLayers('imailoptsend','','hide')">
+<area shape="rect" coords="54,31,94,49" href="#" alt="Read" onclick="MM_showHideLayers('imailoptread','','show','imailoptsend','','hide')">
+<area shape="rect" coords="95,31,137,49" href="#" alt="Server" onclick="MM_showHideLayers('imailoptserv','','show','imailoptsend','','hide')">
+<area shape="rect" coords="138,31,179,49" href="#" alt="Fonts" onclick="MM_showHideLayers('imailoptfont','','show','imailoptsend','','hide')">
+<area shape="rect" coords="180,31,236,49" href="#" alt="Signature" onclick="MM_showHideLayers('imailoptsig','','show','imailoptsend','','hide')">
+<area shape="rect" coords="237,31,302,49" href="#" alt="Connection" onclick="MM_showHideLayers('imailoptconn','','show','imailoptsend','','hide')">
+<area shape="rect" coords="121,410,195,432" href="#" alt="OK" onclick="MM_showHideLayers('imailoptsend','','hide')">
+<area shape="rect" coords="202,410,276,432" href="#" alt="Cancel" onclick="MM_showHideLayers('imailoptsend','','hide')">
+</map>
+</div>
+
+<div id="imailoptread" style="z-index: 30; left: 200px; top: 75px; position: absolute;">
+<img src="imailoptread.png" usemap="#imailoptread.png" width="367" height="443" border="0" alt="">
+<map name="imailoptread.png">
+<area shape="rect" coords="346,5,360,17" href="#" alt="Close" onclick="MM_showHideLayers('imailoptread','','hide')">
+<area shape="rect" coords="11,31,51,49" href="#" alt="Send" onclick="MM_showHideLayers('imailoptsend','','show','imailoptread','','hide')">
+<area shape="rect" coords="96,31,137,49" href="#" alt="Server" onclick="MM_showHideLayers('imailoptserv','','show','imailoptread','','hide')">
+<area shape="rect" coords="138,31,179,49" href="#" alt="Fonts" onclick="MM_showHideLayers('imailoptfont','','show','imailoptread','','hide')">
+<area shape="rect" coords="180,31,236,49" href="#" alt="Signature" onclick="MM_showHideLayers('imailoptsig','','show','imailoptread','','hide')">
+<area shape="rect" coords="237,31,302,49" href="#" alt="Connection" onclick="MM_showHideLayers('imailoptconn','','show','imailoptread','','hide')">
+<area shape="rect" coords="121,410,195,432" href="#" alt="OK" onclick="MM_showHideLayers('imailoptread','','hide')">
+<area shape="rect" coords="202,410,276,432" href="#" alt="Cancel" onclick="MM_showHideLayers('imailoptread','','hide')">
+</map>
+</div>
+
+<div id="imailoptserv" style="z-index: 30; left: 200px; top: 75px; position: absolute;">
+<img src="imailoptserv.png" usemap="#imailoptserv.png" width="367" height="443" border="0" alt="">
+<map name="imailoptserv.png">
+<area shape="rect" coords="346,5,360,17" href="#" alt="Close" onclick="MM_showHideLayers('imailoptserv','','hide')">
+<area shape="rect" coords="11,31,52,49" href="#" alt="Send" onclick="MM_showHideLayers('imailoptsend','','show','imailoptserv','','hide')">
+<area shape="rect" coords="53,31,93,49" href="#" alt="Read" onclick="MM_showHideLayers('imailoptread','','show','imailoptserv','','hide')">
+<area shape="rect" coords="139,31,179,49" href="#" alt="Fonts" onclick="MM_showHideLayers('imailoptfont','','show','imailoptserv','','hide')">
+<area shape="rect" coords="180,31,236,49" href="#" alt="Signature" onclick="MM_showHideLayers('imailoptsig','','show','imailoptserv','','hide')">
+<area shape="rect" coords="237,31,302,49" href="#" alt="Connection" onclick="MM_showHideLayers('imailoptconn','','show','imailoptserv','','hide')">
+<area shape="rect" coords="226,368,344,390" href="#" alt="Advanced Settings" onclick="MM_showHideLayers('imailoptservas','','show')">
+<area shape="rect" coords="121,410,195,432" href="#" alt="OK" onclick="MM_showHideLayers('imailoptserv','','hide')">
+<area shape="rect" coords="202,410,276,432" href="#" alt="Cancel" onclick="MM_showHideLayers('imailoptserv','','hide')">
+</map>
+</div>
+
+<div id="imailoptfont" style="z-index: 30; left: 200px; top: 75px; position: absolute;">
+<img src="imailoptfont.png" usemap="#imailoptfont.png" width="367" height="443" border="0" alt="">
+<map name="imailoptfont.png">
+<area shape="rect" coords="346,5,360,17" href="#" alt="Close" onclick="MM_showHideLayers('imailoptfont','','hide')">
+<area shape="rect" coords="11,31,52,49" href="#" alt="Send" onclick="MM_showHideLayers('imailoptsend','','show','imailoptfont','','hide')">
+<area shape="rect" coords="53,31,94,49" href="#" alt="Read" onclick="MM_showHideLayers('imailoptread','','show','imailoptfont','','hide')">
+<area shape="rect" coords="95,31,136,49" href="#" alt="Server" onclick="MM_showHideLayers('imailoptserv','','show','imailoptfont','','hide')">
+<area shape="rect" coords="181,31,236,49" href="#" alt="Signature" onclick="MM_showHideLayers('imailoptsig','','show','imailoptfont','','hide')">
+<area shape="rect" coords="237,31,302,49" href="#" alt="Connection" onclick="MM_showHideLayers('imailoptconn','','show','imailoptfont','','hide')">
+<area shape="rect" coords="121,410,195,432" href="#" alt="OK" onclick="MM_showHideLayers('imailoptfont','','hide')">
+<area shape="rect" coords="202,410,276,432" href="#" alt="Cancel" onclick="MM_showHideLayers('imailoptfont','','hide')">
+</map>
+</div>
+
+<div id="imailoptsig" style="z-index: 30; left: 200px; top: 75px; position: absolute;">
+<img src="imailoptsig.png" usemap="#imailoptsig.png" width="367" height="443" border="0" alt="">
+<map name="imailoptsig.png">
+<area shape="rect" coords="346,5,360,17" href="#" alt="Close" onclick="MM_showHideLayers('imailoptsig','','hide')">
+<area shape="rect" coords="11,31,52,49" href="#" alt="Send" onclick="MM_showHideLayers('imailoptsend','','show','imailoptsig','','hide')">
+<area shape="rect" coords="53,31,94,49" href="#" alt="Read" onclick="MM_showHideLayers('imailoptread','','show','imailoptsig','','hide')">
+<area shape="rect" coords="95,31,137,49" href="#" alt="Server" onclick="MM_showHideLayers('imailoptserv','','show','imailoptsig','','hide')">
+<area shape="rect" coords="138,31,178,49" href="#" alt="Fonts" onclick="MM_showHideLayers('imailoptfont','','show','imailoptsig','','hide')">
+<area shape="rect" coords="238,31,302,49" href="#" alt="Connection" onclick="MM_showHideLayers('imailoptconn','','show','imailoptsig','','hide')">
+<area shape="rect" coords="121,410,195,432" href="#" alt="OK" onclick="MM_showHideLayers('imailoptsig','','hide')">
+<area shape="rect" coords="202,410,276,432" href="#" alt="Cancel" onclick="MM_showHideLayers('imailoptsig','','hide')">
+</map>
+</div>
+
+<div id="imailoptconn" style="z-index: 30; left: 200px; top: 75px; position: absolute;">
+<img src="imailoptconn.png" usemap="#imailoptconn.png" width="367" height="443" border="0" alt="">
+<map name="imailoptconn.png">
+<area shape="rect" coords="346,5,360,17" href="#" alt="Close" onclick="MM_showHideLayers('imailoptconn','','hide')">
+<area shape="rect" coords="11,31,52,49" href="#" alt="Send" onclick="MM_showHideLayers('imailoptsend','','show','imailoptconn','','hide')">
+<area shape="rect" coords="53,31,94,49" href="#" alt="Read" onclick="MM_showHideLayers('imailoptread','','show','imailoptconn','','hide')">
+<area shape="rect" coords="95,31,137,49" href="#" alt="Server" onclick="MM_showHideLayers('imailoptserv','','show','imailoptconn','','hide')">
+<area shape="rect" coords="138,31,179,49" href="#" alt="Fonts" onclick="MM_showHideLayers('imailoptfont','','show','imailoptconn','','hide')">
+<area shape="rect" coords="180,31,235,49" href="#" alt="Signature" onclick="MM_showHideLayers('imailoptsig','','show','imailoptconn','','hide')">
+<area shape="rect" coords="121,410,195,432" href="#" alt="OK" onclick="MM_showHideLayers('imailoptconn','','hide')">
+<area shape="rect" coords="202,410,276,432" href="#" alt="Cancel" onclick="MM_showHideLayers('imailoptconn','','hide')">
+</map>
+</div>
+
+<div id="imailoptservas" style="z-index: 40; left: 175px; top: 125px; position: absolute;">
+<img src="imailoptservas.png" usemap="#imailoptservas.png" width="440" height="322" border="0" alt="">
+<map name="imailoptservas.png">
+<area shape="rect" coords="419,5,433,17" href="#" alt="Close" onclick="MM_showHideLayers('imailoptservas','','hide')">
+<area shape="rect" coords="351,38,425,60" href="#" alt="OK" onclick="MM_showHideLayers('imailoptservas','','hide')">
+<area shape="rect" coords="351,66,425,88" href="#" alt="Cancel" onclick="MM_showHideLayers('imailoptservas','','hide')">
+</map>
+</div>
+
+<div id="newmail" style="z-index: 30; left: 100px; top: 100px; position: absolute;">
+<img src="newmail.png" usemap="#newmail.png" width="530" height="430" border="0" alt="">
+<map name="newmail.png">
+<area shape="rect" coords="508,6,522,18" href="#" alt="Close" onclick="MM_showHideLayers('newmail','','hide')">
+<area shape="rect" coords="4,23,32,41" href="#" alt="File" onmouseover="MM_showHideLayers('newmailfile','','show')" onmouseout="MM_showHideLayers('newmailfile','','hide')">
+<area shape="rect" coords="32,23,62,41" href="#" alt="Edit" onmouseover="MM_showHideLayers('newmailedit','','show')" onmouseout="MM_showHideLayers('newmailedit','','hide')">
+<area shape="rect" coords="62,23,97,41" href="#" alt="View" onmouseover="MM_showHideLayers('newmailview','','show')" onmouseout="MM_showHideLayers('newmailview','','hide')">
+<area shape="rect" coords="97,23,128,41" href="#" alt="Mail" onmouseover="MM_showHideLayers('newmailmail','','show')" onmouseout="MM_showHideLayers('newmailmail','','hide')">
+<area shape="rect" coords="128,23,166,41" href="#" alt="Insert" onmouseover="MM_showHideLayers('newmailins','','show')" onmouseout="MM_showHideLayers('newmailins','','hide')">
+<area shape="rect" coords="166,23,210,41" href="#" alt="Format" onmouseover="MM_showHideLayers('newmailform','','show')" onmouseout="MM_showHideLayers('newmailform','','hide')">
+<area shape="rect" coords="210,23,244,41" href="#" alt="Help" onmouseover="MM_showHideLayers('newmailhelp','','show')" onmouseout="MM_showHideLayers('newmailhelp','','hide')">
+<area shape="rect" coords="4,46,26,67" href="#" alt="Send" onclick="MM_showHideLayers('newmail','','hide')">
+</map>
+</div>
+
+<div id="newmailfile" style="z-index: 40; left: 104px; top: 141px; position: absolute;" onmouseover="MM_showHideLayers('newmailfile','','show')"  onmouseout="MM_showHideLayers('newmailfile','','hide')">
+<img src="newmailfile.png" usemap="#newmailfile.png" width="159" height="92" border="0" alt="">
+<map name="newmailfile.png">
+<area shape="rect" coords="2,2,156,19" href="#" alt="Send Message" onclick="MM_showHideLayers('newmail','','hide','newmailfile','','hide')">
+<area shape="rect" coords="2,68,156,89" href="#" alt="Close" onclick="MM_showHideLayers('newmail','','hide','newmailfile','','hide')">
+</map>
+</div>
+
+<div id="newmailedit" style="z-index: 40; left: 132px; top: 141px; position: absolute;" onmouseover="MM_showHideLayers('newmailedit','','show')"  onmouseout="MM_showHideLayers('newmailedit','','hide')">
+<img src="newmailedit.png" width="126" height="135" border="0" alt="">
+</div>
+
+<div id="newmailview" style="z-index: 40; left: 162px; top: 141px; position: absolute;" onmouseover="MM_showHideLayers('newmailview','','show')"  onmouseout="MM_showHideLayers('newmailview','','hide')">
+<img src="newmailview.png" width="136" height="66" border="0" alt="">
+</div>
+
+<div id="newmailmail" style="z-index: 40; left: 197px; top: 141px; position: absolute;" onmouseover="MM_showHideLayers('newmailmail','','show')"  onmouseout="MM_showHideLayers('newmailmail','','hide')">
+<img src="newmailmail.png" width="181" height="109" border="0" alt="">
+</div>
+
+<div id="newmailins" style="z-index: 40; left: 228px; top: 141px; position: absolute;" onmouseover="MM_showHideLayers('newmailins','','show')"  onmouseout="MM_showHideLayers('newmailins','','hide')">
+<img src="newmailins.png" width="121" height="57" border="0" alt="">
+</div>
+
+<div id="newmailform" style="z-index: 40; left: 266px; top: 141px; position: absolute;" onmouseover="MM_showHideLayers('newmailform','','show')"  onmouseout="MM_showHideLayers('newmailform','','hide')">
+<img src="newmailform.png" width="95" height="126" border="0" alt="">
+</div>
+
+<div id="newmailhelp" style="z-index: 40; left: 310px; top: 141px; position: absolute;" onmouseover="MM_showHideLayers('newmailhelp','','show')"  onmouseout="MM_showHideLayers('newmailhelp','','hide')">
+<img src="newmailhelp.png" width="206" height="49" border="0" alt="">
+</div>
+
+</body>
+</html>

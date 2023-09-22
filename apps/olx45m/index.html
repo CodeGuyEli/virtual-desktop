@@ -1,0 +1,600 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Outlook Express 4.5 Mac Virtual Desktop</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script language="javascript" type="text/javascript">
+<!--
+function MM_findObj(n, d) { //v4.0
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && document.getElementById) x=document.getElementById(n); return x;
+}
+
+function MM_showHideLayers() { //v3.0
+  var i,p,v,obj,args=MM_showHideLayers.arguments;
+  for (i=0; i<(args.length-2); i+=3) if ((obj=MM_findObj(args[i]))!=null) { v=args[i+2];
+    if (obj.style) { obj=obj.style; v=(v=='show')?'visible':(v='hide')?'hidden':v; }
+    obj.visibility=v; }
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+//-->
+</script>
+</head>
+
+<body bgcolor="#63639C" style="margin: 0px;" onload="show_clock();	
+MM_showHideLayers('loading','','hide','loadmsg','','hide','clock','','show','dticons','','show','cstrip','','show','olx45','','show','olx45finder','','show','olx45appmenu','','hide','olx45file','','hide','olx45edit','','hide','olx45view','','hide','olx45msg','','hide','olx45form','','hide','olx45tool','','hide','olx45win','','hide','olx45scr','','hide','olx45help','','hide','olx45filenew','','hide','olx45toolec','','hide','olx45about','','hide','olx45ccuprompt','','hide','olx45ccu','','hide','olx45ccunew','','hide','olx45nr','','hide','olx45nred','','hide','olx45nredsel1','','hide','olx45nredsel2','','hide','olx45nredsel3','','hide','olx45nredsel4','','hide','olx45mr','','hide','olx45mred','','hide','olx45mredsel1','','hide','olx45mredsel2','','hide','olx45mredsel3','','hide','olx45mredsel4','','hide','olx45sig','','hide','olx45siged','','hide','olx45ecache','','hide','olx45newmsg','','hide','olx45prefmail','','hide','olx45prefnews','','hide','olx45prefds','','hide','olx45prefgen','','hide','olx45prefsq','','hide','olx45prefmc','','hide','olx45prefdisp','','hide','olx45preffont','','hide','olx45prefph','','hide','olx45prefprox','','hide','olx45preffh','','hide','olx45prefmailnew','','hide','olx45prefmailadv','','hide','olx45prefnewsnew','','hide','olx45prefnewsadv','','hide','olx45prefdsnew','','hide','olx45prefdsadv','','hide','olx45prefphadd','','hide','olx45prefprox2','','hide','olx45prefproxset','','hide','olx45preffhadd','','hide');
+MM_preloadImages('loading.png','dticons.png','cstrip.png','olx45.png','olx45finder.png','olx45appmenu.png','olx45file.png','olx45edit.png','olx45view.png','olx45msg.png','olx45form.png','olx45tool.png','olx45win.png','olx45scr.png','olx45help.png','olx45filenew.png','olx45toolec.png','olx45about.png','olx45ccuprompt.png','olx45ccu.png','olx45ccunew.png','olx45nr.png','olx45nred.png','olx45nredsel1.png','olx45nredsel2.png','olx45nredsel3.png','olx45nredsel4.png','olx45mr.png','olx45mred.png','olx45mredsel1.png','olx45mredsel2.png','olx45mredsel3.png','olx45mredsel4.png','olx45sig.png','olx45siged.png','olx45ecache.png','olx45newmsg.png','olx45prefmail.png','olx45prefnews.png','olx45prefds.png','olx45prefgen.png','olx45prefsq.png','olx45prefmc.png','olx45prefdisp.png','olx45preffont.png','olx45prefph.png','olx45prefprox.png','olx45preffh.png','olx45prefmailnew.png','olx45prefmailadv.png','olx45prefnewsnew.png','olx45prefnewsadv.png','olx45prefdsnew.png','olx45prefdsadv.png','olx45prefphadd.png','olx45prefprox2.png','olx45prefproxset.png','olx45preffhadd.png');
+return document.MM_returnValue;">
+
+<div id="loading" style="z-index: 499; left: 0px; top: 0px; position: absolute;">
+<img src="loading.png" width="800" height="600" border="0" alt="">
+</div>
+
+<div id="loadmsg" style="z-index: 500; left: 20px; top: 20px; width: 300; height: 300; position: absolute;">
+<center><span style="font-family: Arial; font-size: 24px;">Please Wait...</span></center><br>
+<span style="font-family: Arial; font-size: 13px;">Images for the virtual desktop are now being preloaded into RAM. When this is complete, you will be presented with the desktop and be able to browse all available options without the need for further loading.</span>
+</div>
+
+<div id="clock" style="z-index: 120; left: 582px; top: 2px; position: absolute;">
+<b><script language="javascript" type="text/javascript" src="clock.js">
+/*
+Live Clock Script-
+By Mark Plachetta (astro@bigpond.net.au) based on code from DynamicDrive.com
+For full source code, 100's more DHTML scripts, and Terms Of Use,
+visit http://www.dynamicdrive.com
+*/
+</script></b>
+</div>
+
+<div id="dticons" style="z-index: 1; left: 684px; top: 20px; position: absolute;">
+<img src="dticons.png" width="116" height="580" border="0" alt="">
+</div>
+
+<div id="cstrip" style="z-index: 1; left: 0px; top: 576px; position: absolute;">
+<img src="cstrip.png" width="441" height="24" border="0" alt="">
+</div>
+
+<div id="olx45" style="z-index: 10; left: 15px; top: 23px; position: absolute;">
+<img src="olx45.png" usemap="#olx45.png" width="770" height="550" border="0" alt="">
+<map name="olx45.png">
+<area shape="rect" coords="5,5,15,15" href="#" alt="Close" onclick="window.close();">
+<area shape="rect" coords="6,22,45,58" href="#" alt="New" onclick="MM_showHideLayers('olx45newmsg','','show')">
+<area shape="rect" coords="471,22,532,58" href="#" alt="Preferences" onclick="MM_showHideLayers('olx45prefmail','','show')">
+</map>
+</div>
+
+<div id="olx45finder" style="z-index: 110; left: 0px; top: 0px; position: absolute;">
+<img src="olx45finder.png" usemap="#olx45finder.png" width="800" height="20" border="0" alt="">
+<map name="olx45finder.png">
+<area shape="rect" coords="9,0,37,19" href="#" alt="Apple" onmouseover="MM_showHideLayers('olx45appmenu','','show')" onmouseout="MM_showHideLayers('olx45appmenu','','hide')">
+<area shape="rect" coords="37,0,72,19" href="#" alt="File" onmouseover="MM_showHideLayers('olx45file','','show')" onmouseout="MM_showHideLayers('olx45file','','hide')">
+<area shape="rect" coords="72,0,109,19" href="#" alt="Edit" onmouseover="MM_showHideLayers('olx45edit','','show')" onmouseout="MM_showHideLayers('olx45edit','','hide')">
+<area shape="rect" coords="109,0,153,19" href="#" alt="View" onmouseover="MM_showHideLayers('olx45view','','show')" onmouseout="MM_showHideLayers('olx45view','','hide')">
+<area shape="rect" coords="153,0,223,19" href="#" alt="Message" onmouseover="MM_showHideLayers('olx45msg','','show')" onmouseout="MM_showHideLayers('olx45msg','','hide')">
+<area shape="rect" coords="223,0,281,19" href="#" alt="Format" onmouseover="MM_showHideLayers('olx45form','','show')" onmouseout="MM_showHideLayers('olx45form','','hide')">
+<area shape="rect" coords="281,0,327,19" href="#" alt="Tools" onmouseover="MM_showHideLayers('olx45tool','','show')" onmouseout="MM_showHideLayers('olx45tool','','hide')">
+<area shape="rect" coords="327,0,391,19" href="#" alt="Window" onmouseover="MM_showHideLayers('olx45win','','show')" onmouseout="MM_showHideLayers('olx45win','','hide')">
+<area shape="rect" coords="391,0,419,19" href="#" alt="Script" onmouseover="MM_showHideLayers('olx45scr','','show')" onmouseout="MM_showHideLayers('olx45scr','','hide')">
+<area shape="rect" coords="419,0,459,19" href="#" alt="Help" onmouseover="MM_showHideLayers('olx45help','','show')" onmouseout="MM_showHideLayers('olx45help','','hide')">
+</map>
+</div>
+
+<div id="olx45appmenu" style="z-index: 110; left: 9px; top: 19px; position: absolute;" onmouseover="MM_showHideLayers('olx45appmenu','','show')" onmouseout="MM_showHideLayers('olx45appmenu','','hide')">
+<img src="olx45appmenu.png" usemap="#olx45appmenu.png" width="199" height="367" border="0" alt="">
+<map name="olx45appmenu.png">
+<area shape="rect" coords="2,2,195,18" href="#" alt="About Outlook Express" onclick="MM_showHideLayers('olx45about','','show','olx45appmenu','','hide')">
+</map>
+</div>
+
+<div id="olx45file" style="z-index: 110; left: 37px; top: 19px; position: absolute;" onmouseover="MM_showHideLayers('olx45file','','show')" onmouseout="MM_showHideLayers('olx45file','','hide')">
+<img src="olx45file.png" usemap="#olx45file.png" width="212" height="241" border="0" alt="">
+<map name="olx45file.png">
+<area shape="rect" coords="2,2,208,17" href="#" alt="New" onmouseover="MM_showHideLayers('olx45filenew','','show')" onmouseout="MM_showHideLayers('olx45filenew','','hide')">
+<area shape="rect" coords="2,205,208,222" href="#" alt="Change Current User" onclick="MM_showHideLayers('olx45ccuprompt','','show','olx45file','','hide')">
+<area shape="rect" coords="2,222,208,237" href="#" alt="Quit" onclick="window.close();">
+</map>
+</div>
+
+<div id="olx45edit" style="z-index: 110; left: 72px; top: 19px; position: absolute;" onmouseover="MM_showHideLayers('olx45edit','','show')" onmouseout="MM_showHideLayers('olx45edit','','hide')">
+<img src="olx45edit.png" usemap="#olx45edit.png" width="186" height="263" border="0" alt="">
+<map name="olx45edit.png">
+<area shape="rect" coords="2,243,182,259" href="#" alt="Preferences" onclick="MM_showHideLayers('olx45prefmail','','show','olx45edit','','hide')">
+</map>
+</div>
+
+<div id="olx45view" style="z-index: 110; left: 109px; top: 19px; position: absolute;" onmouseover="MM_showHideLayers('olx45view','','show')" onmouseout="MM_showHideLayers('olx45view','','hide')">
+<img src="olx45view.png" width="200" height="203" border="0" alt="">
+</div>
+
+<div id="olx45msg" style="z-index: 110; left: 153px; top: 19px; position: absolute;" onmouseover="MM_showHideLayers('olx45msg','','show')" onmouseout="MM_showHideLayers('olx45msg','','hide')">
+<img src="olx45msg.png" width="258" height="283" border="0" alt="">
+</div>
+
+<div id="olx45form" style="z-index: 110; left: 223px; top: 19px; position: absolute;" onmouseover="MM_showHideLayers('olx45form','','show')" onmouseout="MM_showHideLayers('olx45form','','hide')">
+<img src="olx45form.png" width="167" height="235" border="0" alt="">
+</div>
+
+<div id="olx45tool" style="z-index: 110; left: 281px; top: 19px; position: absolute;" onmouseover="MM_showHideLayers('olx45tool','','show')" onmouseout="MM_showHideLayers('olx45tool','','hide')">
+<img src="olx45tool.png" usemap="#olx45tool.png" width="208" height="187" border="0" alt="">
+<map name="olx45tool.png">
+<area shape="rect" coords="2,59,204,76" href="#" alt="Newsgroup Rules" onclick="MM_showHideLayers('olx45nr','','show','olx45tool','','hide')">
+<area shape="rect" coords="2,76,204,92" href="#" alt="Mail Rules" onclick="MM_showHideLayers('olx45mr','','show','olx45tool','','hide')">
+<area shape="rect" coords="2,92,204,110" href="#" alt="Signatures" onclick="MM_showHideLayers('olx45sig','','show','olx45tool','','hide')">
+<area shape="rect" coords="2,168,204,183" href="#" alt="Empty Cache" onmouseover="MM_showHideLayers('olx45toolec','','show')" onmouseout="MM_showHideLayers('olx45toolec','','hide')">
+</map>
+</div>
+
+<div id="olx45win" style="z-index: 110; left: 327px; top: 19px; position: absolute;" onmouseover="MM_showHideLayers('olx45win','','show')" onmouseout="MM_showHideLayers('olx45win','','hide')">
+<img src="olx45win.png" width="166" height="73" border="0" alt="">
+</div>
+
+<div id="olx45scr" style="z-index: 110; left: 391px; top: 19px; position: absolute;" onmouseover="MM_showHideLayers('olx45scr','','show')" onmouseout="MM_showHideLayers('olx45scr','','hide')">
+<img src="olx45scr.png" width="181" height="99" border="0" alt="">
+</div>
+
+<div id="olx45help" style="z-index: 110; left: 419px; top: 19px; position: absolute;" onmouseover="MM_showHideLayers('olx45help','','show')" onmouseout="MM_showHideLayers('olx45help','','hide')">
+<img src="olx45help.png" width="175" height="63" border="0" alt="">
+</div>
+
+<div id="olx45filenew" style="z-index: 120; left: 242px; top: 26px; position: absolute;" onmouseover="MM_showHideLayers('olx45file','','show','olx45filenew','','show')" onmouseout="MM_showHideLayers('olx45file','','hide','olx45filenew','','hide')">
+<img src="olx45filenew.png" usemap="#olx45filenew.png" width="162" height="127" border="0" alt="">
+<map name="olx45filenew.png">
+<area shape="rect" coords="2,2,158,18" href="#" alt="Mail Message" onclick="MM_showHideLayers('olx45newmsg','','show','olx45file','','hide','olx45filenew','','hide')">
+</map>
+</div>
+
+<div id="olx45toolec" style="z-index: 120; left: 482px; top: 195px; position: absolute;" onmouseover="MM_showHideLayers('olx45tool','','show','olx45toolec','','show')" onmouseout="MM_showHideLayers('olx45tool','','hide','olx45toolec','','hide')">
+<img src="olx45toolec.png" usemap="#olx45toolec.png" width="155" height="41" border="0" alt="">
+<map name="olx45toolec.png">
+<area shape="rect" coords="2,2,151,18" href="#" alt="Empty Entire Cache" onclick="MM_showHideLayers('olx45ecache','','show','olx45tool','','hide','olx45toolec','','hide')">
+</map>
+</div>
+
+<div id="olx45about" style="z-index: 20; left: 150px; top: 150px; position: absolute;">
+<img src="olx45about.png" usemap="#olx45about.png" width="473" height="273" border="0" alt="">
+<map name="olx45about.png">
+<area shape="rect" coords="349,217,444,242" href="#" alt="OK" onclick="MM_showHideLayers('olx45about','','hide')">
+</map>
+</div>
+
+<div id="olx45ccuprompt" style="z-index: 20; left: 200px; top: 200px; position: absolute;">
+<img src="olx45ccuprompt.png" usemap="#olx45ccuprompt.png" width="385" height="117" border="0" alt="">
+<map name="olx45ccuprompt.png">
+<area shape="rect" coords="218,82,281,101" href="#" alt="No" onclick="MM_showHideLayers('olx45ccuprompt','','hide')">
+<area shape="rect" coords="295,79,368,104" href="#" alt="Yes" onclick="MM_showHideLayers('olx45ccu','','show','olx45','','hide','olx45ccuprompt','','hide')">
+</map>
+</div>
+
+<div id="olx45ccu" style="z-index: 20; left: 175px; top: 175px; position: absolute;">
+<img src="olx45ccu.png" usemap="#olx45ccu.png" width="351" height="219" border="0" alt="">
+<map name="olx45ccu.png">
+<area shape="rect" coords="262,51,337,70" href="#" alt="New User" onclick="MM_showHideLayers('olx45ccunew','','show')">
+<area shape="rect" coords="261,158,336,177" href="#" alt="Quit" onclick="window.close();">
+<area shape="rect" coords="259,185,340,210" href="#" alt="OK" onclick="MM_showHideLayers('olx45','','show','olx45ccu','','hide')">
+</map>
+</div>
+
+<div id="olx45ccunew" style="z-index: 30; left: 200px; top: 225px; position: absolute;">
+<img src="olx45ccunew.png" usemap="#olx45ccunew.png" width="322" height="120" border="0" alt="">
+<map name="olx45ccunew.png">
+<area shape="rect" coords="148,86,210,105" href="#" alt="Cancel" onclick="MM_showHideLayers('olx45ccunew','','hide')">
+<area shape="rect" coords="231,83,304,108" href="#" alt="Save" onclick="MM_showHideLayers('olx45ccunew','','hide')">
+</map>
+</div>
+
+<div id="olx45nr" style="z-index: 20; left: 225px; top: 100px; position: absolute;">
+<img src="olx45nr.png" usemap="#olx45nr.png" width="313" height="349" border="0" alt="">
+<map name="olx45nr.png">
+<area shape="rect" coords="5,5,15,15" href="#" alt="Close" onclick="MM_showHideLayers('olx45nr','','hide')">
+<area shape="rect" coords="6,22,53,58" href="#" alt="New Rule" onclick="MM_showHideLayers('olx45nred','','show')">
+<area shape="rect" coords="109,22,154,58" href="#" alt="Edit Rule" onclick="MM_showHideLayers('olx45nred','','show')">
+</map>
+</div>
+
+<div id="olx45nred" style="z-index: 30; left: 150px; top: 125px; position: absolute;">
+<img src="olx45nred.png" usemap="#olx45nred.png" width="481" height="334" border="0" alt="">
+<map name="olx45nred.png">
+<area shape="rect" coords="259,76,277,91" href="#" alt="Select" onclick="MM_showHideLayers('olx45nredsel1','','show')">
+<area shape="rect" coords="141,102,159,117" href="#" alt="Select" onclick="MM_showHideLayers('olx45nredsel2','','show')">
+<area shape="rect" coords="259,102,277,117" href="#" alt="Select" onclick="MM_showHideLayers('olx45nredsel3','','show')">
+<area shape="rect" coords="283,180,301,195" href="#" alt="Select" onclick="MM_showHideLayers('olx45nredsel4','','show')">
+<area shape="rect" coords="311,303,378,322" href="#" alt="Cancel" onclick="MM_showHideLayers('olx45nred','','hide','olx45nredsel1','','hide','olx45nredsel2','','hide','olx45nredsel3','','hide','olx45nredsel4','','hide')">
+<area shape="rect" coords="393,300,466,325" href="#" alt="OK" onclick="MM_showHideLayers('olx45nred','','hide','olx45nredsel1','','hide','olx45nredsel2','','hide','olx45nredsel3','','hide','olx45nredsel4','','hide')">
+</map>
+</div>
+
+<div id="olx45nredsel1" style="z-index: 40; left: 314px; top: 201px; position: absolute;" onclick="MM_showHideLayers('olx45nredsel1','','hide')">
+<img src="olx45nredsel1.png" width="114" height="87" border="0" alt="">
+</div>
+
+<div id="olx45nredsel2" style="z-index: 40; left: 206px; top: 215px; position: absolute;" onclick="MM_showHideLayers('olx45nredsel2','','hide')">
+<img src="olx45nredsel2.png" width="104" height="51" border="0" alt="">
+</div>
+
+<div id="olx45nredsel3" style="z-index: 40; left: 314px; top: 227px; position: absolute;" onclick="MM_showHideLayers('olx45nredsel3','','hide')">
+<img src="olx45nredsel3.png" width="114" height="99" border="0" alt="">
+</div>
+
+<div id="olx45nredsel4" style="z-index: 40; left: 314px; top: 305px; position: absolute;" onclick="MM_showHideLayers('olx45nredsel4','','hide')">
+<img src="olx45nredsel4.png" width="122" height="27" border="0" alt="">
+</div>
+
+<div id="olx45mr" style="z-index: 20; left: 225px; top: 100px; position: absolute;">
+<img src="olx45mr.png" usemap="#olx45mr.png" width="313" height="349" border="0" alt="">
+<map name="olx45mr.png">
+<area shape="rect" coords="5,5,15,15" href="#" alt="Close" onclick="MM_showHideLayers('olx45mr','','hide')">
+<area shape="rect" coords="6,22,53,58" href="#" alt="New Rule" onclick="MM_showHideLayers('olx45mred','','show')">
+<area shape="rect" coords="109,22,154,58" href="#" alt="Edit Rule" onclick="MM_showHideLayers('olx45mred','','show')">
+</map>
+</div>
+
+<div id="olx45mred" style="z-index: 30; left: 150px; top: 125px; position: absolute;">
+<img src="olx45mred.png" usemap="#olx45mred.png" width="485" height="348" border="0" alt="">
+<map name="olx45mred.png">
+<area shape="rect" coords="189,70,207,85" href="#" alt="Select" onclick="MM_showHideLayers('olx45mredsel1','','show')">
+<area shape="rect" coords="305,70,323,85" href="#" alt="Select" onclick="MM_showHideLayers('olx45mredsel2','','show')">
+<area shape="rect" coords="279,142,297,157" href="#" alt="Select" onclick="MM_showHideLayers('olx45mredsel3','','show')">
+<area shape="rect" coords="196,176,214,191" href="#" alt="Select" onclick="MM_showHideLayers('olx45mredsel4','','show')">
+<area shape="rect" coords="311,316,378,335" href="#" alt="Cancel" onclick="MM_showHideLayers('olx45mred','','hide','olx45mredsel1','','hide','olx45mredsel2','','hide','olx45mredsel3','','hide','olx45mredsel4','','hide')">
+<area shape="rect" coords="393,313,466,338" href="#" alt="OK" onclick="MM_showHideLayers('olx45mred','','hide','olx45mredsel1','','hide','olx45mredsel2','','hide','olx45mredsel3','','hide','olx45mredsel4','','hide')">
+</map>
+</div>
+
+<div id="olx45mredsel1" style="z-index: 40; left: 205px; top: 195px; position: absolute;" onclick="MM_showHideLayers('olx45mredsel1','','hide')">
+<img src="olx45mredsel1.png" width="137" height="141" border="0" alt="">
+</div>
+
+<div id="olx45mredsel2" style="z-index: 40; left: 360px; top: 195px; position: absolute;" onclick="MM_showHideLayers('olx45mredsel2','','hide')">
+<img src="olx45mredsel2.png" width="121" height="123" border="0" alt="">
+</div>
+
+<div id="olx45mredsel3" style="z-index: 40; left: 310px; top: 267px; position: absolute;" onclick="MM_showHideLayers('olx45mredsel3','','hide')">
+<img src="olx45mredsel3.png" width="122" height="27" border="0" alt="">
+</div>
+
+<div id="olx45mredsel4" style="z-index: 40; left: 221px; top: 187px; position: absolute;" onclick="MM_showHideLayers('olx45mredsel4','','hide')">
+<img src="olx45mredsel4.png" width="176" height="225" border="0" alt="">
+</div>
+
+<div id="olx45sig" style="z-index: 20; left: 225px; top: 100px; position: absolute;">
+<img src="olx45sig.png" usemap="#olx45sig.png" width="313" height="349" border="0" alt="">
+<map name="olx45sig.png">
+<area shape="rect" coords="5,5,15,15" href="#" alt="Close" onclick="MM_showHideLayers('olx45sig','','hide')">
+<area shape="rect" coords="6,22,77,59" href="#" alt="New Signature" onclick="MM_showHideLayers('olx45siged','','show')">
+<area shape="rect" coords="157,22,226,59" href="#" alt="Edit Signature" onclick="MM_showHideLayers('olx45siged','','show')">
+</map>
+</div>
+
+<div id="olx45siged" style="z-index: 30; left: 125px; top: 150px; position: absolute;">
+<img src="olx45siged.png" usemap="#olx45siged.png" width="517" height="247" border="0" alt="">
+<map name="olx45siged.png">
+<area shape="rect" coords="338,205,405,224" href="#" alt="Cancel" onclick="MM_showHideLayers('olx45siged','','hide')">
+<area shape="rect" coords="421,202,494,227" href="#" alt="OK" onclick="MM_showHideLayers('olx45siged','','hide')">
+</map>
+</div>
+
+<div id="olx45ecache" style="z-index: 20; left: 175px; top: 150px; position: absolute;">
+<img src="olx45ecache.png" usemap="#olx45ecache.png" width="399" height="165" border="0" alt="">
+<map name="olx45ecache.png">
+<area shape="rect" coords="230,126,293,145" href="#" alt="No" onclick="MM_showHideLayers('olx45ecache','','hide')">
+<area shape="rect" coords="307,123,380,148" href="#" alt="Yes" onclick="MM_showHideLayers('olx45ecache','','hide')">
+</map>
+</div>
+
+<div id="olx45newmsg" style="z-index: 20; left: 100px; top: 100px; position: absolute;">
+<img src="olx45newmsg.png" usemap="#olx45newmsg.png" width="564" height="374" border="0" alt="">
+<map name="olx45newmsg.png">
+<area shape="rect" coords="5,5,15,15" href="#" alt="Close" onclick="MM_showHideLayers('olx45newmsg','','hide')">
+<area shape="rect" coords="6,22,55,58" href="#" alt="Send Now" onclick="MM_showHideLayers('olx45newmsg','','hide')">
+</map>
+</div>
+
+<div id="olx45prefmail" style="z-index: 20; left: 100px; top: 100px; position: absolute;">
+<img src="olx45prefmail.png" usemap="#olx45prefmail.png" width="535" height="399" border="0" alt="">
+<map name="olx45prefmail.png">
+<area shape="rect" coords="18,74,144,90" href="#" alt="News" onclick="MM_showHideLayers('olx45prefnews','','show','olx45prefmail','','hide')">
+<area shape="rect" coords="18,92,144,108" href="#" alt="Directory Services" onclick="MM_showHideLayers('olx45prefds','','show','olx45prefmail','','hide')">
+<area shape="rect" coords="18,128,144,144" href="#" alt="General" onclick="MM_showHideLayers('olx45prefgen','','show','olx45prefmail','','hide')">
+<area shape="rect" coords="18,146,144,162" href="#" alt="Startup &amp; Quit" onclick="MM_showHideLayers('olx45prefsq','','show','olx45prefmail','','hide')">
+<area shape="rect" coords="18,164,144,180" href="#" alt="Message Composition" onclick="MM_showHideLayers('olx45prefmc','','show','olx45prefmail','','hide')">
+<area shape="rect" coords="18,182,144,198" href="#" alt="Display" onclick="MM_showHideLayers('olx45prefdisp','','show','olx45prefmail','','hide')">
+<area shape="rect" coords="18,200,144,216" href="#" alt="Fonts" onclick="MM_showHideLayers('olx45preffont','','show','olx45prefmail','','hide')">
+<area shape="rect" coords="18,236,144,252" href="#" alt="Protocol Helpers" onclick="MM_showHideLayers('olx45prefph','','show','olx45prefmail','','hide')">
+<area shape="rect" coords="18,254,144,270" href="#" alt="Proxies" onclick="MM_showHideLayers('olx45prefprox','','show','olx45prefmail','','hide')">
+<area shape="rect" coords="18,290,144,306" href="#" alt="File Helpers" onclick="MM_showHideLayers('olx45preffh','','show','olx45prefmail','','hide')">
+<area shape="rect" coords="298,44,383,63" href="#" alt="New Account" onclick="MM_showHideLayers('olx45prefmailnew','','show')">
+<area shape="rect" coords="185,320,270,339" href="#" alt="Advanced" onclick="MM_showHideLayers('olx45prefmailadv','','show')">
+<area shape="rect" coords="375,362,439,381" href="#" alt="Cancel" onclick="MM_showHideLayers('olx45prefmail','','hide')">
+<area shape="rect" coords="449,359,519,384" href="#" alt="OK" onclick="MM_showHideLayers('olx45prefmail','','hide')">
+</map>
+</div>
+
+<div id="olx45prefnews" style="z-index: 20; left: 100px; top: 100px; position: absolute;">
+<img src="olx45prefnews.png" usemap="#olx45prefnews.png" width="535" height="399" border="0" alt="">
+<map name="olx45prefnews.png">
+<area shape="rect" coords="18,56,144,72" href="#" alt="E-mail" onclick="MM_showHideLayers('olx45prefmail','','show','olx45prefnews','','hide')">
+<area shape="rect" coords="18,92,144,108" href="#" alt="Directory Services" onclick="MM_showHideLayers('olx45prefds','','show','olx45prefnews','','hide')">
+<area shape="rect" coords="18,128,144,144" href="#" alt="General" onclick="MM_showHideLayers('olx45prefgen','','show','olx45prefnews','','hide')">
+<area shape="rect" coords="18,146,144,162" href="#" alt="Startup &amp; Quit" onclick="MM_showHideLayers('olx45prefsq','','show','olx45prefnews','','hide')">
+<area shape="rect" coords="18,164,144,180" href="#" alt="Message Composition" onclick="MM_showHideLayers('olx45prefmc','','show','olx45prefnews','','hide')">
+<area shape="rect" coords="18,182,144,198" href="#" alt="Display" onclick="MM_showHideLayers('olx45prefdisp','','show','olx45prefnews','','hide')">
+<area shape="rect" coords="18,200,144,216" href="#" alt="Fonts" onclick="MM_showHideLayers('olx45preffont','','show','olx45prefnews','','hide')">
+<area shape="rect" coords="18,236,144,252" href="#" alt="Protocol Helpers" onclick="MM_showHideLayers('olx45prefph','','show','olx45prefnews','','hide')">
+<area shape="rect" coords="18,254,144,270" href="#" alt="Proxies" onclick="MM_showHideLayers('olx45prefprox','','show','olx45prefnews','','hide')">
+<area shape="rect" coords="18,290,144,306" href="#" alt="File Helpers" onclick="MM_showHideLayers('olx45preffh','','show','olx45prefnews','','hide')">
+<area shape="rect" coords="289,44,376,63" href="#" alt="New Server" onclick="MM_showHideLayers('olx45prefnewsnew','','show')">
+<area shape="rect" coords="191,316,287,333" href="#" alt="Advanced" onclick="MM_showHideLayers('olx45prefnewsadv','','show')">
+<area shape="rect" coords="375,362,439,381" href="#" alt="Cancel" onclick="MM_showHideLayers('olx45prefnews','','hide')">
+<area shape="rect" coords="449,359,519,384" href="#" alt="OK" onclick="MM_showHideLayers('olx45prefnews','','hide')">
+</map>
+</div>
+
+<div id="olx45prefds" style="z-index: 20; left: 100px; top: 100px; position: absolute;">
+<img src="olx45prefds.png" usemap="#olx45prefds.png" width="535" height="399" border="0" alt="">
+<map name="olx45prefds.png">
+<area shape="rect" coords="18,56,144,72" href="#" alt="E-mail" onclick="MM_showHideLayers('olx45prefmail','','show','olx45prefds','','hide')">
+<area shape="rect" coords="18,74,144,90" href="#" alt="News" onclick="MM_showHideLayers('olx45prefnews','','show','olx45prefds','','hide')">
+<area shape="rect" coords="18,128,144,144" href="#" alt="General" onclick="MM_showHideLayers('olx45prefgen','','show','olx45prefds','','hide')">
+<area shape="rect" coords="18,146,144,162" href="#" alt="Startup &amp; Quit" onclick="MM_showHideLayers('olx45prefsq','','show','olx45prefds','','hide')">
+<area shape="rect" coords="18,164,144,180" href="#" alt="Message Composition" onclick="MM_showHideLayers('olx45prefmc','','show','olx45prefds','','hide')">
+<area shape="rect" coords="18,182,144,198" href="#" alt="Display" onclick="MM_showHideLayers('olx45prefdisp','','show','olx45prefds','','hide')">
+<area shape="rect" coords="18,200,144,216" href="#" alt="Fonts" onclick="MM_showHideLayers('olx45preffont','','show','olx45prefds','','hide')">
+<area shape="rect" coords="18,236,144,252" href="#" alt="Protocol Helpers" onclick="MM_showHideLayers('olx45prefph','','show','olx45prefds','','hide')">
+<area shape="rect" coords="18,254,144,270" href="#" alt="Proxies" onclick="MM_showHideLayers('olx45prefprox','','show','olx45prefds','','hide')">
+<area shape="rect" coords="18,290,144,306" href="#" alt="File Helpers" onclick="MM_showHideLayers('olx45preffh','','show','olx45prefds','','hide')">
+<area shape="rect" coords="282,44,376,63" href="#" alt="New Directory" onclick="MM_showHideLayers('olx45prefdsnew','','show')">
+<area shape="rect" coords="191,316,287,333" href="#" alt="Advanced" onclick="MM_showHideLayers('olx45prefdsadv','','show')">
+<area shape="rect" coords="375,362,439,381" href="#" alt="Cancel" onclick="MM_showHideLayers('olx45prefds','','hide')">
+<area shape="rect" coords="449,359,519,384" href="#" alt="OK" onclick="MM_showHideLayers('olx45prefds','','hide')">
+</map>
+</div>
+
+<div id="olx45prefgen" style="z-index: 20; left: 100px; top: 100px; position: absolute;">
+<img src="olx45prefgen.png" usemap="#olx45prefgen.png" width="535" height="399" border="0" alt="">
+<map name="olx45prefgen.png">
+<area shape="rect" coords="18,56,144,72" href="#" alt="E-mail" onclick="MM_showHideLayers('olx45prefmail','','show','olx45prefgen','','hide')">
+<area shape="rect" coords="18,74,144,90" href="#" alt="News" onclick="MM_showHideLayers('olx45prefnews','','show','olx45prefgen','','hide')">
+<area shape="rect" coords="18,92,144,108" href="#" alt="Directory Services" onclick="MM_showHideLayers('olx45prefds','','show','olx45prefgen','','hide')">
+<area shape="rect" coords="18,146,144,162" href="#" alt="Startup &amp; Quit" onclick="MM_showHideLayers('olx45prefsq','','show','olx45prefgen','','hide')">
+<area shape="rect" coords="18,164,144,180" href="#" alt="Message Composition" onclick="MM_showHideLayers('olx45prefmc','','show','olx45prefgen','','hide')">
+<area shape="rect" coords="18,182,144,198" href="#" alt="Display" onclick="MM_showHideLayers('olx45prefdisp','','show','olx45prefgen','','hide')">
+<area shape="rect" coords="18,200,144,216" href="#" alt="Fonts" onclick="MM_showHideLayers('olx45preffont','','show','olx45prefgen','','hide')">
+<area shape="rect" coords="18,236,144,252" href="#" alt="Protocol Helpers" onclick="MM_showHideLayers('olx45prefph','','show','olx45prefgen','','hide')">
+<area shape="rect" coords="18,254,144,270" href="#" alt="Proxies" onclick="MM_showHideLayers('olx45prefprox','','show','olx45prefgen','','hide')">
+<area shape="rect" coords="18,290,144,306" href="#" alt="File Helpers" onclick="MM_showHideLayers('olx45preffh','','show','olx45prefgen','','hide')">
+<area shape="rect" coords="375,362,439,381" href="#" alt="Cancel" onclick="MM_showHideLayers('olx45prefgen','','hide')">
+<area shape="rect" coords="449,359,519,384" href="#" alt="OK" onclick="MM_showHideLayers('olx45prefgen','','hide')">
+</map>
+</div>
+
+<div id="olx45prefsq" style="z-index: 20; left: 100px; top: 100px; position: absolute;">
+<img src="olx45prefsq.png" usemap="#olx45prefsq.png" width="535" height="399" border="0" alt="">
+<map name="olx45prefsq.png">
+<area shape="rect" coords="18,56,144,72" href="#" alt="E-mail" onclick="MM_showHideLayers('olx45prefmail','','show','olx45prefsq','','hide')">
+<area shape="rect" coords="18,74,144,90" href="#" alt="News" onclick="MM_showHideLayers('olx45prefnews','','show','olx45prefsq','','hide')">
+<area shape="rect" coords="18,92,144,108" href="#" alt="Directory Services" onclick="MM_showHideLayers('olx45prefds','','show','olx45prefsq','','hide')">
+<area shape="rect" coords="18,128,144,144" href="#" alt="General" onclick="MM_showHideLayers('olx45prefgen','','show','olx45prefsq','','hide')">
+<area shape="rect" coords="18,164,144,180" href="#" alt="Message Composition" onclick="MM_showHideLayers('olx45prefmc','','show','olx45prefsq','','hide')">
+<area shape="rect" coords="18,182,144,198" href="#" alt="Display" onclick="MM_showHideLayers('olx45prefdisp','','show','olx45prefsq','','hide')">
+<area shape="rect" coords="18,200,144,216" href="#" alt="Fonts" onclick="MM_showHideLayers('olx45preffont','','show','olx45prefsq','','hide')">
+<area shape="rect" coords="18,236,144,252" href="#" alt="Protocol Helpers" onclick="MM_showHideLayers('olx45prefph','','show','olx45prefsq','','hide')">
+<area shape="rect" coords="18,254,144,270" href="#" alt="Proxies" onclick="MM_showHideLayers('olx45prefprox','','show','olx45prefsq','','hide')">
+<area shape="rect" coords="18,290,144,306" href="#" alt="File Helpers" onclick="MM_showHideLayers('olx45preffh','','show','olx45prefsq','','hide')">
+<area shape="rect" coords="375,362,439,381" href="#" alt="Cancel" onclick="MM_showHideLayers('olx45prefsq','','hide')">
+<area shape="rect" coords="449,359,519,384" href="#" alt="OK" onclick="MM_showHideLayers('olx45prefsq','','hide')">
+</map>
+</div>
+
+<div id="olx45prefmc" style="z-index: 20; left: 100px; top: 100px; position: absolute;">
+<img src="olx45prefmc.png" usemap="#olx45prefmc.png" width="535" height="399" border="0" alt="">
+<map name="olx45prefmc.png">
+<area shape="rect" coords="18,56,144,72" href="#" alt="E-mail" onclick="MM_showHideLayers('olx45prefmail','','show','olx45prefmc','','hide')">
+<area shape="rect" coords="18,74,144,90" href="#" alt="News" onclick="MM_showHideLayers('olx45prefnews','','show','olx45prefmc','','hide')">
+<area shape="rect" coords="18,92,144,108" href="#" alt="Directory Services" onclick="MM_showHideLayers('olx45prefds','','show','olx45prefmc','','hide')">
+<area shape="rect" coords="18,128,144,144" href="#" alt="General" onclick="MM_showHideLayers('olx45prefgen','','show','olx45prefmc','','hide')">
+<area shape="rect" coords="18,146,144,162" href="#" alt="Startup &amp; Quit" onclick="MM_showHideLayers('olx45prefsq','','show','olx45prefmc','','hide')">
+<area shape="rect" coords="18,182,144,198" href="#" alt="Display" onclick="MM_showHideLayers('olx45prefdisp','','show','olx45prefmc','','hide')">
+<area shape="rect" coords="18,200,144,216" href="#" alt="Fonts" onclick="MM_showHideLayers('olx45preffont','','show','olx45prefmc','','hide')">
+<area shape="rect" coords="18,236,144,252" href="#" alt="Protocol Helpers" onclick="MM_showHideLayers('olx45prefph','','show','olx45prefmc','','hide')">
+<area shape="rect" coords="18,254,144,270" href="#" alt="Proxies" onclick="MM_showHideLayers('olx45prefprox','','show','olx45prefmc','','hide')">
+<area shape="rect" coords="18,290,144,306" href="#" alt="File Helpers" onclick="MM_showHideLayers('olx45preffh','','show','olx45prefmc','','hide')">
+<area shape="rect" coords="375,362,439,381" href="#" alt="Cancel" onclick="MM_showHideLayers('olx45prefmc','','hide')">
+<area shape="rect" coords="449,359,519,384" href="#" alt="OK" onclick="MM_showHideLayers('olx45prefmc','','hide')">
+</map>
+</div>
+
+<div id="olx45prefdisp" style="z-index: 20; left: 100px; top: 100px; position: absolute;">
+<img src="olx45prefdisp.png" usemap="#olx45prefdisp.png" width="535" height="399" border="0" alt="">
+<map name="olx45prefdisp.png">
+<area shape="rect" coords="18,56,144,72" href="#" alt="E-mail" onclick="MM_showHideLayers('olx45prefmail','','show','olx45prefdisp','','hide')">
+<area shape="rect" coords="18,74,144,90" href="#" alt="News" onclick="MM_showHideLayers('olx45prefnews','','show','olx45prefdisp','','hide')">
+<area shape="rect" coords="18,92,144,108" href="#" alt="Directory Services" onclick="MM_showHideLayers('olx45prefds','','show','olx45prefdisp','','hide')">
+<area shape="rect" coords="18,128,144,144" href="#" alt="General" onclick="MM_showHideLayers('olx45prefgen','','show','olx45prefdisp','','hide')">
+<area shape="rect" coords="18,146,144,162" href="#" alt="Startup &amp; Quit" onclick="MM_showHideLayers('olx45prefsq','','show','olx45prefdisp','','hide')">
+<area shape="rect" coords="18,164,144,180" href="#" alt="Message Composition" onclick="MM_showHideLayers('olx45prefmc','','show','olx45prefdisp','','hide')">
+<area shape="rect" coords="18,200,144,216" href="#" alt="Fonts" onclick="MM_showHideLayers('olx45preffont','','show','olx45prefdisp','','hide')">
+<area shape="rect" coords="18,236,144,252" href="#" alt="Protocol Helpers" onclick="MM_showHideLayers('olx45prefph','','show','olx45prefdisp','','hide')">
+<area shape="rect" coords="18,254,144,270" href="#" alt="Proxies" onclick="MM_showHideLayers('olx45prefprox','','show','olx45prefdisp','','hide')">
+<area shape="rect" coords="18,290,144,306" href="#" alt="File Helpers" onclick="MM_showHideLayers('olx45preffh','','show','olx45prefdisp','','hide')">
+<area shape="rect" coords="375,362,439,381" href="#" alt="Cancel" onclick="MM_showHideLayers('olx45prefdisp','','hide')">
+<area shape="rect" coords="449,359,519,384" href="#" alt="OK" onclick="MM_showHideLayers('olx45prefdisp','','hide')">
+</map>
+</div>
+
+<div id="olx45preffont" style="z-index: 20; left: 100px; top: 100px; position: absolute;">
+<img src="olx45preffont.png" usemap="#olx45preffont.png" width="535" height="399" border="0" alt="">
+<map name="olx45preffont.png">
+<area shape="rect" coords="18,56,144,72" href="#" alt="E-mail" onclick="MM_showHideLayers('olx45prefmail','','show','olx45preffont','','hide')">
+<area shape="rect" coords="18,74,144,90" href="#" alt="News" onclick="MM_showHideLayers('olx45prefnews','','show','olx45preffont','','hide')">
+<area shape="rect" coords="18,92,144,108" href="#" alt="Directory Services" onclick="MM_showHideLayers('olx45prefds','','show','olx45preffont','','hide')">
+<area shape="rect" coords="18,128,144,144" href="#" alt="General" onclick="MM_showHideLayers('olx45prefgen','','show','olx45preffont','','hide')">
+<area shape="rect" coords="18,146,144,162" href="#" alt="Startup &amp; Quit" onclick="MM_showHideLayers('olx45prefsq','','show','olx45preffont','','hide')">
+<area shape="rect" coords="18,164,144,180" href="#" alt="Message Composition" onclick="MM_showHideLayers('olx45prefmc','','show','olx45preffont','','hide')">
+<area shape="rect" coords="18,182,144,198" href="#" alt="Display" onclick="MM_showHideLayers('olx45prefdisp','','show','olx45preffont','','hide')">
+<area shape="rect" coords="18,236,144,252" href="#" alt="Protocol Helpers" onclick="MM_showHideLayers('olx45prefph','','show','olx45preffont','','hide')">
+<area shape="rect" coords="18,254,144,270" href="#" alt="Proxies" onclick="MM_showHideLayers('olx45prefprox','','show','olx45preffont','','hide')">
+<area shape="rect" coords="18,290,144,306" href="#" alt="File Helpers" onclick="MM_showHideLayers('olx45preffh','','show','olx45preffont','','hide')">
+<area shape="rect" coords="375,362,439,381" href="#" alt="Cancel" onclick="MM_showHideLayers('olx45preffont','','hide')">
+<area shape="rect" coords="449,359,519,384" href="#" alt="OK" onclick="MM_showHideLayers('olx45preffont','','hide')">
+</map>
+</div>
+
+<div id="olx45prefph" style="z-index: 20; left: 100px; top: 100px; position: absolute;">
+<img src="olx45prefph.png" usemap="#olx45prefph.png" width="535" height="399" border="0" alt="">
+<map name="olx45prefph.png">
+<area shape="rect" coords="18,56,144,72" href="#" alt="E-mail" onclick="MM_showHideLayers('olx45prefmail','','show','olx45prefph','','hide')">
+<area shape="rect" coords="18,74,144,90" href="#" alt="News" onclick="MM_showHideLayers('olx45prefnews','','show','olx45prefph','','hide')">
+<area shape="rect" coords="18,92,144,108" href="#" alt="Directory Services" onclick="MM_showHideLayers('olx45prefds','','show','olx45prefph','','hide')">
+<area shape="rect" coords="18,128,144,144" href="#" alt="General" onclick="MM_showHideLayers('olx45prefgen','','show','olx45prefph','','hide')">
+<area shape="rect" coords="18,146,144,162" href="#" alt="Startup &amp; Quit" onclick="MM_showHideLayers('olx45prefsq','','show','olx45prefph','','hide')">
+<area shape="rect" coords="18,164,144,180" href="#" alt="Message Composition" onclick="MM_showHideLayers('olx45prefmc','','show','olx45prefph','','hide')">
+<area shape="rect" coords="18,182,144,198" href="#" alt="Display" onclick="MM_showHideLayers('olx45prefdisp','','show','olx45prefph','','hide')">
+<area shape="rect" coords="18,200,144,216" href="#" alt="Fonts" onclick="MM_showHideLayers('olx45preffont','','show','olx45prefph','','hide')">
+<area shape="rect" coords="18,254,144,270" href="#" alt="Proxies" onclick="MM_showHideLayers('olx45prefprox','','show','olx45prefph','','hide')">
+<area shape="rect" coords="18,290,144,306" href="#" alt="File Helpers" onclick="MM_showHideLayers('olx45preffh','','show','olx45prefph','','hide')">
+<area shape="rect" coords="182,304,261,321" href="#" alt="Add" onclick="MM_showHideLayers('olx45prefphadd','','show')">
+<area shape="rect" coords="375,362,439,381" href="#" alt="Cancel" onclick="MM_showHideLayers('olx45prefph','','hide')">
+<area shape="rect" coords="449,359,519,384" href="#" alt="OK" onclick="MM_showHideLayers('olx45prefph','','hide')">
+</map>
+</div>
+
+<div id="olx45prefprox" style="z-index: 20; left: 100px; top: 100px; position: absolute;">
+<img src="olx45prefprox.png" usemap="#olx45prefprox.png" width="535" height="399" border="0" alt="">
+<map name="olx45prefprox.png">
+<area shape="rect" coords="18,56,144,72" href="#" alt="E-mail" onclick="MM_showHideLayers('olx45prefmail','','show','olx45prefprox','','hide')">
+<area shape="rect" coords="18,74,144,90" href="#" alt="News" onclick="MM_showHideLayers('olx45prefnews','','show','olx45prefprox','','hide')">
+<area shape="rect" coords="18,92,144,108" href="#" alt="Directory Services" onclick="MM_showHideLayers('olx45prefds','','show','olx45prefprox','','hide')">
+<area shape="rect" coords="18,128,144,144" href="#" alt="General" onclick="MM_showHideLayers('olx45prefgen','','show','olx45prefprox','','hide')">
+<area shape="rect" coords="18,146,144,162" href="#" alt="Startup &amp; Quit" onclick="MM_showHideLayers('olx45prefsq','','show','olx45prefprox','','hide')">
+<area shape="rect" coords="18,164,144,180" href="#" alt="Message Composition" onclick="MM_showHideLayers('olx45prefmc','','show','olx45prefprox','','hide')">
+<area shape="rect" coords="18,182,144,198" href="#" alt="Display" onclick="MM_showHideLayers('olx45prefdisp','','show','olx45prefprox','','hide')">
+<area shape="rect" coords="18,200,144,216" href="#" alt="Fonts" onclick="MM_showHideLayers('olx45preffont','','show','olx45prefprox','','hide')">
+<area shape="rect" coords="18,236,144,252" href="#" alt="Protocol Helpers" onclick="MM_showHideLayers('olx45prefph','','show','olx45prefprox','','hide')">
+<area shape="rect" coords="18,290,144,306" href="#" alt="File Helpers" onclick="MM_showHideLayers('olx45preffh','','show','olx45prefprox','','hide')">
+<area shape="rect" coords="180,117,191,128" href="#" alt="Web Proxy" onclick="MM_showHideLayers('olx45prefprox2','','show','olx45prefprox','','hide')">
+<area shape="rect" coords="375,362,439,381" href="#" alt="Cancel" onclick="MM_showHideLayers('olx45prefprox','','hide')">
+<area shape="rect" coords="449,359,519,384" href="#" alt="OK" onclick="MM_showHideLayers('olx45prefprox','','hide')">
+</map>
+</div>
+
+<div id="olx45preffh" style="z-index: 20; left: 100px; top: 100px; position: absolute;">
+<img src="olx45preffh.png" usemap="#olx45preffh.png" width="535" height="399" border="0" alt="">
+<map name="olx45preffh.png">
+<area shape="rect" coords="18,56,144,72" href="#" alt="E-mail" onclick="MM_showHideLayers('olx45prefmail','','show','olx45preffh','','hide')">
+<area shape="rect" coords="18,74,144,90" href="#" alt="News" onclick="MM_showHideLayers('olx45prefnews','','show','olx45preffh','','hide')">
+<area shape="rect" coords="18,92,144,108" href="#" alt="Directory Services" onclick="MM_showHideLayers('olx45prefds','','show','olx45preffh','','hide')">
+<area shape="rect" coords="18,128,144,144" href="#" alt="General" onclick="MM_showHideLayers('olx45prefgen','','show','olx45preffh','','hide')">
+<area shape="rect" coords="18,146,144,162" href="#" alt="Startup &amp; Quit" onclick="MM_showHideLayers('olx45prefsq','','show','olx45preffh','','hide')">
+<area shape="rect" coords="18,164,144,180" href="#" alt="Message Composition" onclick="MM_showHideLayers('olx45prefmc','','show','olx45preffh','','hide')">
+<area shape="rect" coords="18,182,144,198" href="#" alt="Display" onclick="MM_showHideLayers('olx45prefdisp','','show','olx45preffh','','hide')">
+<area shape="rect" coords="18,200,144,216" href="#" alt="Fonts" onclick="MM_showHideLayers('olx45preffont','','show','olx45preffh','','hide')">
+<area shape="rect" coords="18,236,144,252" href="#" alt="Protocol Helpers" onclick="MM_showHideLayers('olx45prefph','','show','olx45preffh','','hide')">
+<area shape="rect" coords="18,254,144,270" href="#" alt="Proxies" onclick="MM_showHideLayers('olx45prefprox','','show','olx45preffh','','hide')">
+<area shape="rect" coords="182,314,261,331" href="#" alt="Add" onclick="MM_showHideLayers('olx45preffhadd','','show')">
+<area shape="rect" coords="375,362,439,381" href="#" alt="Cancel" onclick="MM_showHideLayers('olx45preffh','','hide')">
+<area shape="rect" coords="449,359,519,384" href="#" alt="OK" onclick="MM_showHideLayers('olx45preffh','','hide')">
+</map>
+</div>
+
+<div id="olx45prefmailnew" style="z-index: 30; left: 200px; top: 175px; position: absolute;">
+<img src="olx45prefmailnew.png" usemap="#olx45prefmailnew.png" width="336" height="192" border="0" alt="">
+<map name="olx45prefmailnew.png">
+<area shape="rect" coords="160,148,223,167" href="#" alt="Cancel" onclick="MM_showHideLayers('olx45prefmailnew','','hide')">
+<area shape="rect" coords="237,145,310,170" href="#" alt="OK" onclick="MM_showHideLayers('olx45prefmailnew','','hide')">
+</map>
+</div>
+
+<div id="olx45prefmailadv" style="z-index: 30; left: 175px; top: 100px; position: absolute;">
+<img src="olx45prefmailadv.png" usemap="#olx45prefmailadv.png" width="393" height="400" border="0" alt="">
+<map name="olx45prefmailadv.png">
+<area shape="rect" coords="214,357,281,376" href="#" alt="Cancel" onclick="MM_showHideLayers('olx45prefmailadv','','hide')">
+<area shape="rect" coords="299,354,372,379" href="#" alt="OK" onclick="MM_showHideLayers('olx45prefmailadv','','hide')">
+</map>
+</div>
+
+<div id="olx45prefnewsnew" style="z-index: 30; left: 200px; top: 200px; position: absolute;">
+<img src="olx45prefnewsnew.png" usemap="#olx45prefnewsnew.png" width="335" height="145" border="0" alt="">
+<map name="olx45prefnewsnew.png">
+<area shape="rect" coords="157,102,220,121" href="#" alt="Cancel" onclick="MM_showHideLayers('olx45prefnewsnew','','hide')">
+<area shape="rect" coords="234,99,307,124" href="#" alt="OK" onclick="MM_showHideLayers('olx45prefnewsnew','','hide')">
+</map>
+</div>
+
+<div id="olx45prefnewsadv" style="z-index: 30; left: 200px; top: 150px; position: absolute;">
+<img src="olx45prefnewsadv.png" usemap="#olx45prefnewsadv.png" width="356" height="262" border="0" alt="">
+<map name="olx45prefnewsadv.png">
+<area shape="rect" coords="173,219,240,238" href="#" alt="Cancel" onclick="MM_showHideLayers('olx45prefnewsadv','','hide')">
+<area shape="rect" coords="257,216,330,241" href="#" alt="OK" onclick="MM_showHideLayers('olx45prefnewsadv','','hide')">
+</map>
+</div>
+
+<div id="olx45prefdsnew" style="z-index: 30; left: 200px; top: 200px; position: absolute;">
+<img src="olx45prefdsnew.png" usemap="#olx45prefdsnew.png" width="335" height="145" border="0" alt="">
+<map name="olx45prefdsnew.png">
+<area shape="rect" coords="157,102,220,121" href="#" alt="Cancel" onclick="MM_showHideLayers('olx45prefdsnew','','hide')">
+<area shape="rect" coords="234,99,307,124" href="#" alt="OK" onclick="MM_showHideLayers('olx45prefdsnew','','hide')">
+</map>
+</div>
+
+<div id="olx45prefdsadv" style="z-index: 30; left: 200px; top: 175px; position: absolute;">
+<img src="olx45prefdsadv.png" usemap="#olx45prefdsadv.png" width="327" height="243" border="0" alt="">
+<map name="olx45prefdsadv.png">
+<area shape="rect" coords="150,202,217,221" href="#" alt="Cancel" onclick="MM_showHideLayers('olx45prefdsadv','','hide')">
+<area shape="rect" coords="233,199,306,224" href="#" alt="OK" onclick="MM_showHideLayers('olx45prefdsadv','','hide')">
+</map>
+</div>
+
+<div id="olx45prefphadd" style="z-index: 30; left: 175px; top: 175px; position: absolute;">
+<img src="olx45prefphadd.png" usemap="#olx45prefphadd.png" width="387" height="216" border="0" alt="">
+<map name="olx45prefphadd.png">
+<area shape="rect" coords="223,175,287,194" href="#" alt="Cancel" onclick="MM_showHideLayers('olx45prefphadd','','hide')">
+<area shape="rect" coords="298,172,368,197" href="#" alt="OK" onclick="MM_showHideLayers('olx45prefphadd','','hide')">
+</map>
+</div>
+
+<div id="olx45prefprox2" style="z-index: 20; left: 100px; top: 100px; position: absolute;">
+<img src="olx45prefprox2.png" usemap="#olx45prefprox2.png" width="535" height="399" border="0" alt="">
+<map name="olx45prefprox2.png">
+<area shape="rect" coords="18,56,144,72" href="#" alt="E-mail" onclick="MM_showHideLayers('olx45prefmail','','show','olx45prefprox2','','hide')">
+<area shape="rect" coords="18,74,144,90" href="#" alt="News" onclick="MM_showHideLayers('olx45prefnews','','show','olx45prefprox2','','hide')">
+<area shape="rect" coords="18,92,144,108" href="#" alt="Directory Services" onclick="MM_showHideLayers('olx45prefds','','show','olx45prefprox2','','hide')">
+<area shape="rect" coords="18,128,144,144" href="#" alt="General" onclick="MM_showHideLayers('olx45prefgen','','show','olx45prefprox2','','hide')">
+<area shape="rect" coords="18,146,144,162" href="#" alt="Startup &amp; Quit" onclick="MM_showHideLayers('olx45prefsq','','show','olx45prefprox2','','hide')">
+<area shape="rect" coords="18,164,144,180" href="#" alt="Message Composition" onclick="MM_showHideLayers('olx45prefmc','','show','olx45prefprox2','','hide')">
+<area shape="rect" coords="18,182,144,198" href="#" alt="Display" onclick="MM_showHideLayers('olx45prefdisp','','show','olx45prefprox2','','hide')">
+<area shape="rect" coords="18,200,144,216" href="#" alt="Fonts" onclick="MM_showHideLayers('olx45preffont','','show','olx45prefprox2','','hide')">
+<area shape="rect" coords="18,236,144,252" href="#" alt="Protocol Helpers" onclick="MM_showHideLayers('olx45prefph','','show','olx45prefprox2','','hide')">
+<area shape="rect" coords="18,290,144,306" href="#" alt="File Helpers" onclick="MM_showHideLayers('olx45preffh','','show','olx45prefprox2','','hide')">
+<area shape="rect" coords="180,117,191,128" href="#" alt="No Web Proxy" onclick="MM_showHideLayers('olx45prefprox','','show','olx45prefprox2','','hide')">
+<area shape="rect" coords="441,113,508,131" href="#" alt="Settings" onclick="MM_showHideLayers('olx45prefproxset','','show')">
+<area shape="rect" coords="375,362,439,381" href="#" alt="Cancel" onclick="MM_showHideLayers('olx45prefprox2','','hide')">
+<area shape="rect" coords="449,359,519,384" href="#" alt="OK" onclick="MM_showHideLayers('olx45prefprox2','','hide')">
+</map>
+</div>
+
+<div id="olx45prefproxset" style="z-index: 30; left: 200px; top: 175px; position: absolute;">
+<img src="olx45prefproxset.png" usemap="#olx45prefproxset.png" width="331" height="241" border="0" alt="">
+<map name="olx45prefproxset.png">
+<area shape="rect" coords="162,200,225,219" href="#" alt="Cancel" onclick="MM_showHideLayers('olx45prefproxset','','hide')">
+<area shape="rect" coords="239,197,312,222" href="#" alt="OK" onclick="MM_showHideLayers('olx45prefproxset','','hide')">
+</map>
+</div>
+
+<div id="olx45preffhadd" style="z-index: 30; left: 175px; top: 100px; position: absolute;">
+<img src="olx45preffhadd.png" usemap="#olx45preffhadd.png" width="383" height="419" border="0" alt="">
+<map name="olx45preffhadd.png">
+<area shape="rect" coords="219,378,283,397" href="#" alt="Cancel" onclick="MM_showHideLayers('olx45preffhadd','','hide')">
+<area shape="rect" coords="294,375,364,400" href="#" alt="OK" onclick="MM_showHideLayers('olx45preffhadd','','hide')">
+</map>
+</div>
+
+</body>
+</html>
